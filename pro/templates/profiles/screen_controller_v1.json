@@ -1,0 +1,50 @@
+{
+  "profile_id": "screen_controller_v1",
+  "description": "Ethernet LED Screen Controller (Modbus TCP / Smart Box)",
+  "device_defaults": {
+    "manufacturer": "MFR_LOCAL",
+    "devtyp": "PLC_FF_BOX",
+    "channel": "ethernet",
+    "ipaddr": "192.168.4.125",
+    "port": 502,
+    "devaddr_str": "1",
+    "acq_intv": 500,
+    "acqtimeout": 500,
+    "optimization": true
+  },
+  "registers": [
+    {
+      "portid": "power_status",
+      "startaddr": "0",
+      "addrtype": "03(4X)",
+      "datatype": "u16",
+      "datanum": 1,
+      "rdwr": "rw",
+      "cal_type": "disabled",
+      "formula": "",
+      "description": "Screen Display Power State (0: Off, 1: On)"
+    },
+    {
+      "portid": "brightness",
+      "startaddr": "1",
+      "addrtype": "03(4X)",
+      "datatype": "u16",
+      "datanum": 1,
+      "rdwr": "rw",
+      "cal_type": "disabled",
+      "formula": "",
+      "description": "Display Brightness Level (0-100)"
+    },
+    {
+      "portid": "program_id",
+      "startaddr": "2",
+      "addrtype": "03(4X)",
+      "datatype": "u16",
+      "datanum": 1,
+      "rdwr": "rw",
+      "cal_type": "disabled",
+      "formula": "",
+      "description": "Active Broadcast Playlist / Program ID"
+    }
+  ]
+}

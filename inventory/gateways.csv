@@ -1,0 +1,5 @@
+gateway_id,ip_address,port,username,password,location,description
+GW-001,192.168.4.1,80,Teamtech12!,teamtech,Sector-4-Pole-1,Active Pilot Gateway
+# Add additional city-wide gateways below (up to 100):
+# GW-002,192.168.4.2,80,Teamtech12!,teamtech,Sector-4-Pole-2,Planned Gateway
+# GW-003,192.168.5.1,80,Teamtech12!,teamtech,Sector-5-Substation,Planned Gateway

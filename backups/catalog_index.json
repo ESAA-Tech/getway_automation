@@ -1,0 +1,108 @@
+{
+  "GW-TARGET": [
+    {
+      "timestamp": "20261012_094331",
+      "tag": "AUDIT_SNAPSHOT",
+      "filepath": "backups\\GW-TARGET_192.168.4.1_20261012_094331_AUDIT_SNAPSHOT.json",
+      "device_count": 4,
+      "uplink_count": 2
+    },
+    {
+      "timestamp": "20261012_141419",
+      "tag": "AUDIT_SNAPSHOT",
+      "filepath": "backups\\GW-TARGET_192.168.4.1_20261012_141419_AUDIT_SNAPSHOT.json",
+      "device_count": 4,
+      "uplink_count": 3
+    }
+  ],
+  "GW-CLOUD": [
+    {
+      "timestamp": "20261012_140901",
+      "tag": "PRE_CLONE_production_cloud",
+      "filepath": "C:\\Users\\mahesaa\\OneDrive\\Documents\\env\\backups\\GW-CLOUD_192.168.4.1_20261012_140901_PRE_CLONE_production_cloud.json",
+      "device_count": 4,
+      "uplink_count": 2
+    },
+    {
+      "timestamp": "20261012_141644",
+      "tag": "PRE_CLONE_new",
+      "filepath": "C:\\Users\\mahesaa\\OneDrive\\Documents\\env\\backups\\GW-CLOUD_192.168.4.1_20261012_141644_PRE_CLONE_new.json",
+      "device_count": 4,
+      "uplink_count": 3
+    },
+    {
+      "timestamp": "20261012_142432",
+      "tag": "PRE_CLONE_production_cloud",
+      "filepath": "C:\\Users\\mahesaa\\OneDrive\\Documents\\env\\backups\\GW-CLOUD_192.168.4.1_20261012_142432_PRE_CLONE_production_cloud.json",
+      "device_count": 4,
+      "uplink_count": 2
+    }
+  ],
+  "GW_P001": [
+    {
+      "timestamp": "20261012_160739",
+      "tag": "PRE_PROVISION",
+      "filepath": "C:\\Users\\mahesaa\\OneDrive\\Documents\\env\\backups\\GW_P001_192.168.4.1_20261012_160739_PRE_PROVISION.json",
+      "device_count": 4,
+      "uplink_count": 3
+    },
+    {
+      "timestamp": "20261012_163133",
+      "tag": "PRE_PROVISION",
+      "filepath": "C:\\Users\\mahesaa\\OneDrive\\Documents\\env\\backups\\GW_P001_192.168.4.1_20261012_163133_PRE_PROVISION.json",
+      "device_count": 4,
+      "uplink_count": 3
+    },
+    {
+      "timestamp": "20261012_165101",
+      "tag": "PRE_PROVISION",
+      "filepath": "C:\\Users\\mahesaa\\OneDrive\\Documents\\env\\backups\\GW_P001_192.168.4.1_20261012_165101_PRE_PROVISION.json",
+      "device_count": 4,
+      "uplink_count": 1
+    },
+    {
+      "timestamp": "20261012_232049",
+      "tag": "PRE_PROVISION",
+      "filepath": "D:\\getway_automation\\getway_automation\\backups\\GW_P001_192.168.4.1_20261012_232049_PRE_PROVISION.json",
+      "device_count": 4,
+      "uplink_count": 3
+    },
+    {
+      "timestamp": "20261013_123130",
+      "tag": "PRE_PROVISION",
+      "filepath": "D:\\getway_automation\\getway_automation\\backups\\GW_P001_192.168.4.1_20261013_123130_PRE_PROVISION.json",
+      "device_count": 4,
+      "uplink_count": 2
+    },
+    {
+      "timestamp": "20261013_125131",
+      "tag": "PRE_PROVISION",
+      "filepath": "D:\\getway_automation\\getway_automation\\backups\\GW_P001_192.168.4.1_20261013_125131_PRE_PROVISION.json",
+      "device_count": 4,
+      "uplink_count": 3
+    },
+    {
+      "timestamp": "20261013_151010",
+      "tag": "PRE_PROVISION",
+      "filepath": "D:\\getway_automation\\getway_automation\\backups\\GW_P001_192.168.4.1_20261013_151010_PRE_PROVISION.json",
+      "device_count": 4,
+      "uplink_count": 3
+    },
+    {
+      "timestamp": "20261013_152343",
+      "tag": "PRE_PROVISION",
+      "filepath": "D:\\getway_automation\\getway_automation\\backups\\GW_P001_192.168.4.1_20261013_152343_PRE_PROVISION.json",
+      "device_count": 4,
+      "uplink_count": 3
+    }
+  ],
+  "GW_P004": [
+    {
+      "timestamp": "20261012_230923",
+      "tag": "PRE_PROVISION",
+      "filepath": "D:\\getway_automation\\getway_automation\\backups\\GW_P004_192.168.4.1_20261012_230923_PRE_PROVISION.json",
+      "device_count": 4,
+      "uplink_count": 4
+    }
+  ]
+}

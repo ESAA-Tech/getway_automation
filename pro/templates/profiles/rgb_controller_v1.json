@@ -1,0 +1,81 @@
+{
+  "profile_id": "rgb_controller_v1",
+  "description": "Standard Modbus RTU RGB Luminaire & Strip Controller",
+  "device_defaults": {
+    "manufacturer": "MFR_MODBUS",
+    "devtyp": "PLC_MDBS_RTU",
+    "channel": "RS485-2",
+    "devaddr_str": "1",
+    "acq_intv": 500,
+    "acqtimeout": 1000,
+    "optimization": true
+  },
+  "registers": [
+    {
+      "portid": "red_level",
+      "startaddr": "0",
+      "addrtype": "03(4X)",
+      "datatype": "u16",
+      "datanum": 1,
+      "rdwr": "rw",
+      "cal_type": "disabled",
+      "formula": "",
+      "description": "Red Channel Intensity (0-255)"
+    },
+    {
+      "portid": "green_level",
+      "startaddr": "1",
+      "addrtype": "03(4X)",
+      "datatype": "u16",
+      "datanum": 1,
+      "rdwr": "rw",
+      "cal_type": "disabled",
+      "formula": "",
+      "description": "Green Channel Intensity (0-255)"
+    },
+    {
+      "portid": "blue_level",
+      "startaddr": "2",
+      "addrtype": "03(4X)",
+      "datatype": "u16",
+      "datanum": 1,
+      "rdwr": "rw",
+      "cal_type": "disabled",
+      "formula": "",
+      "description": "Blue Channel Intensity (0-255)"
+    },
+    {
+      "portid": "brightness",
+      "startaddr": "3",
+      "addrtype": "03(4X)",
+      "datatype": "u16",
+      "datanum": 1,
+      "rdwr": "rw",
+      "cal_type": "disabled",
+      "formula": "",
+      "description": "Master Brightness Level (0-100%)"
+    },
+    {
+      "portid": "light_mode",
+      "startaddr": "4",
+      "addrtype": "03(4X)",
+      "datatype": "u16",
+      "datanum": 1,
+      "rdwr": "rw",
+      "cal_type": "disabled",
+      "formula": "",
+      "description": "Dynamic Scene Mode (0: Solid, 1: Pulse, 2: Rainbow, etc.)"
+    },
+    {
+      "portid": "power_state",
+      "startaddr": "5",
+      "addrtype": "03(4X)",
+      "datatype": "u16",
+      "datanum": 1,
+      "rdwr": "rw",
+      "cal_type": "disabled",
+      "formula": "",
+      "description": "RGB Power State Relay (0: Off, 1: On)"
+    }
+  ]
+}
