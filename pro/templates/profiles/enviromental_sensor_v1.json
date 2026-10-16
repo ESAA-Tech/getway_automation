@@ -1,0 +1,246 @@
+{
+  "profile_id": "enviromental_sensor_v1",
+  "description": "Multi-Sensor Environmental Weather Station (RS485-1 Modbus RTU 21 Variables)",
+  "device_defaults": {
+    "manufacturer": "MFR_MODBUS",
+    "devtyp": "PLC_MDBS_RTU",
+    "channel": "RS485-1",
+    "devaddr_str": "255",
+    "acq_intv": 500,
+    "acqtimeout": 1000,
+    "optimization": true
+  },
+  "registers": [
+    {
+      "portid": "Noise",
+      "startaddr": "1",
+      "addrtype": "03(4X)",
+      "datatype": "u16",
+      "datanum": 1,
+      "rdwr": "rw",
+      "cal_type": "cal",
+      "formula": "${this}/10",
+      "description": "Environmental Noise Level (dB)"
+    },
+    {
+      "portid": "PM1",
+      "startaddr": "21",
+      "addrtype": "03(4X)",
+      "datatype": "u16",
+      "datanum": 1,
+      "rdwr": "rw",
+      "cal_type": "disabled",
+      "formula": "",
+      "description": "Particulate Matter PM1.0 (ug/m3)"
+    },
+    {
+      "portid": "PM10",
+      "startaddr": "8",
+      "addrtype": "03(4X)",
+      "datatype": "u16",
+      "datanum": 1,
+      "rdwr": "rw",
+      "cal_type": "disabled",
+      "formula": "",
+      "description": "Particulate Matter PM10 (ug/m3)"
+    },
+    {
+      "portid": "Tsp",
+      "startaddr": "20",
+      "addrtype": "03(4X)",
+      "datatype": "u16",
+      "datanum": 1,
+      "rdwr": "rw",
+      "cal_type": "disabled",
+      "formula": "",
+      "description": "Total Suspended Particulate (ug/m3)"
+    },
+    {
+      "portid": "neg_oxygen_ions",
+      "startaddr": "19",
+      "addrtype": "03(4X)",
+      "datatype": "u16",
+      "datanum": 1,
+      "rdwr": "rw",
+      "cal_type": "cal",
+      "formula": "${this}*10",
+      "description": "Negative Oxygen Ions"
+    },
+    {
+      "portid": "CO2",
+      "startaddr": "18",
+      "addrtype": "03(4X)",
+      "datatype": "u16",
+      "datanum": 1,
+      "rdwr": "rw",
+      "cal_type": "disabled",
+      "formula": "",
+      "description": "Carbon Dioxide (ppm)"
+    },
+    {
+      "portid": "Uv_index",
+      "startaddr": "17",
+      "addrtype": "03(4X)",
+      "datatype": "u16",
+      "datanum": 1,
+      "rdwr": "rw",
+      "cal_type": "disabled",
+      "formula": "",
+      "description": "Ultraviolet Index"
+    },
+    {
+      "portid": "Illuminance",
+      "startaddr": "16",
+      "addrtype": "03(4X)",
+      "datatype": "u16",
+      "datanum": 1,
+      "rdwr": "rw",
+      "cal_type": "cal",
+      "formula": "${this}/100",
+      "description": "Light Intensity Illuminance (Lux)"
+    },
+    {
+      "portid": "Radiation",
+      "startaddr": "15",
+      "addrtype": "03(4X)",
+      "datatype": "u16",
+      "datanum": 1,
+      "rdwr": "rw",
+      "cal_type": "disabled",
+      "formula": "",
+      "description": "Solar Radiation (W/m2)"
+    },
+    {
+      "portid": "Rainfall",
+      "startaddr": "14",
+      "addrtype": "03(4X)",
+      "datatype": "u16",
+      "datanum": 1,
+      "rdwr": "rw",
+      "cal_type": "cal",
+      "formula": "${this}/10",
+      "description": "Rainfall Accumulation (mm)"
+    },
+    {
+      "portid": "Wind_direction",
+      "startaddr": "13",
+      "addrtype": "03(4X)",
+      "datatype": "u16",
+      "datanum": 1,
+      "rdwr": "rw",
+      "cal_type": "cal",
+      "formula": "${this}/10",
+      "description": "Wind Direction Angle (deg)"
+    },
+    {
+      "portid": "Wind_speed",
+      "startaddr": "12",
+      "addrtype": "03(4X)",
+      "datatype": "u16",
+      "datanum": 1,
+      "rdwr": "rw",
+      "cal_type": "cal",
+      "formula": "${this}/100",
+      "description": "Wind Speed (m/s)"
+    },
+    {
+      "portid": "pressure",
+      "startaddr": "11",
+      "addrtype": "03(4X)",
+      "datatype": "u16",
+      "datanum": 1,
+      "rdwr": "rw",
+      "cal_type": "cal",
+      "formula": "${this}/10",
+      "description": "Barometric Atmospheric Pressure (hPa)"
+    },
+    {
+      "portid": "Humidity",
+      "startaddr": "10",
+      "addrtype": "03(4X)",
+      "datatype": "u16",
+      "datanum": 1,
+      "rdwr": "rw",
+      "cal_type": "cal",
+      "formula": "${this}/100",
+      "description": "Relative Humidity (%RH)"
+    },
+    {
+      "portid": "PM2.5",
+      "startaddr": "7",
+      "addrtype": "03(4X)",
+      "datatype": "u16",
+      "datanum": 1,
+      "rdwr": "rw",
+      "cal_type": "disabled",
+      "formula": "",
+      "description": "Particulate Matter PM2.5 (ug/m3)"
+    },
+    {
+      "portid": "O3",
+      "startaddr": "6",
+      "addrtype": "03(4X)",
+      "datatype": "u16",
+      "datanum": 1,
+      "rdwr": "rw",
+      "cal_type": "disabled",
+      "formula": "",
+      "description": "Ozone (ppm)"
+    },
+    {
+      "portid": "CO",
+      "startaddr": "5",
+      "addrtype": "03(4X)",
+      "datatype": "u16",
+      "datanum": 1,
+      "rdwr": "rw",
+      "cal_type": "disabled",
+      "formula": "",
+      "description": "Carbon Monoxide (ppm)"
+    },
+    {
+      "portid": "NO2",
+      "startaddr": "4",
+      "addrtype": "03(4X)",
+      "datatype": "u16",
+      "datanum": 1,
+      "rdwr": "rw",
+      "cal_type": "disabled",
+      "formula": "",
+      "description": "Nitrogen Dioxide (ppm)"
+    },
+    {
+      "portid": "SO2",
+      "startaddr": "3",
+      "addrtype": "03(4X)",
+      "datatype": "u16",
+      "datanum": 1,
+      "rdwr": "rw",
+      "cal_type": "disabled",
+      "formula": "",
+      "description": "Sulfur Dioxide (ppm)"
+    },
+    {
+      "portid": "H2s_tvoc",
+      "startaddr": "2",
+      "addrtype": "03(4X)",
+      "datatype": "u16",
+      "datanum": 1,
+      "rdwr": "rw",
+      "cal_type": "disabled",
+      "formula": "",
+      "description": "Hydrogen Sulfide / TVOC (ppm)"
+    },
+    {
+      "portid": "Temperature",
+      "startaddr": "9",
+      "addrtype": "03(4X)",
+      "datatype": "u16",
+      "datanum": 1,
+      "rdwr": "rw",
+      "cal_type": "cal",
+      "formula": "${this}/100 -40",
+      "description": "Ambient Temperature (°C)"
+    }
+  ]
+}

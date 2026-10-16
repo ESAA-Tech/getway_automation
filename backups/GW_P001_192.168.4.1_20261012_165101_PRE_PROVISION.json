@@ -1,0 +1,887 @@
+{
+  "gateway_ip": "192.168.4.1",
+  "gateway_port": 80,
+  "captured_at": "2026-10-12T13:51:01Z",
+  "devices": [
+    {
+      "chn_en": true,
+      "acq_intv": 500,
+      "acqtimeout": 500,
+      "cmd_acqdelay": 0,
+      "manufacturer": "MFR_LOCAL",
+      "devtyp": "PLC_FF_BOX",
+      "optimization": true,
+      "devaddr_str": "0",
+      "channel": "ethernet",
+      "ipaddr": "192.168.4.125",
+      "port": 0,
+      "bit16_order": "ab",
+      "bit32_order": "abcd",
+      "flt32_order": "abcd",
+      "bit16_order_d": "ab",
+      "bit32_order_d": "abcd",
+      "flt32_order_d": "abcd",
+      "plc_id": "Screen"
+    },
+    {
+      "chn_en": true,
+      "acq_intv": 500,
+      "acqtimeout": 1000,
+      "cmd_acqdelay": 0,
+      "manufacturer": "MFR_MODBUS",
+      "devtyp": "PLC_MDBS_RTU",
+      "optimization": true,
+      "devaddr_str": "255",
+      "channel": "RS485-1",
+      "ipaddr": "",
+      "port": 0,
+      "bit16_order": "ab",
+      "bit32_order": "abcd",
+      "flt32_order": "abcd",
+      "bit16_order_d": "ab",
+      "bit32_order_d": "abcd",
+      "flt32_order_d": "abcd",
+      "plc_id": "enviromental"
+    },
+    {
+      "chn_en": true,
+      "acq_intv": 500,
+      "acqtimeout": 500,
+      "cmd_acqdelay": 0,
+      "manufacturer": "MFR_LOCAL",
+      "devtyp": "PLC_FF_BOX",
+      "optimization": true,
+      "devaddr_str": "0",
+      "channel": "ethernet",
+      "ipaddr": "",
+      "port": 0,
+      "bit16_order": "ab",
+      "bit32_order": "abcd",
+      "flt32_order": "abcd",
+      "bit16_order_d": "ab",
+      "bit32_order_d": "abcd",
+      "flt32_order_d": "abcd",
+      "plc_id": "IO"
+    },
+    {
+      "chn_en": true,
+      "acq_intv": 500,
+      "acqtimeout": 1000,
+      "cmd_acqdelay": 0,
+      "manufacturer": "MFR_MODBUS",
+      "devtyp": "PLC_MDBS_RTU",
+      "optimization": true,
+      "devaddr_str": "1",
+      "channel": "RS485-2",
+      "ipaddr": "",
+      "port": 0,
+      "bit16_order": "ab",
+      "bit32_order": "abcd",
+      "flt32_order": "abcd",
+      "bit16_order_d": "ab",
+      "bit32_order_d": "abcd",
+      "flt32_order_d": "abcd",
+      "plc_id": "rgb_controller"
+    }
+  ],
+  "datanodes": {
+    "Screen": [],
+    "enviromental": [
+      {
+        "portid": "Noise",
+        "rdwr": "rw",
+        "datanum": 1,
+        "datatype": "u16",
+        "cal_type": "cal",
+        "map_up_o": "",
+        "map_down_o": "",
+        "map_up_t": "",
+        "map_down_t": "",
+        "formula": "${this}/10",
+        "startaddr": "1",
+        "addrtype": "03(4X)",
+        "int_bit": "",
+        "decimal_bit": ""
+      },
+      {
+        "portid": "PM1",
+        "rdwr": "rw",
+        "datanum": 1,
+        "datatype": "u16",
+        "cal_type": "disabled",
+        "map_up_o": "",
+        "map_down_o": "",
+        "map_up_t": "",
+        "map_down_t": "",
+        "formula": "",
+        "startaddr": "21",
+        "addrtype": "03(4X)",
+        "int_bit": "",
+        "decimal_bit": ""
+      },
+      {
+        "portid": "PM10",
+        "rdwr": "rw",
+        "datanum": 1,
+        "datatype": "u16",
+        "cal_type": "disabled",
+        "map_up_o": "",
+        "map_down_o": "",
+        "map_up_t": "",
+        "map_down_t": "",
+        "formula": "",
+        "startaddr": "8",
+        "addrtype": "03(4X)",
+        "int_bit": "",
+        "decimal_bit": ""
+      },
+      {
+        "portid": "Tsp",
+        "rdwr": "rw",
+        "datanum": 1,
+        "datatype": "u16",
+        "cal_type": "disabled",
+        "map_up_o": "",
+        "map_down_o": "",
+        "map_up_t": "",
+        "map_down_t": "",
+        "formula": "",
+        "startaddr": "20",
+        "addrtype": "03(4X)",
+        "int_bit": "",
+        "decimal_bit": ""
+      },
+      {
+        "portid": "neg_oxygen_ions",
+        "rdwr": "rw",
+        "datanum": 1,
+        "datatype": "u16",
+        "cal_type": "cal",
+        "map_up_o": "",
+        "map_down_o": "",
+        "map_up_t": "",
+        "map_down_t": "",
+        "formula": "${this}*10",
+        "startaddr": "19",
+        "addrtype": "03(4X)",
+        "int_bit": "",
+        "decimal_bit": ""
+      },
+      {
+        "portid": "CO2",
+        "rdwr": "rw",
+        "datanum": 1,
+        "datatype": "u16",
+        "cal_type": "disabled",
+        "map_up_o": "",
+        "map_down_o": "",
+        "map_up_t": "",
+        "map_down_t": "",
+        "formula": "",
+        "startaddr": "18",
+        "addrtype": "03(4X)",
+        "int_bit": "",
+        "decimal_bit": ""
+      },
+      {
+        "portid": "Uv_index",
+        "rdwr": "rw",
+        "datanum": 1,
+        "datatype": "u16",
+        "cal_type": "disabled",
+        "map_up_o": "",
+        "map_down_o": "",
+        "map_up_t": "",
+        "map_down_t": "",
+        "formula": "",
+        "startaddr": "17",
+        "addrtype": "03(4X)",
+        "int_bit": "",
+        "decimal_bit": ""
+      },
+      {
+        "portid": "Illuminance",
+        "rdwr": "rw",
+        "datanum": 1,
+        "datatype": "u16",
+        "cal_type": "cal",
+        "map_up_o": "",
+        "map_down_o": "",
+        "map_up_t": "",
+        "map_down_t": "",
+        "formula": "${this}/100",
+        "startaddr": "16",
+        "addrtype": "03(4X)",
+        "int_bit": "",
+        "decimal_bit": ""
+      },
+      {
+        "portid": "Radiation",
+        "rdwr": "rw",
+        "datanum": 1,
+        "datatype": "u16",
+        "cal_type": "disabled",
+        "map_up_o": "",
+        "map_down_o": "",
+        "map_up_t": "",
+        "map_down_t": "",
+        "formula": "",
+        "startaddr": "15",
+        "addrtype": "03(4X)",
+        "int_bit": "",
+        "decimal_bit": ""
+      },
+      {
+        "portid": "Rainfall",
+        "rdwr": "rw",
+        "datanum": 1,
+        "datatype": "u16",
+        "cal_type": "cal",
+        "map_up_o": "",
+        "map_down_o": "",
+        "map_up_t": "",
+        "map_down_t": "",
+        "formula": "${this}/10",
+        "startaddr": "14",
+        "addrtype": "03(4X)",
+        "int_bit": "",
+        "decimal_bit": ""
+      },
+      {
+        "portid": "Wind_direction",
+        "rdwr": "rw",
+        "datanum": 1,
+        "datatype": "u16",
+        "cal_type": "cal",
+        "map_up_o": "",
+        "map_down_o": "",
+        "map_up_t": "",
+        "map_down_t": "",
+        "formula": "${this}/10",
+        "startaddr": "13",
+        "addrtype": "03(4X)",
+        "int_bit": "",
+        "decimal_bit": ""
+      },
+      {
+        "portid": "Wind_speed",
+        "rdwr": "rw",
+        "datanum": 1,
+        "datatype": "u16",
+        "cal_type": "cal",
+        "map_up_o": "",
+        "map_down_o": "",
+        "map_up_t": "",
+        "map_down_t": "",
+        "formula": "${this}/100",
+        "startaddr": "12",
+        "addrtype": "03(4X)",
+        "int_bit": "",
+        "decimal_bit": ""
+      },
+      {
+        "portid": "pressure",
+        "rdwr": "rw",
+        "datanum": 1,
+        "datatype": "u16",
+        "cal_type": "cal",
+        "map_up_o": "",
+        "map_down_o": "",
+        "map_up_t": "",
+        "map_down_t": "",
+        "formula": "${this}/10",
+        "startaddr": "11",
+        "addrtype": "03(4X)",
+        "int_bit": "",
+        "decimal_bit": ""
+      },
+      {
+        "portid": "Humidity",
+        "rdwr": "rw",
+        "datanum": 1,
+        "datatype": "u16",
+        "cal_type": "cal",
+        "map_up_o": "",
+        "map_down_o": "",
+        "map_up_t": "",
+        "map_down_t": "",
+        "formula": "${this}/100",
+        "startaddr": "10",
+        "addrtype": "03(4X)",
+        "int_bit": "",
+        "decimal_bit": ""
+      },
+      {
+        "portid": "PM2.5",
+        "rdwr": "rw",
+        "datanum": 1,
+        "datatype": "u16",
+        "cal_type": "disabled",
+        "map_up_o": "",
+        "map_down_o": "",
+        "map_up_t": "",
+        "map_down_t": "",
+        "formula": "",
+        "startaddr": "7",
+        "addrtype": "03(4X)",
+        "int_bit": "",
+        "decimal_bit": ""
+      },
+      {
+        "portid": "O3",
+        "rdwr": "rw",
+        "datanum": 1,
+        "datatype": "u16",
+        "cal_type": "disabled",
+        "map_up_o": "",
+        "map_down_o": "",
+        "map_up_t": "",
+        "map_down_t": "",
+        "formula": "",
+        "startaddr": "6",
+        "addrtype": "03(4X)",
+        "int_bit": "",
+        "decimal_bit": ""
+      },
+      {
+        "portid": "CO",
+        "rdwr": "rw",
+        "datanum": 1,
+        "datatype": "u16",
+        "cal_type": "disabled",
+        "map_up_o": "",
+        "map_down_o": "",
+        "map_up_t": "",
+        "map_down_t": "",
+        "formula": "",
+        "startaddr": "5",
+        "addrtype": "03(4X)",
+        "int_bit": "",
+        "decimal_bit": ""
+      },
+      {
+        "portid": "NO2",
+        "rdwr": "rw",
+        "datanum": 1,
+        "datatype": "u16",
+        "cal_type": "disabled",
+        "map_up_o": "",
+        "map_down_o": "",
+        "map_up_t": "",
+        "map_down_t": "",
+        "formula": "",
+        "startaddr": "4",
+        "addrtype": "03(4X)",
+        "int_bit": "",
+        "decimal_bit": ""
+      },
+      {
+        "portid": "SO2",
+        "rdwr": "rw",
+        "datanum": 1,
+        "datatype": "u16",
+        "cal_type": "disabled",
+        "map_up_o": "",
+        "map_down_o": "",
+        "map_up_t": "",
+        "map_down_t": "",
+        "formula": "",
+        "startaddr": "3",
+        "addrtype": "03(4X)",
+        "int_bit": "",
+        "decimal_bit": ""
+      },
+      {
+        "portid": "H2s_tvoc",
+        "rdwr": "rw",
+        "datanum": 1,
+        "datatype": "u16",
+        "cal_type": "disabled",
+        "map_up_o": "",
+        "map_down_o": "",
+        "map_up_t": "",
+        "map_down_t": "",
+        "formula": "",
+        "startaddr": "2",
+        "addrtype": "03(4X)",
+        "int_bit": "",
+        "decimal_bit": ""
+      },
+      {
+        "portid": "Temperature",
+        "rdwr": "rw",
+        "datanum": 1,
+        "datatype": "u16",
+        "cal_type": "cal",
+        "map_up_o": "",
+        "map_down_o": "",
+        "map_up_t": "",
+        "map_down_t": "",
+        "formula": "${this}/100 -40",
+        "startaddr": "9",
+        "addrtype": "03(4X)",
+        "int_bit": "",
+        "decimal_bit": ""
+      }
+    ],
+    "IO": [
+      {
+        "portid": "AC-OUT3",
+        "rdwr": "rw",
+        "datanum": 64,
+        "datatype": "s",
+        "cal_type": "disabled",
+        "map_up_o": "",
+        "map_down_o": "",
+        "map_up_t": "",
+        "map_down_t": "",
+        "formula": "",
+        "startaddr": "ac_enabled3",
+        "addrtype": "nvram",
+        "int_bit": "",
+        "decimal_bit": ""
+      },
+      {
+        "portid": "AC-OUT2",
+        "rdwr": "rw",
+        "datanum": 64,
+        "datatype": "s",
+        "cal_type": "disabled",
+        "map_up_o": "",
+        "map_down_o": "",
+        "map_up_t": "",
+        "map_down_t": "",
+        "formula": "",
+        "startaddr": "ac_enabled2",
+        "addrtype": "nvram",
+        "int_bit": "",
+        "decimal_bit": ""
+      },
+      {
+        "portid": "AC-OUT1",
+        "rdwr": "rw",
+        "datanum": 64,
+        "datatype": "s",
+        "cal_type": "disabled",
+        "map_up_o": "",
+        "map_down_o": "",
+        "map_up_t": "",
+        "map_down_t": "",
+        "formula": "",
+        "startaddr": "ac_enabled1",
+        "addrtype": "nvram",
+        "int_bit": "",
+        "decimal_bit": ""
+      },
+      {
+        "portid": "ac_dc_switch",
+        "rdwr": "rw",
+        "datanum": 64,
+        "datatype": "s",
+        "cal_type": "disabled",
+        "map_up_o": "",
+        "map_down_o": "",
+        "map_up_t": "",
+        "map_down_t": "",
+        "formula": "",
+        "startaddr": "ac_dc_switch",
+        "addrtype": "nvram",
+        "int_bit": "",
+        "decimal_bit": ""
+      },
+      {
+        "portid": "smart_lightpole_en",
+        "rdwr": "rw",
+        "datanum": 64,
+        "datatype": "s",
+        "cal_type": "disabled",
+        "map_up_o": "",
+        "map_down_o": "",
+        "map_up_t": "",
+        "map_down_t": "",
+        "formula": "",
+        "startaddr": "smart_lightpole_en",
+        "addrtype": "nvram",
+        "int_bit": "",
+        "decimal_bit": ""
+      }
+    ],
+    "rgb_controller": [
+      {
+        "portid": "red_level",
+        "rdwr": "rw",
+        "datanum": 1,
+        "datatype": "u16",
+        "cal_type": "disabled",
+        "map_up_o": "",
+        "map_down_o": "",
+        "map_up_t": "",
+        "map_down_t": "",
+        "formula": "",
+        "startaddr": "0",
+        "addrtype": "03(4X)",
+        "int_bit": "",
+        "decimal_bit": ""
+      },
+      {
+        "portid": "green_level",
+        "rdwr": "rw",
+        "datanum": 1,
+        "datatype": "u16",
+        "cal_type": "disabled",
+        "map_up_o": "",
+        "map_down_o": "",
+        "map_up_t": "",
+        "map_down_t": "",
+        "formula": "",
+        "startaddr": "1",
+        "addrtype": "03(4X)",
+        "int_bit": "",
+        "decimal_bit": ""
+      },
+      {
+        "portid": "blue_level",
+        "rdwr": "rw",
+        "datanum": 1,
+        "datatype": "u16",
+        "cal_type": "disabled",
+        "map_up_o": "",
+        "map_down_o": "",
+        "map_up_t": "",
+        "map_down_t": "",
+        "formula": "",
+        "startaddr": "2",
+        "addrtype": "03(4X)",
+        "int_bit": "",
+        "decimal_bit": ""
+      },
+      {
+        "portid": "brightness",
+        "rdwr": "rw",
+        "datanum": 1,
+        "datatype": "u16",
+        "cal_type": "disabled",
+        "map_up_o": "",
+        "map_down_o": "",
+        "map_up_t": "",
+        "map_down_t": "",
+        "formula": "",
+        "startaddr": "3",
+        "addrtype": "03(4X)",
+        "int_bit": "",
+        "decimal_bit": ""
+      },
+      {
+        "portid": "light_mode",
+        "rdwr": "rw",
+        "datanum": 1,
+        "datatype": "u16",
+        "cal_type": "disabled",
+        "map_up_o": "",
+        "map_down_o": "",
+        "map_up_t": "",
+        "map_down_t": "",
+        "formula": "",
+        "startaddr": "4",
+        "addrtype": "03(4X)",
+        "int_bit": "",
+        "decimal_bit": ""
+      },
+      {
+        "portid": "power_state",
+        "rdwr": "rw",
+        "datanum": 1,
+        "datatype": "u16",
+        "cal_type": "disabled",
+        "map_up_o": "",
+        "map_down_o": "",
+        "map_up_t": "",
+        "map_down_t": "",
+        "formula": "",
+        "startaddr": "5",
+        "addrtype": "03(4X)",
+        "int_bit": "",
+        "decimal_bit": ""
+      }
+    ]
+  },
+  "uplinks": [
+    {
+      "svr_en": true,
+      "proto": "TRNS_PROTO_CUSTOM_MQTT",
+      "url": "192.168.4.124",
+      "srvport": 1883,
+      "mutchange": "disabled",
+      "datastore": false,
+      "store_mode": "memory",
+      "clear_data": true,
+      "periodic_time": 10,
+      "mqtt_clientid": "scmp-pole-P001",
+      "mqtt_psk": "",
+      "mqtt_pskid": "",
+      "mqtt_enc": false,
+      "mqtt_sslmode": "anon",
+      "mqtt_psk_id": "",
+      "mqtt_username": "gw-pole-test",
+      "mqtt_pswd": "gateway_secret",
+      "mqtt_keepalive": 60,
+      "mqtt_timeout": 10,
+      "mqtt_pki": "",
+      "mqtt_ca_pki": "",
+      "ct_id": "testserver"
+    }
+  ],
+  "serial_cfg": [
+    {
+      "com_baudrate": 9600,
+      "com_databit": 8,
+      "com_stopbit": 1,
+      "com_parity": "n",
+      "com_flowcontrol": 0,
+      "com_id": "RS485-1"
+    },
+    {
+      "com_baudrate": 9600,
+      "com_databit": 8,
+      "com_stopbit": 1,
+      "com_parity": "n",
+      "com_flowcontrol": 0,
+      "com_id": "RS485-2"
+    }
+  ],
+  "scripts": {
+    "testserver": {
+      "script_up": [
+        {
+          "script_id": "EnvTelemetry",
+          "ds": "periodic_report",
+          "event": "aacra/smartpole/P001/env/telemetry",
+          "param": "1",
+          "code": "Ly8gQ29uc29saWRhdGVkIEVudmlyb25tZW50YWwgVGVsZW1ldHJ5IEZvcm1hdHRlciAoRGUtZHVwbGljYXRlZCkKdHJ5IHsKICAgIHZhciByYXcgPSBKU09OLnBhcnNlKGFwaV9kYXRhKTsKICAgIHZhciBlbnYgPSByYXcuc3ViZGV2ICYmIHJhdy5zdWJkZXYuZW52aXJvbWVudGFsOwogICAgdmFyIGdhdGV3YXlfc24gPSByYXcuc24gfHwgIkdXLVNJTkdMRSI7CiAgICB2YXIgY3RpbWVTdHIgPSAoZW52ICYmIGVudi5jdGltZSkgPyBTdHJpbmcoZW52LmN0aW1lKS50cmltKCkgOiAiIjsKCiAgICB2YXIgaXNPZmZsaW5lID0gIWVudiB8fCBjdGltZVN0ciA9PT0gIiIgfHwgY3RpbWVTdHIuaW5kZXhPZigiMTk3MC0wMS0wMSIpID09PSAwOwoKICAgIGlmIChpc09mZmxpbmUpIHsKICAgICAgICB2YXIgZmF1bHRQYXlsb2FkID0gSlNPTi5zdHJpbmdpZnkoewogICAgICAgICAgICBnYXRld2F5X3NuOiBnYXRld2F5X3NuLAogICAgICAgICAgICBkZXZpY2VfaWQ6ICJlbnZpcm9tZW50YWwiLAogICAgICAgICAgICBzdGF0dXM6ICJPRkZMSU5FIiwKICAgICAgICAgICAgdGltZXN0YW1wOiBuZXcgRGF0ZSgpLnRvSVNPU3RyaW5nKCksCiAgICAgICAgICAgIGVycm9yOiAiU2Vuc29yIGFjcXVpc2l0aW9uIHRpbWVvdXQgb3IgZGlzY29ubmVjdGVkIgogICAgICAgIH0pOwogICAgICAgIGFwaV9sb2coIltFTlZdIFNlbnNvciBPRkZMSU5FLiBQdWJsaXNoaW5nIGFsZXJ0LlxuIik7CiAgICAgICAgYXBpX291dChhcGlfZXZlbnQsIGZhdWx0UGF5bG9hZCk7CiAgICB9IGVsc2UgewogICAgICAgIHZhciB0ZWxlbWV0cnkgPSB7CiAgICAgICAgICAgIGdhdGV3YXlfc246IGdhdGV3YXlfc24sCiAgICAgICAgICAgIGRldmljZV9pZDogImVudmlyb21lbnRhbCIsCiAgICAgICAgICAgIHN0YXR1czogIk9OTElORSIsCiAgICAgICAgICAgIHRpbWVzdGFtcDogZW52LmN0aW1lIHx8IG5ldyBEYXRlKCkudG9JU09TdHJpbmcoKSwKICAgICAgICAgICAgbWV0cmljczogewogICAgICAgICAgICAgICAgdGVtcGVyYXR1cmU6IE51bWJlcihlbnYuVGVtcGVyYXR1cmUgfHwgMCksCiAgICAgICAgICAgICAgICBodW1pZGl0eTogTnVtYmVyKGVudi5IdW1pZGl0eSB8fCAwKSwKICAgICAgICAgICAgICAgIHByZXNzdXJlOiBOdW1iZXIoZW52LnByZXNzdXJlIHx8IDApLAogICAgICAgICAgICAgICAgcG0xOiBOdW1iZXIoZW52LlBNMSB8fCAwKSwKICAgICAgICAgICAgICAgIHBtMl81OiBOdW1iZXIoZW52WyJQTTIuNSJdIHx8IDApLAogICAgICAgICAgICAgICAgcG0xMDogTnVtYmVyKGVudi5QTTEwIHx8IDApLAogICAgICAgICAgICAgICAgdHNwOiBOdW1iZXIoZW52LlRzcCB8fCAwKSwKICAgICAgICAgICAgICAgIGNvMjogTnVtYmVyKGVudi5DTzIgfHwgMCksCiAgICAgICAgICAgICAgICBjbzogTnVtYmVyKGVudi5DTyB8fCAwKSwKICAgICAgICAgICAgICAgIHNvMjogTnVtYmVyKGVudi5TTzIgfHwgMCksCiAgICAgICAgICAgICAgICBubzI6IE51bWJlcihlbnYuTk8yIHx8IDApLAogICAgICAgICAgICAgICAgbzM6IE51bWJlcihlbnYuTzMgfHwgMCksCiAgICAgICAgICAgICAgICBoMnNfdHZvYzogTnVtYmVyKGVudi5IMnNfdHZvYyB8fCAwKSwKICAgICAgICAgICAgICAgIHdpbmRfc3BlZWQ6IE51bWJlcihlbnYuV2luZF9zcGVlZCB8fCAwKSwKICAgICAgICAgICAgICAgIHdpbmRfZGlyZWN0aW9uOiBOdW1iZXIoZW52LldpbmRfZGlyZWN0aW9uIHx8IDApLAogICAgICAgICAgICAgICAgcmFpbmZhbGw6IE51bWJlcihlbnYuUmFpbmZhbGwgfHwgMCksCiAgICAgICAgICAgICAgICBpbGx1bWluYW5jZTogTnVtYmVyKGVudi5JbGx1bWluYW5jZSB8fCAwKSwKICAgICAgICAgICAgICAgIHJhZGlhdGlvbjogTnVtYmVyKGVudi5SYWRpYXRpb24gfHwgMCksCiAgICAgICAgICAgICAgICB1dl9pbmRleDogTnVtYmVyKGVudi5Vdl9pbmRleCB8fCAwKSwKICAgICAgICAgICAgICAgIG5lZ2F0aXZlX28yX2lvbnM6IE51bWJlcihlbnYubmVnX294eWdlbl9pb25zIHx8IDApCiAgICAgICAgICAgIH0KICAgICAgICB9OwogICAgICAgIGFwaV9sb2coIltFTlZdIENsZWFuIHRlbGVtZXRyeSBwdWJsaXNoZWQuXG4iKTsKICAgICAgICBhcGlfb3V0KGFwaV9ldmVudCwgSlNPTi5zdHJpbmdpZnkodGVsZW1ldHJ5KSk7CiAgICB9Cn0gY2F0Y2ggKGUpIHsKICAgIGFwaV9sb2coIltFTlYgRVJST1JdICIgKyBlLnRvU3RyaW5nKCkgKyAiXG4iKTsKfQo=",
+          "cycle": 10
+        },
+        {
+          "script_id": "PoleIoTelemetry",
+          "ds": "periodic_report",
+          "event": "aacra/smartpole/P001/io/telemetry",
+          "param": "1",
+          "code": "Ly8gU21hcnQgUG9sZSBJTyAmIFBvd2VyIFN0YXR1cyBUZWxlbWV0cnkKdHJ5IHsKICAgIHZhciByYXcgPSBKU09OLnBhcnNlKGFwaV9kYXRhKTsKICAgIHZhciBpbyA9IHJhdy5zdWJkZXYgJiYgcmF3LnN1YmRldi5JTzsKICAgIHZhciBnYXRld2F5X3NuID0gcmF3LnNuIHx8ICJHVy1TSU5HTEUiOwoKICAgIGlmIChpbykgewogICAgICAgIHZhciBpb1BheWxvYWQgPSB7CiAgICAgICAgICAgIGdhdGV3YXlfc246IGdhdGV3YXlfc24sCiAgICAgICAgICAgIGRldmljZV9pZDogIklPIiwKICAgICAgICAgICAgdGltZXN0YW1wOiBpby5jdGltZSB8fCBuZXcgRGF0ZSgpLnRvSVNPU3RyaW5nKCksCiAgICAgICAgICAgIGNoYW5uZWxzOiB7CiAgICAgICAgICAgICAgICBhY19vdXQxX2xhbXA6IE51bWJlcihpb1siQUMtT1VUMSJdIHx8IDApLAogICAgICAgICAgICAgICAgYWNfb3V0Ml9zdHJpcDogTnVtYmVyKGlvWyJBQy1PVVQyIl0gfHwgMCksCiAgICAgICAgICAgICAgICBhY19vdXQzX2xlZDogTnVtYmVyKGlvWyJBQy1PVVQzIl0gfHwgMCksCiAgICAgICAgICAgICAgICBzeXN0ZW1fcG93ZXJfZW46IE51bWJlcihpby5zbWFydF9saWdodHBvbGVfZW4gfHwgMCksCiAgICAgICAgICAgICAgICBhY19kY19zd2l0Y2g6IE51bWJlcihpby5hY19kY19zd2l0Y2ggfHwgMCkKICAgICAgICAgICAgfQogICAgICAgIH07CiAgICAgICAgYXBpX291dChhcGlfZXZlbnQsIEpTT04uc3RyaW5naWZ5KGlvUGF5bG9hZCkpOwogICAgfQp9IGNhdGNoIChlKSB7CiAgICBhcGlfbG9nKCJbSU8gRVJST1JdICIgKyBlLnRvU3RyaW5nKCkgKyAiXG4iKTsKfQo=",
+          "cycle": 15
+        },
+        {
+          "script_id": "RgbTelemetry",
+          "ds": "periodic_report",
+          "event": "aacra/smartpole/P001/rgb/telemetry",
+          "param": "1",
+          "code": "Ly8gTW9kYnVzIFJUVSBSR0IgQ29udHJvbGxlciBUZWxlbWV0cnkKdHJ5IHsKICAgIHZhciByYXcgPSBKU09OLnBhcnNlKGFwaV9kYXRhKTsKICAgIHZhciByZ2IgPSByYXcuc3ViZGV2ICYmIHJhdy5zdWJkZXYucmdiX2NvbnRyb2xsZXI7CiAgICB2YXIgZ2F0ZXdheV9zbiA9IHJhdy5zbiB8fCAiR1ctU0lOR0xFIjsKCiAgICBpZiAocmdiICYmIHJnYi5wb3dlcl9zdGF0ZSAhPT0gdW5kZWZpbmVkICYmIHJnYi5wb3dlcl9zdGF0ZSAhPT0gIm51bGwiKSB7CiAgICAgICAgdmFyIHJnYlBheWxvYWQgPSB7CiAgICAgICAgICAgIGdhdGV3YXlfc246IGdhdGV3YXlfc24sCiAgICAgICAgICAgIGRldmljZV9pZDogInJnYl9jb250cm9sbGVyIiwKICAgICAgICAgICAgdGltZXN0YW1wOiByZ2IuY3RpbWUgfHwgbmV3IERhdGUoKS50b0lTT1N0cmluZygpLAogICAgICAgICAgICBzdGF0ZTogewogICAgICAgICAgICAgICAgcG93ZXI6IE51bWJlcihyZ2IucG93ZXJfc3RhdGUgfHwgMCksCiAgICAgICAgICAgICAgICBicmlnaHRuZXNzOiBOdW1iZXIocmdiLmJyaWdodG5lc3MgfHwgMCksCiAgICAgICAgICAgICAgICBtb2RlOiBOdW1iZXIocmdiLmxpZ2h0X21vZGUgfHwgMCksCiAgICAgICAgICAgICAgICByZWQ6IE51bWJlcihyZ2IucmVkX2xldmVsIHx8IDApLAogICAgICAgICAgICAgICAgZ3JlZW46IE51bWJlcihyZ2IuZ3JlZW5fbGV2ZWwgfHwgMCksCiAgICAgICAgICAgICAgICBibHVlOiBOdW1iZXIocmdiLmJsdWVfbGV2ZWwgfHwgMCkKICAgICAgICAgICAgfQogICAgICAgIH07CiAgICAgICAgYXBpX291dChhcGlfZXZlbnQsIEpTT04uc3RyaW5naWZ5KHJnYlBheWxvYWQpKTsKICAgIH0KfSBjYXRjaCAoZSkgewogICAgYXBpX2xvZygiW1JHQiBFUlJPUl0gIiArIGUudG9TdHJpbmcoKSArICJcbiIpOwp9Cg==",
+          "cycle": 10
+        },
+        {
+          "script_id": "CameraFault",
+          "ds": "periodic_report",
+          "event": "aacra/smartpole/P001/camera/fault",
+          "param": "0",
+          "code": "Ly8gQ2FtZXJhIENvbm5lY3Rpdml0eSBGYXVsdCBEaWFnbm9zdGljIENoZWNrCnRyeSB7CiAgICB2YXIgcGluZ1JlcyA9IGFwaV9zeXNfZXhlYygicGluZyAtYyAyIC1XIDIgMTkyLjE2OC40LjEyMCA+L2Rldi9udWxsIDI+JjEgJiYgZWNobyBPSyB8fCBlY2hvIEZBSUwiKTsKICAgIGlmIChwaW5nUmVzICYmIHBpbmdSZXMuaW5kZXhPZigiRkFJTCIpICE9PSAtMSkgewogICAgICAgIHZhciBhbGVydCA9IHsKICAgICAgICAgICAgZGV2aWNlX2lkOiAiY2FtZXJhIiwKICAgICAgICAgICAgc3RhdHVzOiAiT0ZGTElORSIsCiAgICAgICAgICAgIHRhcmdldF9pcDogIjE5Mi4xNjguNC4xMjAiLAogICAgICAgICAgICB0aW1lc3RhbXA6IG5ldyBEYXRlKCkudG9JU09TdHJpbmcoKQogICAgICAgIH07CiAgICAgICAgYXBpX291dChhcGlfZXZlbnQsIEpTT04uc3RyaW5naWZ5KGFsZXJ0KSk7CiAgICB9Cn0gY2F0Y2ggKGUpIHsKICAgIGFwaV9sb2coIltDQU0gQ0hFQ0sgRVJST1JdICIgKyBlLnRvU3RyaW5nKCkgKyAiXG4iKTsKfQo=",
+          "cycle": 30
+        },
+        {
+          "script_id": "ScreenFault",
+          "ds": "periodic_report",
+          "event": "aacra/smartpole/P001/screen/fault",
+          "param": "0",
+          "code": "Ly8gTEVEIFNjcmVlbiBDb25uZWN0aXZpdHkgRmF1bHQgRGlhZ25vc3RpYyBDaGVjawp0cnkgewogICAgdmFyIHBpbmdSZXMgPSBhcGlfc3lzX2V4ZWMoInBpbmcgLWMgMiAtVyAyIDE5Mi4xNjguNC4xMjUgPi9kZXYvbnVsbCAyPiYxICYmIGVjaG8gT0sgfHwgZWNobyBGQUlMIik7CiAgICBpZiAocGluZ1JlcyAmJiBwaW5nUmVzLmluZGV4T2YoIkZBSUwiKSAhPT0gLTEpIHsKICAgICAgICB2YXIgYWxlcnQgPSB7CiAgICAgICAgICAgIGRldmljZV9pZDogInNjcmVlbiIsCiAgICAgICAgICAgIHN0YXR1czogIk9GRkxJTkUiLAogICAgICAgICAgICB0YXJnZXRfaXA6ICIxOTIuMTY4LjQuMTI1IiwKICAgICAgICAgICAgdGltZXN0YW1wOiBuZXcgRGF0ZSgpLnRvSVNPU3RyaW5nKCkKICAgICAgICB9OwogICAgICAgIGFwaV9vdXQoYXBpX2V2ZW50LCBKU09OLnN0cmluZ2lmeShhbGVydCkpOwogICAgfQp9IGNhdGNoIChlKSB7CiAgICBhcGlfbG9nKCJbU0NSRUVOIENIRUNLIEVSUk9SXSAiICsgZS50b1N0cmluZygpICsgIlxuIik7Cn0K",
+          "cycle": 30
+        }
+      ],
+      "script_down": [
+        {
+          "script_id": "LampControl",
+          "ds": "form_server",
+          "event": "aacra/smartpole/P001/lamp/command",
+          "param": "0",
+          "code": "Ly8gRG93bmxpbmsgU3RyZWV0bGlnaHQgLyBMYW1wIENvbnRyb2wgSGFuZGxlcgphcGlfbG9nKCI9PT0gTGFtcCBDb21tYW5kIFJlY2VpdmVkID09PVxuIiArIGFwaV9kYXRhICsgIlxuIik7CnRyeSB7CiAgICB2YXIgcGF5bG9hZCA9IGFwaV9kYXRhLnJlcGxhY2UoLycvZywgJyInKTsKICAgIHBheWxvYWQgPSBwYXlsb2FkLnJlcGxhY2UoLyhbeyxdXFxzKikoW2EtekEtWjAtOV9cXC1dKylcXHMqOi9nLCAnJDEiJDIiOicpOwogICAgdmFyIGNtZCA9IEpTT04ucGFyc2UocGF5bG9hZCk7CgogICAgdmFyIHN0YXRlID0gY21kLnN0YXRlICE9PSB1bmRlZmluZWQgPyBTdHJpbmcoY21kLnN0YXRlKSA6IChjbWRbIkFDLU9VVDEiXSAhPT0gdW5kZWZpbmVkID8gU3RyaW5nKGNtZFsiQUMtT1VUMSJdKSA6ICIxIik7CgogICAgYXBpX2xvZygiU2V0dGluZyBBQy1PVVQxIChMYW1wKSA9ICIgKyBzdGF0ZSArICJcbiIpOwogICAgYXBpX3dyaXRlX25vZGUoIklPIiwgIkFDLU9VVDEiLCBzdGF0ZSk7CiAgICBhcGlfd3JpdGVfbm9kZSgiSU8iLCAic21hcnRfbGlnaHRwb2xlX2VuIiwgIjEiKTsKICAgIGFwaV93cml0ZV9ub2RlKCJJTyIsICJhY19kY19zd2l0Y2giLCAiMSIpOwp9IGNhdGNoIChlKSB7CiAgICBhcGlfbG9nKCJbQ01EIEVSUk9SXSAiICsgZS50b1N0cmluZygpICsgIlxuIik7Cn0K",
+          "cycle": 0
+        },
+        {
+          "script_id": "RgbControl",
+          "ds": "form_server",
+          "event": "aacra/smartpole/P001/rgb/command",
+          "param": "0",
+          "code": "Ly8gRG93bmxpbmsgTW9kYnVzIFJHQiBDb250cm9sbGVyIEhhbmRsZXIKYXBpX2xvZygiPT09IFJHQiBDb250cm9sbGVyIENvbW1hbmQgUmVjZWl2ZWQgPT09XG4iICsgYXBpX2RhdGEgKyAiXG4iKTsKdHJ5IHsKICAgIHZhciBwYXlsb2FkID0gYXBpX2RhdGEucmVwbGFjZSgvJy9nLCAnIicpOwogICAgcGF5bG9hZCA9IHBheWxvYWQucmVwbGFjZSgvKFt7LF1cXHMqKShbYS16QS1aMC05X1xcLV0rKVxccyo6L2csICckMSIkMiI6Jyk7CiAgICB2YXIgY21kID0gSlNPTi5wYXJzZShwYXlsb2FkKTsKCiAgICBpZiAoY21kLnBvd2VyICE9PSB1bmRlZmluZWQpIGFwaV93cml0ZV9ub2RlKCJyZ2JfY29udHJvbGxlciIsICJwb3dlcl9zdGF0ZSIsIFN0cmluZyhjbWQucG93ZXIpKTsKICAgIGlmIChjbWQuYnJpZ2h0bmVzcyAhPT0gdW5kZWZpbmVkKSBhcGlfd3JpdGVfbm9kZSgicmdiX2NvbnRyb2xsZXIiLCAiYnJpZ2h0bmVzcyIsIFN0cmluZyhjbWQuYnJpZ2h0bmVzcykpOwogICAgaWYgKGNtZC5tb2RlICE9PSB1bmRlZmluZWQpIGFwaV93cml0ZV9ub2RlKCJyZ2JfY29udHJvbGxlciIsICJsaWdodF9tb2RlIiwgU3RyaW5nKGNtZC5tb2RlKSk7CiAgICBpZiAoY21kLnIgIT09IHVuZGVmaW5lZCkgYXBpX3dyaXRlX25vZGUoInJnYl9jb250cm9sbGVyIiwgInJlZF9sZXZlbCIsIFN0cmluZyhjbWQucikpOwogICAgaWYgKGNtZC5nICE9PSB1bmRlZmluZWQpIGFwaV93cml0ZV9ub2RlKCJyZ2JfY29udHJvbGxlciIsICJncmVlbl9sZXZlbCIsIFN0cmluZyhjbWQuZykpOwogICAgaWYgKGNtZC5iICE9PSB1bmRlZmluZWQpIGFwaV93cml0ZV9ub2RlKCJyZ2JfY29udHJvbGxlciIsICJibHVlX2xldmVsIiwgU3RyaW5nKGNtZC5iKSk7Cn0gY2F0Y2ggKGUpIHsKICAgIGFwaV9sb2coIltSR0IgQ01EIEVSUk9SXSAiICsgZS50b1N0cmluZygpICsgIlxuIik7Cn0K",
+          "cycle": 0
+        }
+      ]
+    }
+  },
+  "ct_datanodes": {
+    "testserver": [
+      {
+        "plc_id": "enviromental",
+        "portid": "Noise",
+        "change_report": false
+      },
+      {
+        "plc_id": "enviromental",
+        "portid": "PM1",
+        "change_report": false
+      },
+      {
+        "plc_id": "enviromental",
+        "portid": "PM10",
+        "change_report": false
+      },
+      {
+        "plc_id": "enviromental",
+        "portid": "Tsp",
+        "change_report": false
+      },
+      {
+        "plc_id": "enviromental",
+        "portid": "neg_oxygen_ions",
+        "change_report": false
+      },
+      {
+        "plc_id": "enviromental",
+        "portid": "CO2",
+        "change_report": false
+      },
+      {
+        "plc_id": "enviromental",
+        "portid": "Uv_index",
+        "change_report": false
+      },
+      {
+        "plc_id": "enviromental",
+        "portid": "Illuminance",
+        "change_report": false
+      },
+      {
+        "plc_id": "enviromental",
+        "portid": "Radiation",
+        "change_report": false
+      },
+      {
+        "plc_id": "enviromental",
+        "portid": "Rainfall",
+        "change_report": false
+      },
+      {
+        "plc_id": "enviromental",
+        "portid": "Wind_direction",
+        "change_report": false
+      },
+      {
+        "plc_id": "enviromental",
+        "portid": "Wind_speed",
+        "change_report": false
+      },
+      {
+        "plc_id": "enviromental",
+        "portid": "pressure",
+        "change_report": false
+      },
+      {
+        "plc_id": "enviromental",
+        "portid": "Humidity",
+        "change_report": false
+      },
+      {
+        "plc_id": "enviromental",
+        "portid": "PM2.5",
+        "change_report": false
+      },
+      {
+        "plc_id": "enviromental",
+        "portid": "O3",
+        "change_report": false
+      },
+      {
+        "plc_id": "enviromental",
+        "portid": "CO",
+        "change_report": false
+      },
+      {
+        "plc_id": "enviromental",
+        "portid": "NO2",
+        "change_report": false
+      },
+      {
+        "plc_id": "enviromental",
+        "portid": "SO2",
+        "change_report": false
+      },
+      {
+        "plc_id": "enviromental",
+        "portid": "H2s_tvoc",
+        "change_report": false
+      },
+      {
+        "plc_id": "enviromental",
+        "portid": "Temperature",
+        "change_report": false
+      },
+      {
+        "plc_id": "IO",
+        "portid": "AC-OUT3",
+        "change_report": false
+      },
+      {
+        "plc_id": "IO",
+        "portid": "AC-OUT2",
+        "change_report": false
+      },
+      {
+        "plc_id": "IO",
+        "portid": "AC-OUT1",
+        "change_report": false
+      },
+      {
+        "plc_id": "IO",
+        "portid": "ac_dc_switch",
+        "change_report": false
+      },
+      {
+        "plc_id": "IO",
+        "portid": "smart_lightpole_en",
+        "change_report": false
+      },
+      {
+        "plc_id": "rgb_controller",
+        "portid": "red_level",
+        "change_report": false
+      },
+      {
+        "plc_id": "rgb_controller",
+        "portid": "green_level",
+        "change_report": false
+      },
+      {
+        "plc_id": "rgb_controller",
+        "portid": "blue_level",
+        "change_report": false
+      },
+      {
+        "plc_id": "rgb_controller",
+        "portid": "brightness",
+        "change_report": false
+      },
+      {
+        "plc_id": "rgb_controller",
+        "portid": "light_mode",
+        "change_report": false
+      },
+      {
+        "plc_id": "rgb_controller",
+        "portid": "power_state",
+        "change_report": false
+      }
+    ]
+  },
+  "backup_metadata": {
+    "gateway_id": "GW_P001",
+    "gateway_ip": "192.168.4.1",
+    "timestamp": "20261012_165101",
+    "tag": "PRE_PROVISION",
+    "filename": "GW_P001_192.168.4.1_20261012_165101_PRE_PROVISION.json"
+  }
+}

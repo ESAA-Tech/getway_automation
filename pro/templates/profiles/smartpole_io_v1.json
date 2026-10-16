@@ -1,0 +1,70 @@
+{
+  "profile_id": "smartpole_io_v1",
+  "description": "Smart Pole Internal Power & Relay IO Box",
+  "device_defaults": {
+    "manufacturer": "MFR_LOCAL",
+    "devtyp": "PLC_FF_BOX",
+    "channel": "ethernet",
+    "devaddr_str": "0",
+    "acq_intv": 500,
+    "acqtimeout": 500,
+    "optimization": true
+  },
+  "registers": [
+    {
+      "portid": "AC-OUT1",
+      "startaddr": "0",
+      "addrtype": "01(0X)",
+      "datatype": "bool",
+      "datanum": 1,
+      "rdwr": "rw",
+      "cal_type": "disabled",
+      "formula": "",
+      "description": "Luminaire / Main Streetlight AC Power Relay"
+    },
+    {
+      "portid": "AC-OUT2",
+      "startaddr": "1",
+      "addrtype": "01(0X)",
+      "datatype": "bool",
+      "datanum": 1,
+      "rdwr": "rw",
+      "cal_type": "disabled",
+      "formula": "",
+      "description": "Accent Light / LED Strip AC Power Relay"
+    },
+    {
+      "portid": "AC-OUT3",
+      "startaddr": "2",
+      "addrtype": "01(0X)",
+      "datatype": "bool",
+      "datanum": 1,
+      "rdwr": "rw",
+      "cal_type": "disabled",
+      "formula": "",
+      "description": "Auxiliary Light / LED Display Power Relay"
+    },
+    {
+      "portid": "smart_lightpole_en",
+      "startaddr": "3",
+      "addrtype": "01(0X)",
+      "datatype": "bool",
+      "datanum": 1,
+      "rdwr": "rw",
+      "cal_type": "disabled",
+      "formula": "",
+      "description": "Smart Pole System Master Power Enable"
+    },
+    {
+      "portid": "ac_dc_switch",
+      "startaddr": "4",
+      "addrtype": "01(0X)",
+      "datatype": "bool",
+      "datanum": 1,
+      "rdwr": "rw",
+      "cal_type": "disabled",
+      "formula": "",
+      "description": "AC / DC Power Converter Interlock"
+    }
+  ]
+}

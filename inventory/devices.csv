@@ -1,0 +1,5 @@
+gateway_id,plc_id,channel,device_type,manufacturer,target_ip,target_port,slave_id,interval_ms,timeout_ms,description
+GW-001,Screen,ethernet,PLC_FF_BOX,MFR_LOCAL,192.168.4.125,0,0,500,500,LED Display Screen
+GW-001,enviromental,RS485-1,PLC_MDBS_RTU,MFR_MODBUS,,,255,500,1000,Environmental Weather Sensor
+GW-001,IO,ethernet,PLC_FF_BOX,MFR_LOCAL,,,0,500,500,Smart Pole IO Controller
+GW-001,rgb_controller,RS485-2,PLC_MDBS_RTU,MFR_MODBUS,,,1,500,1000,RGB Controller Sensor

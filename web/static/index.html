@@ -1,0 +1,274 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Four-Faith Edge Gateway Automated Provisioning Station">
+  <title>Gateway Provisioning Station</title>
+  <link rel="stylesheet" href="/static/css/tokens.css">
+  <link rel="stylesheet" href="/static/css/style.css">
+</head>
+<body>
+  <div class="app-container">
+    
+    <!-- Header -->
+    <header class="top-header">
+      <div class="brand-section">
+        <div class="brand-logo" id="brand-logo">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+            <path d="M12 2L2 7l10 5 10-5-10-5zM2 17l10 5 10-5M2 12l10 5 10-5"/>
+          </svg>
+        </div>
+        <div class="brand-title">
+          <h1>Four-Faith Gateway Provisioning Station</h1>
+          <p>Automated Device Registration • Datanode Injection • Cloud Uplink • Message Management</p>
+        </div>
+      </div>
+
+      <div class="header-actions">
+        <div class="gateway-selector-wrap" style="display: flex; align-items: center; gap: 0.5rem;">
+          <div class="status-indicator" id="status-indicator">
+            <div class="status-dot"></div>
+            <span id="status-text">CONNECTING...</span>
+          </div>
+          <select id="gateway-select" class="gateway-select" aria-label="Select Target Gateway">
+            <option value="192.168.4.1">GW-001 (192.168.4.1)</option>
+            <option value="custom">+ Custom Gateway IP...</option>
+          </select>
+          <input type="text" id="inp-custom-gw-ip" class="custom-select" style="display: none; width: 145px; padding: 0.45rem 0.6rem; font-size: 0.85rem; font-family: var(--font-mono);" placeholder="192.168.6.1">
+          <button id="btn-custom-gw-connect" class="btn-command" style="display: none; padding: 0.45rem 0.75rem; font-size: 0.8rem; background: var(--accent-cyan); color: #000; font-weight: 700; border-radius: var(--radius-sm); border: none; cursor: pointer;">Connect</button>
+        </div>
+      </div>
+    </header>
+
+    <!-- Main Provisioning Workspace Grid -->
+    <main class="control-grid" style="grid-template-columns: 1fr 1fr; margin-bottom: 1.5rem;">
+      
+      <!-- Section 1: Child Devices & Variables -->
+      <section class="card" id="card-devices">
+        <div class="card-header">
+          <div class="card-title">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <rect x="2" y="3" width="20" height="14" rx="2" ry="2"/>
+              <line x1="8" y1="21" x2="16" y2="21"/>
+              <line x1="12" y1="17" x2="12" y2="21"/>
+            </svg>
+            <h2>1. Child Devices to Write</h2>
+          </div>
+          <span class="badge">4 Hardware Targets</span>
+        </div>
+
+        <div class="relays-list">
+          <!-- Device 1: Screen -->
+          <div class="relay-item" style="flex-direction: column; align-items: flex-start; gap: 0.5rem;">
+            <div style="display: flex; justify-content: space-between; width: 100%; align-items: center;">
+              <div>
+                <h4 style="color: var(--accent-cyan);">Screen (LED Display)</h4>
+                <p>Ethernet Device • Driver: PLC_FF_BOX • Port: 0</p>
+              </div>
+              <span class="badge" style="background: rgba(6, 182, 212, 0.15); color: var(--accent-cyan);">Ethernet</span>
+            </div>
+            <div style="display: flex; align-items: center; gap: 0.75rem; width: 100%;">
+              <label for="inp-screen-ip" style="font-size: 0.8rem; color: var(--text-muted); font-weight: 600;">Screen IP:</label>
+              <input type="text" id="inp-screen-ip" class="custom-select" style="padding: 0.4rem 0.75rem; font-size: 0.85rem;" value="192.168.4.125" placeholder="192.168.4.125">
+            </div>
+          </div>
+
+          <!-- Device 2: Environmental -->
+          <div class="relay-item">
+            <div class="relay-meta">
+              <h4 style="color: var(--accent-emerald);">enviromental (Weather Station)</h4>
+              <p>RS485-1 • Modbus RTU • Slave ID: 255 • 21 Registered Variables</p>
+            </div>
+            <span class="badge" style="background: rgba(16, 185, 129, 0.15); color: var(--accent-emerald);">21 Tags</span>
+          </div>
+
+          <!-- Device 3: IO -->
+          <div class="relay-item">
+            <div class="relay-meta">
+              <h4 style="color: var(--accent-amber);">IO (Smart Pole Relay Box)</h4>
+              <p>Ethernet • PLC_FF_BOX • AC-OUT1, AC-OUT2, AC-OUT3, power_en, switch</p>
+            </div>
+            <span class="badge" style="background: rgba(245, 158, 11, 0.15); color: var(--accent-amber);">5 Relays</span>
+          </div>
+
+          <!-- Device 4: RGB Controller -->
+          <div class="relay-item">
+            <div class="relay-meta">
+              <h4 style="color: var(--accent-purple);">rgb_controller (RGB Luminaire)</h4>
+              <p>RS485-2 • Modbus RTU • Slave ID: 1 • 6 Holding Registers</p>
+            </div>
+            <span class="badge" style="background: rgba(168, 85, 247, 0.15); color: var(--accent-purple);">6 Registers</span>
+          </div>
+        </div>
+      </section>
+
+      <!-- Section 2: Cloud List & Broker Setup -->
+      <section class="card" id="card-cloud">
+        <div class="card-header">
+          <div class="card-title">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <path d="M18 10h-1.26A8 8 0 1 0 9 20h9a5 5 0 0 0 0-10z"/>
+            </svg>
+            <h2>2. Cloud List & MQTT User</h2>
+          </div>
+          <span class="badge">Uplink Profile</span>
+        </div>
+
+        <div style="display: flex; flex-direction: column; gap: 0.9rem;">
+          <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 0.75rem;">
+            <div>
+              <label for="inp-cloud-id" style="font-size: 0.8rem; font-weight: 600; color: var(--text-muted); display: block; margin-bottom: 0.25rem;">Cloud ID (ct_id):</label>
+              <input type="text" id="inp-cloud-id" class="custom-select" value="testserver" placeholder="testserver">
+            </div>
+            <div>
+              <label for="inp-client-prefix" style="font-size: 0.8rem; font-weight: 600; color: var(--text-muted); display: block; margin-bottom: 0.25rem;">Client ID Prefix:</label>
+              <input type="text" id="inp-client-prefix" class="custom-select" value="scmp-pole" placeholder="scmp-pole">
+            </div>
+          </div>
+
+          <div style="display: grid; grid-template-columns: 2fr 1fr; gap: 0.75rem;">
+            <div>
+              <label for="inp-broker-url" style="font-size: 0.8rem; font-weight: 600; color: var(--text-muted); display: block; margin-bottom: 0.25rem;">Broker IP / Hostname:</label>
+              <input type="text" id="inp-broker-url" class="custom-select" value="192.168.4.124" placeholder="192.168.4.124">
+            </div>
+            <div>
+              <label for="inp-broker-port" style="font-size: 0.8rem; font-weight: 600; color: var(--text-muted); display: block; margin-bottom: 0.25rem;">Port:</label>
+              <input type="number" id="inp-broker-port" class="custom-select" value="1883">
+            </div>
+          </div>
+
+          <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 0.75rem;">
+            <div>
+              <label for="inp-mqtt-user" style="font-size: 0.8rem; font-weight: 600; color: var(--text-muted); display: block; margin-bottom: 0.25rem;">MQTT Username:</label>
+              <input type="text" id="inp-mqtt-user" class="custom-select" value="gw-pole-test" placeholder="gw-pole-test">
+            </div>
+            <div>
+              <label for="inp-mqtt-pass" style="font-size: 0.8rem; font-weight: 600; color: var(--text-muted); display: block; margin-bottom: 0.25rem;">MQTT Password:</label>
+              <input type="password" id="inp-mqtt-pass" class="custom-select" value="gateway_secret" placeholder="gateway_secret">
+            </div>
+          </div>
+
+          <div style="padding: 0.75rem 1rem; background: rgba(0,0,0,0.25); border-radius: var(--radius-md); border: 1px solid var(--border-subtle); display: flex; align-items: center; gap: 0.5rem;">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="var(--accent-emerald)" stroke-width="2">
+              <polyline points="20 6 9 17 4 12"/>
+            </svg>
+            <span style="font-size: 0.8rem; color: #cbd5e1;">Automatically import all 32 child device variables to this cloud uplink</span>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <!-- Section 3: Pole Number & Topic Hierarchy Preview -->
+    <section class="card" id="card-pole-setup" style="margin-bottom: 1.5rem;">
+      <div class="card-header">
+        <div class="card-title">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+            <circle cx="12" cy="12" r="10"/>
+            <polyline points="12 6 12 12 16 14"/>
+          </svg>
+          <h2>3. Script Template & Pole Number Selection</h2>
+        </div>
+        <span class="badge" id="badge-script-count">24 UP / 5 DOWN Scripts</span>
+      </div>
+
+      <div style="display: grid; grid-template-columns: 1fr 2fr; gap: 1.5rem; align-items: flex-start;">
+        <div style="display: flex; flex-direction: column; gap: 0.75rem;">
+          <div>
+            <label for="sel-script-source" style="font-size: 0.85rem; font-weight: 700; color: var(--text-main); display: block; margin-bottom: 0.35rem;">
+              Script Source (Exact & Unmodified):
+            </label>
+            <select id="sel-script-source" class="custom-select" style="font-size: 0.95rem; font-weight: 700; padding: 0.55rem 0.75rem; color: var(--accent-cyan);">
+              <option value="testserver" selected>testserver (Exact Original - 24 UP / 5 DOWN)</option>
+              <option value="test">test (Exact Original - 20 UP / 5 DOWN)</option>
+              <option value="consolidated">SCMP Standard (Consolidated - 5 UP / 2 DOWN)</option>
+            </select>
+            <p style="font-size: 0.75rem; color: var(--accent-emerald); margin-top: 0.35rem; font-weight: 600;">
+              ✓ Retains exact script names, repetition, and parameters from gateway.
+            </p>
+          </div>
+          <div>
+            <label for="inp-pole-id" style="font-size: 0.85rem; font-weight: 700; color: var(--text-main); display: block; margin-bottom: 0.35rem;">
+              Selected Pole Number:
+            </label>
+            <input type="text" id="inp-pole-id" class="custom-select" style="font-size: 1.1rem; font-weight: 700; padding: 0.6rem 0.75rem; color: var(--accent-cyan);" value="P001" placeholder="P001">
+          </div>
+          <div>
+            <label for="inp-site-id" style="font-size: 0.85rem; font-weight: 700; color: var(--text-main); display: block; margin-bottom: 0.35rem;">
+              Site Identifier:
+            </label>
+            <input type="text" id="inp-site-id" class="custom-select" style="font-size: 0.95rem; font-weight: 600; padding: 0.5rem 0.75rem; color: var(--accent-emerald);" value="default-site" placeholder="default-site">
+          </div>
+        </div>
+
+        <div style="background: rgba(0,0,0,0.3); border: 1px solid var(--border-subtle); border-radius: var(--radius-md); padding: 0.9rem 1.25rem;">
+          <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 0.5rem;">
+            <div style="font-size: 0.75rem; font-weight: 700; color: var(--text-muted); text-transform: uppercase;">Exact Script Injections:</div>
+            <span id="preview-clientid-badge" style="font-family: var(--font-mono); font-size: 0.75rem; color: var(--accent-cyan);">Client: scmp-pole-P001</span>
+          </div>
+
+          <div id="preview-exact-container" style="display: flex; flex-direction: column; gap: 0.5rem;">
+            <div>
+              <span style="font-size: 0.75rem; font-weight: 600; color: var(--accent-emerald);">Upstream Scripts (Exact IDs):</span>
+              <div id="preview-up-names" style="font-family: var(--font-mono); font-size: 0.72rem; color: #cbd5e1; margin-top: 0.2rem; line-height: 1.4; word-break: break-all;">
+                Publish, Temperature, Noise, S02, NO2, CO, O3, PM10, Humidity, Pressure, Wind speed, Rainfall, Winddirection, Radiation, Illuminance, UV index, CO2, Negative O2 ions, TSP, PM1, ack, camera_status, led_screen_status
+              </div>
+            </div>
+            <div style="border-top: 1px solid rgba(255,255,255,0.06); padding-top: 0.4rem;">
+              <span style="font-size: 0.75rem; font-weight: 600; color: var(--accent-amber);">Downstream Scripts (Exact IDs):</span>
+              <div id="preview-down-names" style="font-family: var(--font-mono); font-size: 0.72rem; color: #cbd5e1; margin-top: 0.2rem; line-height: 1.4;">
+                Subscribe, LampControlTopic, new, testsub, LedScreenControl
+              </div>
+            </div>
+            <div style="border-top: 1px solid rgba(255,255,255,0.06); padding-top: 0.4rem; font-family: var(--font-mono); font-size: 0.72rem; color: #94a3b8; display: flex; flex-direction: column; gap: 0.25rem;">
+              <div>• <span style="color: var(--accent-cyan);">Env Telemetry:</span> <span id="topic-env">scmp/v1/5efa910f-8e17-4443-af76-8b0a674d23f5/Pole-CBD-3444/env/29748b52-5203-49de-8221-7f9df657e28e/telemetry</span></div>
+              <div>• <span style="color: var(--accent-emerald);">Camera Status:</span> <span id="topic-camera">scmp/v1/5efa910f-8e17-4443-af76-8b0a674d23f5/Pole-CBD-3444/camera/camera-01/status</span></div>
+              <div>• <span style="color: var(--accent-purple);">Screen Status:</span> <span id="topic-screen">scmp/v1/5efa910f-8e17-4443-af76-8b0a674d23f5/Pole-CBD-3444/screen/screen-01/status</span></div>
+              <div>• <span style="color: var(--accent-amber);">Lamp Command:</span> <span id="topic-lamp">scmp/v1/.../lamp/.../cmd/control</span></div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Execution Bar (Write to Gateway) -->
+    <div style="display: flex; gap: 1rem; margin-bottom: 1.5rem;">
+      <button class="btn-command primary" id="btn-write-single" style="flex: 2; padding: 1.25rem 2rem; justify-content: center; font-size: 1.1rem; gap: 0.75rem;">
+        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+          <polyline points="20 6 9 17 4 12"/>
+        </svg>
+        Write All Configuration to This Gateway
+      </button>
+
+      <button class="btn-command" id="btn-write-all" style="flex: 1; padding: 1.25rem 1.5rem; justify-content: center; font-size: 0.95rem; gap: 0.5rem; border-color: rgba(99, 102, 241, 0.4);">
+        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+          <path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/>
+          <circle cx="9" cy="7" r="4"/>
+          <path d="M23 21v-2a4 4 0 0 0-3-3.87"/>
+          <path d="M16 3.13a4 4 0 0 1 0 7.75"/>
+        </svg>
+        Duplicate & Write to All Gateways on LAN
+      </button>
+    </div>
+
+    <!-- Live Execution Status Log -->
+    <section class="terminal-card" aria-label="Provisioning Execution Log">
+      <div class="terminal-header">
+        <span>Provisioning Execution Stream</span>
+        <span id="log-status-badge" style="color: var(--accent-cyan);">READY</span>
+      </div>
+      <div class="terminal-body" id="terminal-body" style="height: 180px;">
+        <div class="log-entry info">[System] Gateway Provisioning Station Ready. Configure parameters above and press 'Write All Configuration'.</div>
+      </div>
+    </section>
+
+  </div>
+
+  <!-- Toast Container -->
+  <div id="toast-container" aria-live="polite"></div>
+
+  <!-- Scripts -->
+  <script src="/static/js/api.js"></script>
+  <script src="/static/js/app.js"></script>
+</body>
+</html>

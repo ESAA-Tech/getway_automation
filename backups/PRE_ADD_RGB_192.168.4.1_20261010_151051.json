@@ -1,0 +1,720 @@
+{
+  "gateway_ip": "192.168.4.1",
+  "devices": [
+    {
+      "chn_en": true,
+      "acq_intv": 500,
+      "acqtimeout": 500,
+      "cmd_acqdelay": 0,
+      "manufacturer": "MFR_LOCAL",
+      "devtyp": "PLC_FF_BOX",
+      "optimization": true,
+      "devaddr_str": "0",
+      "channel": "ethernet",
+      "ipaddr": "192.168.4.125",
+      "port": 0,
+      "bit16_order": "ab",
+      "bit32_order": "abcd",
+      "flt32_order": "abcd",
+      "bit16_order_d": "ab",
+      "bit32_order_d": "abcd",
+      "flt32_order_d": "abcd",
+      "plc_id": "Screen"
+    },
+    {
+      "chn_en": true,
+      "acq_intv": 500,
+      "acqtimeout": 1000,
+      "cmd_acqdelay": 0,
+      "manufacturer": "MFR_MODBUS",
+      "devtyp": "PLC_MDBS_RTU",
+      "optimization": true,
+      "devaddr_str": "255",
+      "channel": "RS485-1",
+      "ipaddr": "",
+      "port": 0,
+      "bit16_order": "ab",
+      "bit32_order": "abcd",
+      "flt32_order": "abcd",
+      "bit16_order_d": "ab",
+      "bit32_order_d": "abcd",
+      "flt32_order_d": "abcd",
+      "plc_id": "enviromental"
+    },
+    {
+      "chn_en": true,
+      "acq_intv": 500,
+      "acqtimeout": 500,
+      "cmd_acqdelay": 0,
+      "manufacturer": "MFR_LOCAL",
+      "devtyp": "PLC_FF_BOX",
+      "optimization": true,
+      "devaddr_str": "0",
+      "channel": "ethernet",
+      "ipaddr": "",
+      "port": 0,
+      "bit16_order": "ab",
+      "bit32_order": "abcd",
+      "flt32_order": "abcd",
+      "bit16_order_d": "ab",
+      "bit32_order_d": "abcd",
+      "flt32_order_d": "abcd",
+      "plc_id": "IO"
+    },
+    {
+      "chn_en": true,
+      "acq_intv": 500,
+      "acqtimeout": 1000,
+      "cmd_acqdelay": 0,
+      "manufacturer": "MFR_MODBUS",
+      "devtyp": "PLC_MDBS_RTU",
+      "optimization": true,
+      "devaddr_str": "1",
+      "channel": "RS485-2",
+      "ipaddr": "",
+      "port": 0,
+      "bit16_order": "ab",
+      "bit32_order": "abcd",
+      "flt32_order": "abcd",
+      "bit16_order_d": "ab",
+      "bit32_order_d": "abcd",
+      "flt32_order_d": "abcd",
+      "plc_id": "rgb_controller"
+    }
+  ],
+  "datanodes": {
+    "Screen": [],
+    "enviromental": [
+      {
+        "portid": "PM1",
+        "rdwr": "rw",
+        "datanum": 1,
+        "datatype": "u16",
+        "cal_type": "disabled",
+        "map_up_o": "",
+        "map_down_o": "",
+        "map_up_t": "",
+        "map_down_t": "",
+        "formula": "",
+        "startaddr": "21",
+        "addrtype": "03(4X)",
+        "int_bit": "",
+        "decimal_bit": ""
+      },
+      {
+        "portid": "PM10",
+        "rdwr": "rw",
+        "datanum": 1,
+        "datatype": "u16",
+        "cal_type": "disabled",
+        "map_up_o": "",
+        "map_down_o": "",
+        "map_up_t": "",
+        "map_down_t": "",
+        "formula": "",
+        "startaddr": "8",
+        "addrtype": "03(4X)",
+        "int_bit": "",
+        "decimal_bit": ""
+      },
+      {
+        "portid": "Tsp",
+        "rdwr": "rw",
+        "datanum": 1,
+        "datatype": "u16",
+        "cal_type": "disabled",
+        "map_up_o": "",
+        "map_down_o": "",
+        "map_up_t": "",
+        "map_down_t": "",
+        "formula": "",
+        "startaddr": "20",
+        "addrtype": "03(4X)",
+        "int_bit": "",
+        "decimal_bit": ""
+      },
+      {
+        "portid": "neg_oxygen_ions",
+        "rdwr": "rw",
+        "datanum": 1,
+        "datatype": "u16",
+        "cal_type": "cal",
+        "map_up_o": "",
+        "map_down_o": "",
+        "map_up_t": "",
+        "map_down_t": "",
+        "formula": "${this}*10",
+        "startaddr": "19",
+        "addrtype": "03(4X)",
+        "int_bit": "",
+        "decimal_bit": ""
+      },
+      {
+        "portid": "CO2",
+        "rdwr": "rw",
+        "datanum": 1,
+        "datatype": "u16",
+        "cal_type": "disabled",
+        "map_up_o": "",
+        "map_down_o": "",
+        "map_up_t": "",
+        "map_down_t": "",
+        "formula": "",
+        "startaddr": "18",
+        "addrtype": "03(4X)",
+        "int_bit": "",
+        "decimal_bit": ""
+      },
+      {
+        "portid": "Uv_index",
+        "rdwr": "rw",
+        "datanum": 1,
+        "datatype": "u16",
+        "cal_type": "disabled",
+        "map_up_o": "",
+        "map_down_o": "",
+        "map_up_t": "",
+        "map_down_t": "",
+        "formula": "",
+        "startaddr": "17",
+        "addrtype": "03(4X)",
+        "int_bit": "",
+        "decimal_bit": ""
+      },
+      {
+        "portid": "Illuminance",
+        "rdwr": "rw",
+        "datanum": 1,
+        "datatype": "u16",
+        "cal_type": "cal",
+        "map_up_o": "",
+        "map_down_o": "",
+        "map_up_t": "",
+        "map_down_t": "",
+        "formula": "${this}/100",
+        "startaddr": "16",
+        "addrtype": "03(4X)",
+        "int_bit": "",
+        "decimal_bit": ""
+      },
+      {
+        "portid": "Radiation",
+        "rdwr": "rw",
+        "datanum": 1,
+        "datatype": "u16",
+        "cal_type": "disabled",
+        "map_up_o": "",
+        "map_down_o": "",
+        "map_up_t": "",
+        "map_down_t": "",
+        "formula": "",
+        "startaddr": "15",
+        "addrtype": "03(4X)",
+        "int_bit": "",
+        "decimal_bit": ""
+      },
+      {
+        "portid": "Rainfall",
+        "rdwr": "rw",
+        "datanum": 1,
+        "datatype": "u16",
+        "cal_type": "cal",
+        "map_up_o": "",
+        "map_down_o": "",
+        "map_up_t": "",
+        "map_down_t": "",
+        "formula": "${this}/10",
+        "startaddr": "14",
+        "addrtype": "03(4X)",
+        "int_bit": "",
+        "decimal_bit": ""
+      },
+      {
+        "portid": "Wind_direction",
+        "rdwr": "rw",
+        "datanum": 1,
+        "datatype": "u16",
+        "cal_type": "cal",
+        "map_up_o": "",
+        "map_down_o": "",
+        "map_up_t": "",
+        "map_down_t": "",
+        "formula": "${this}/10",
+        "startaddr": "13",
+        "addrtype": "03(4X)",
+        "int_bit": "",
+        "decimal_bit": ""
+      },
+      {
+        "portid": "Wind_speed",
+        "rdwr": "rw",
+        "datanum": 1,
+        "datatype": "u16",
+        "cal_type": "cal",
+        "map_up_o": "",
+        "map_down_o": "",
+        "map_up_t": "",
+        "map_down_t": "",
+        "formula": "${this}/100",
+        "startaddr": "12",
+        "addrtype": "03(4X)",
+        "int_bit": "",
+        "decimal_bit": ""
+      },
+      {
+        "portid": "pressure",
+        "rdwr": "rw",
+        "datanum": 1,
+        "datatype": "u16",
+        "cal_type": "cal",
+        "map_up_o": "",
+        "map_down_o": "",
+        "map_up_t": "",
+        "map_down_t": "",
+        "formula": "${this}/10",
+        "startaddr": "11",
+        "addrtype": "03(4X)",
+        "int_bit": "",
+        "decimal_bit": ""
+      },
+      {
+        "portid": "Humidity",
+        "rdwr": "rw",
+        "datanum": 1,
+        "datatype": "u16",
+        "cal_type": "cal",
+        "map_up_o": "",
+        "map_down_o": "",
+        "map_up_t": "",
+        "map_down_t": "",
+        "formula": "${this}/100",
+        "startaddr": "10",
+        "addrtype": "03(4X)",
+        "int_bit": "",
+        "decimal_bit": ""
+      },
+      {
+        "portid": "PM2.5",
+        "rdwr": "rw",
+        "datanum": 1,
+        "datatype": "u16",
+        "cal_type": "disabled",
+        "map_up_o": "",
+        "map_down_o": "",
+        "map_up_t": "",
+        "map_down_t": "",
+        "formula": "",
+        "startaddr": "7",
+        "addrtype": "03(4X)",
+        "int_bit": "",
+        "decimal_bit": ""
+      },
+      {
+        "portid": "O3",
+        "rdwr": "rw",
+        "datanum": 1,
+        "datatype": "u16",
+        "cal_type": "disabled",
+        "map_up_o": "",
+        "map_down_o": "",
+        "map_up_t": "",
+        "map_down_t": "",
+        "formula": "",
+        "startaddr": "6",
+        "addrtype": "03(4X)",
+        "int_bit": "",
+        "decimal_bit": ""
+      },
+      {
+        "portid": "CO",
+        "rdwr": "rw",
+        "datanum": 1,
+        "datatype": "u16",
+        "cal_type": "disabled",
+        "map_up_o": "",
+        "map_down_o": "",
+        "map_up_t": "",
+        "map_down_t": "",
+        "formula": "",
+        "startaddr": "5",
+        "addrtype": "03(4X)",
+        "int_bit": "",
+        "decimal_bit": ""
+      },
+      {
+        "portid": "NO2",
+        "rdwr": "rw",
+        "datanum": 1,
+        "datatype": "u16",
+        "cal_type": "disabled",
+        "map_up_o": "",
+        "map_down_o": "",
+        "map_up_t": "",
+        "map_down_t": "",
+        "formula": "",
+        "startaddr": "4",
+        "addrtype": "03(4X)",
+        "int_bit": "",
+        "decimal_bit": ""
+      },
+      {
+        "portid": "SO2",
+        "rdwr": "rw",
+        "datanum": 1,
+        "datatype": "u16",
+        "cal_type": "disabled",
+        "map_up_o": "",
+        "map_down_o": "",
+        "map_up_t": "",
+        "map_down_t": "",
+        "formula": "",
+        "startaddr": "3",
+        "addrtype": "03(4X)",
+        "int_bit": "",
+        "decimal_bit": ""
+      },
+      {
+        "portid": "H2s_tvoc",
+        "rdwr": "rw",
+        "datanum": 1,
+        "datatype": "u16",
+        "cal_type": "disabled",
+        "map_up_o": "",
+        "map_down_o": "",
+        "map_up_t": "",
+        "map_down_t": "",
+        "formula": "",
+        "startaddr": "2",
+        "addrtype": "03(4X)",
+        "int_bit": "",
+        "decimal_bit": ""
+      },
+      {
+        "portid": "Temperature",
+        "rdwr": "rw",
+        "datanum": 1,
+        "datatype": "u16",
+        "cal_type": "cal",
+        "map_up_o": "",
+        "map_down_o": "",
+        "map_up_t": "",
+        "map_down_t": "",
+        "formula": "${this}/100 -40",
+        "startaddr": "9",
+        "addrtype": "03(4X)",
+        "int_bit": "",
+        "decimal_bit": ""
+      }
+    ],
+    "IO": [
+      {
+        "portid": "AC-OUT3",
+        "rdwr": "rw",
+        "datanum": 64,
+        "datatype": "s",
+        "cal_type": "disabled",
+        "map_up_o": "",
+        "map_down_o": "",
+        "map_up_t": "",
+        "map_down_t": "",
+        "formula": "",
+        "startaddr": "ac_enabled3",
+        "addrtype": "nvram",
+        "int_bit": "",
+        "decimal_bit": ""
+      },
+      {
+        "portid": "AC-OUT2",
+        "rdwr": "rw",
+        "datanum": 64,
+        "datatype": "s",
+        "cal_type": "disabled",
+        "map_up_o": "",
+        "map_down_o": "",
+        "map_up_t": "",
+        "map_down_t": "",
+        "formula": "",
+        "startaddr": "ac_enabled2",
+        "addrtype": "nvram",
+        "int_bit": "",
+        "decimal_bit": ""
+      },
+      {
+        "portid": "AC-OUT1",
+        "rdwr": "rw",
+        "datanum": 64,
+        "datatype": "s",
+        "cal_type": "disabled",
+        "map_up_o": "",
+        "map_down_o": "",
+        "map_up_t": "",
+        "map_down_t": "",
+        "formula": "",
+        "startaddr": "ac_enabled1",
+        "addrtype": "nvram",
+        "int_bit": "",
+        "decimal_bit": ""
+      },
+      {
+        "portid": "ac_dc_switch",
+        "rdwr": "rw",
+        "datanum": 64,
+        "datatype": "s",
+        "cal_type": "disabled",
+        "map_up_o": "",
+        "map_down_o": "",
+        "map_up_t": "",
+        "map_down_t": "",
+        "formula": "",
+        "startaddr": "ac_dc_switch",
+        "addrtype": "nvram",
+        "int_bit": "",
+        "decimal_bit": ""
+      },
+      {
+        "portid": "smart_lightpole_en",
+        "rdwr": "rw",
+        "datanum": 64,
+        "datatype": "s",
+        "cal_type": "disabled",
+        "map_up_o": "",
+        "map_down_o": "",
+        "map_up_t": "",
+        "map_down_t": "",
+        "formula": "",
+        "startaddr": "smart_lightpole_en",
+        "addrtype": "nvram",
+        "int_bit": "",
+        "decimal_bit": ""
+      }
+    ],
+    "rgb_controller": []
+  },
+  "uplinks": [
+    {
+      "svr_en": true,
+      "proto": "TRNS_PROTO_CUSTOM_MQTT",
+      "url": "192.168.4.124",
+      "srvport": 1883,
+      "mutchange": "single",
+      "datastore": false,
+      "store_mode": "memory",
+      "clear_data": true,
+      "periodic_time": 10,
+      "mqtt_clientid": "scmp-pole-POLE-GW-01",
+      "mqtt_psk": "",
+      "mqtt_pskid": "",
+      "mqtt_enc": false,
+      "mqtt_sslmode": "server",
+      "mqtt_psk_id": "",
+      "mqtt_username": "gw-pole-test",
+      "mqtt_pswd": "gateway_secret",
+      "mqtt_keepalive": 60,
+      "mqtt_timeout": 10,
+      "mqtt_pki": "",
+      "mqtt_ca_pki": "",
+      "ct_id": "testserver"
+    },
+    {
+      "svr_en": true,
+      "proto": "TRNS_PROTO_CUSTOM_MQTT",
+      "url": "192.168.4.109",
+      "srvport": 1883,
+      "mutchange": "disabled",
+      "datastore": false,
+      "store_mode": "memory",
+      "clear_data": true,
+      "periodic_time": 10,
+      "mqtt_clientid": "FK5250546498",
+      "mqtt_psk": "",
+      "mqtt_pskid": "",
+      "mqtt_enc": false,
+      "mqtt_sslmode": "server",
+      "mqtt_psk_id": "",
+      "mqtt_username": "gw-p001",
+      "mqtt_pswd": "mosquitto123!",
+      "mqtt_keepalive": 60,
+      "mqtt_timeout": 10,
+      "mqtt_pki": "",
+      "mqtt_ca_pki": "",
+      "ct_id": "test"
+    }
+  ],
+  "serial_ports": [
+    {
+      "com_baudrate": 9600,
+      "com_databit": 8,
+      "com_stopbit": 1,
+      "com_parity": "n",
+      "com_flowcontrol": 0,
+      "com_id": "RS485-1"
+    },
+    {
+      "com_baudrate": 9600,
+      "com_databit": 8,
+      "com_stopbit": 1,
+      "com_parity": "n",
+      "com_flowcontrol": 0,
+      "com_id": "RS485-2"
+    }
+  ],
+  "connection_status": [
+    {
+      "plc_id": "Screen",
+      "status": "connect",
+      "ctime": "0000000",
+      "devtyp": "PLC_FF_BOX",
+      "acctime": 0
+    },
+    {
+      "plc_id": "enviromental",
+      "status": "connect",
+      "ctime": "1791663010614082",
+      "devtyp": "PLC_MDBS_RTU",
+      "acctime": 140
+    },
+    {
+      "plc_id": "IO",
+      "status": "connect",
+      "ctime": "1791663010495185",
+      "devtyp": "PLC_FF_BOX",
+      "acctime": 0
+    }
+  ],
+  "sample_telemetry": {
+    "enviromental": {
+      "PM1": {
+        "value": "0",
+        "ctime": "2026/10/10 20:10:10.614",
+        "nil": 0
+      },
+      "PM10": {
+        "value": "7",
+        "ctime": "2026/10/10 20:10:10.612",
+        "nil": 0
+      },
+      "Tsp": {
+        "value": "0",
+        "ctime": "2026/10/10 20:10:10.613",
+        "nil": 0
+      },
+      "neg_oxygen_ions": {
+        "value": "0",
+        "ctime": "2026/10/10 20:10:10.613",
+        "nil": 0
+      },
+      "CO2": {
+        "value": "57",
+        "ctime": "2026/10/10 20:10:10.613",
+        "nil": 0
+      },
+      "Uv_index": {
+        "value": "0",
+        "ctime": "2026/10/10 20:10:10.613",
+        "nil": 0
+      },
+      "Illuminance": {
+        "value": "0",
+        "ctime": "2026/10/10 20:10:10.613",
+        "nil": 0
+      },
+      "Radiation": {
+        "value": "0",
+        "ctime": "2026/10/10 20:10:10.613",
+        "nil": 0
+      },
+      "Rainfall": {
+        "value": "0",
+        "ctime": "2026/10/10 20:10:10.613",
+        "nil": 0
+      },
+      "Wind_direction": {
+        "value": "0",
+        "ctime": "2026/10/10 20:10:10.613",
+        "nil": 0
+      },
+      "Wind_speed": {
+        "value": "0",
+        "ctime": "2026/10/10 20:10:10.613",
+        "nil": 0
+      },
+      "pressure": {
+        "value": "0",
+        "ctime": "2026/10/10 20:10:10.612",
+        "nil": 0
+      },
+      "Humidity": {
+        "value": "29",
+        "ctime": "2026/10/10 20:10:10.612",
+        "nil": 0
+      },
+      "PM2.5": {
+        "value": "4",
+        "ctime": "2026/10/10 20:10:10.612",
+        "nil": 0
+      },
+      "O3": {
+        "value": "0",
+        "ctime": "2026/10/10 20:10:10.612",
+        "nil": 0
+      },
+      "CO": {
+        "value": "0",
+        "ctime": "2026/10/10 20:10:10.612",
+        "nil": 0
+      },
+      "NO2": {
+        "value": "0",
+        "ctime": "2026/10/10 20:10:10.612",
+        "nil": 0
+      },
+      "SO2": {
+        "value": "0",
+        "ctime": "2026/10/10 20:10:10.611",
+        "nil": 0
+      },
+      "H2s_tvoc": {
+        "value": "0",
+        "ctime": "2026/10/10 20:10:10.611",
+        "nil": 0
+      },
+      "Temperature": {
+        "value": "27",
+        "ctime": "2026/10/10 20:10:10.612",
+        "nil": 0
+      }
+    },
+    "IO": {
+      "AC-OUT3": {
+        "value": "0",
+        "ctime": "2026/10/10 20:10:10.495",
+        "nil": 0
+      },
+      "AC-OUT2": {
+        "value": "0",
+        "ctime": "2026/10/10 20:10:10.495",
+        "nil": 0
+      },
+      "AC-OUT1": {
+        "value": "0",
+        "ctime": "2026/10/10 20:10:10.495",
+        "nil": 0
+      },
+      "ac_dc_switch": {
+        "value": "0",
+        "ctime": "2026/10/10 20:10:10.495",
+        "nil": 0
+      },
+      "smart_lightpole_en": {
+        "value": "1",
+        "ctime": "2026/10/10 20:10:10.495",
+        "nil": 0
+      }
+    }
+  },
+  "backup_metadata": {
+    "gateway_id": "PRE_ADD_RGB",
+    "timestamp": "20261010_151051",
+    "target_host": "192.168.4.1"
+  }
+}

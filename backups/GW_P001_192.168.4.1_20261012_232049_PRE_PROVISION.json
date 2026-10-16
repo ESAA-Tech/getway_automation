@@ -1,0 +1,1643 @@
+{
+  "gateway_ip": "192.168.4.1",
+  "gateway_port": 80,
+  "captured_at": "2026-10-12T20:20:49Z",
+  "devices": [
+    {
+      "chn_en": true,
+      "acq_intv": 500,
+      "acqtimeout": 500,
+      "cmd_acqdelay": 0,
+      "manufacturer": "MFR_LOCAL",
+      "devtyp": "PLC_FF_BOX",
+      "optimization": true,
+      "devaddr_str": "0",
+      "channel": "ethernet",
+      "ipaddr": "192.168.4.125",
+      "port": 0,
+      "bit16_order": "ab",
+      "bit32_order": "abcd",
+      "flt32_order": "abcd",
+      "bit16_order_d": "ab",
+      "bit32_order_d": "abcd",
+      "flt32_order_d": "abcd",
+      "plc_id": "Screen"
+    },
+    {
+      "chn_en": true,
+      "acq_intv": 500,
+      "acqtimeout": 1000,
+      "cmd_acqdelay": 0,
+      "manufacturer": "MFR_MODBUS",
+      "devtyp": "PLC_MDBS_RTU",
+      "optimization": true,
+      "devaddr_str": "255",
+      "channel": "RS485-1",
+      "ipaddr": "",
+      "port": 0,
+      "bit16_order": "ab",
+      "bit32_order": "abcd",
+      "flt32_order": "abcd",
+      "bit16_order_d": "ab",
+      "bit32_order_d": "abcd",
+      "flt32_order_d": "abcd",
+      "plc_id": "enviromental"
+    },
+    {
+      "chn_en": true,
+      "acq_intv": 500,
+      "acqtimeout": 500,
+      "cmd_acqdelay": 0,
+      "manufacturer": "MFR_LOCAL",
+      "devtyp": "PLC_FF_BOX",
+      "optimization": true,
+      "devaddr_str": "0",
+      "channel": "ethernet",
+      "ipaddr": "",
+      "port": 0,
+      "bit16_order": "ab",
+      "bit32_order": "abcd",
+      "flt32_order": "abcd",
+      "bit16_order_d": "ab",
+      "bit32_order_d": "abcd",
+      "flt32_order_d": "abcd",
+      "plc_id": "IO"
+    },
+    {
+      "chn_en": true,
+      "acq_intv": 500,
+      "acqtimeout": 1000,
+      "cmd_acqdelay": 0,
+      "manufacturer": "MFR_MODBUS",
+      "devtyp": "PLC_MDBS_RTU",
+      "optimization": true,
+      "devaddr_str": "1",
+      "channel": "RS485-2",
+      "ipaddr": "",
+      "port": 0,
+      "bit16_order": "ab",
+      "bit32_order": "abcd",
+      "flt32_order": "abcd",
+      "bit16_order_d": "ab",
+      "bit32_order_d": "abcd",
+      "flt32_order_d": "abcd",
+      "plc_id": "rgb_controller"
+    }
+  ],
+  "datanodes": {
+    "Screen": [],
+    "enviromental": [
+      {
+        "portid": "Noise",
+        "rdwr": "rw",
+        "datanum": 1,
+        "datatype": "u16",
+        "cal_type": "cal",
+        "map_up_o": "",
+        "map_down_o": "",
+        "map_up_t": "",
+        "map_down_t": "",
+        "formula": "${this}/10",
+        "startaddr": "1",
+        "addrtype": "03(4X)",
+        "int_bit": "",
+        "decimal_bit": ""
+      },
+      {
+        "portid": "PM1",
+        "rdwr": "rw",
+        "datanum": 1,
+        "datatype": "u16",
+        "cal_type": "disabled",
+        "map_up_o": "",
+        "map_down_o": "",
+        "map_up_t": "",
+        "map_down_t": "",
+        "formula": "",
+        "startaddr": "21",
+        "addrtype": "03(4X)",
+        "int_bit": "",
+        "decimal_bit": ""
+      },
+      {
+        "portid": "PM10",
+        "rdwr": "rw",
+        "datanum": 1,
+        "datatype": "u16",
+        "cal_type": "disabled",
+        "map_up_o": "",
+        "map_down_o": "",
+        "map_up_t": "",
+        "map_down_t": "",
+        "formula": "",
+        "startaddr": "8",
+        "addrtype": "03(4X)",
+        "int_bit": "",
+        "decimal_bit": ""
+      },
+      {
+        "portid": "Tsp",
+        "rdwr": "rw",
+        "datanum": 1,
+        "datatype": "u16",
+        "cal_type": "disabled",
+        "map_up_o": "",
+        "map_down_o": "",
+        "map_up_t": "",
+        "map_down_t": "",
+        "formula": "",
+        "startaddr": "20",
+        "addrtype": "03(4X)",
+        "int_bit": "",
+        "decimal_bit": ""
+      },
+      {
+        "portid": "neg_oxygen_ions",
+        "rdwr": "rw",
+        "datanum": 1,
+        "datatype": "u16",
+        "cal_type": "cal",
+        "map_up_o": "",
+        "map_down_o": "",
+        "map_up_t": "",
+        "map_down_t": "",
+        "formula": "${this}*10",
+        "startaddr": "19",
+        "addrtype": "03(4X)",
+        "int_bit": "",
+        "decimal_bit": ""
+      },
+      {
+        "portid": "CO2",
+        "rdwr": "rw",
+        "datanum": 1,
+        "datatype": "u16",
+        "cal_type": "disabled",
+        "map_up_o": "",
+        "map_down_o": "",
+        "map_up_t": "",
+        "map_down_t": "",
+        "formula": "",
+        "startaddr": "18",
+        "addrtype": "03(4X)",
+        "int_bit": "",
+        "decimal_bit": ""
+      },
+      {
+        "portid": "Uv_index",
+        "rdwr": "rw",
+        "datanum": 1,
+        "datatype": "u16",
+        "cal_type": "disabled",
+        "map_up_o": "",
+        "map_down_o": "",
+        "map_up_t": "",
+        "map_down_t": "",
+        "formula": "",
+        "startaddr": "17",
+        "addrtype": "03(4X)",
+        "int_bit": "",
+        "decimal_bit": ""
+      },
+      {
+        "portid": "Illuminance",
+        "rdwr": "rw",
+        "datanum": 1,
+        "datatype": "u16",
+        "cal_type": "cal",
+        "map_up_o": "",
+        "map_down_o": "",
+        "map_up_t": "",
+        "map_down_t": "",
+        "formula": "${this}/100",
+        "startaddr": "16",
+        "addrtype": "03(4X)",
+        "int_bit": "",
+        "decimal_bit": ""
+      },
+      {
+        "portid": "Radiation",
+        "rdwr": "rw",
+        "datanum": 1,
+        "datatype": "u16",
+        "cal_type": "disabled",
+        "map_up_o": "",
+        "map_down_o": "",
+        "map_up_t": "",
+        "map_down_t": "",
+        "formula": "",
+        "startaddr": "15",
+        "addrtype": "03(4X)",
+        "int_bit": "",
+        "decimal_bit": ""
+      },
+      {
+        "portid": "Rainfall",
+        "rdwr": "rw",
+        "datanum": 1,
+        "datatype": "u16",
+        "cal_type": "cal",
+        "map_up_o": "",
+        "map_down_o": "",
+        "map_up_t": "",
+        "map_down_t": "",
+        "formula": "${this}/10",
+        "startaddr": "14",
+        "addrtype": "03(4X)",
+        "int_bit": "",
+        "decimal_bit": ""
+      },
+      {
+        "portid": "Wind_direction",
+        "rdwr": "rw",
+        "datanum": 1,
+        "datatype": "u16",
+        "cal_type": "cal",
+        "map_up_o": "",
+        "map_down_o": "",
+        "map_up_t": "",
+        "map_down_t": "",
+        "formula": "${this}/10",
+        "startaddr": "13",
+        "addrtype": "03(4X)",
+        "int_bit": "",
+        "decimal_bit": ""
+      },
+      {
+        "portid": "Wind_speed",
+        "rdwr": "rw",
+        "datanum": 1,
+        "datatype": "u16",
+        "cal_type": "cal",
+        "map_up_o": "",
+        "map_down_o": "",
+        "map_up_t": "",
+        "map_down_t": "",
+        "formula": "${this}/100",
+        "startaddr": "12",
+        "addrtype": "03(4X)",
+        "int_bit": "",
+        "decimal_bit": ""
+      },
+      {
+        "portid": "pressure",
+        "rdwr": "rw",
+        "datanum": 1,
+        "datatype": "u16",
+        "cal_type": "cal",
+        "map_up_o": "",
+        "map_down_o": "",
+        "map_up_t": "",
+        "map_down_t": "",
+        "formula": "${this}/10",
+        "startaddr": "11",
+        "addrtype": "03(4X)",
+        "int_bit": "",
+        "decimal_bit": ""
+      },
+      {
+        "portid": "Humidity",
+        "rdwr": "rw",
+        "datanum": 1,
+        "datatype": "u16",
+        "cal_type": "cal",
+        "map_up_o": "",
+        "map_down_o": "",
+        "map_up_t": "",
+        "map_down_t": "",
+        "formula": "${this}/100",
+        "startaddr": "10",
+        "addrtype": "03(4X)",
+        "int_bit": "",
+        "decimal_bit": ""
+      },
+      {
+        "portid": "PM2.5",
+        "rdwr": "rw",
+        "datanum": 1,
+        "datatype": "u16",
+        "cal_type": "disabled",
+        "map_up_o": "",
+        "map_down_o": "",
+        "map_up_t": "",
+        "map_down_t": "",
+        "formula": "",
+        "startaddr": "7",
+        "addrtype": "03(4X)",
+        "int_bit": "",
+        "decimal_bit": ""
+      },
+      {
+        "portid": "O3",
+        "rdwr": "rw",
+        "datanum": 1,
+        "datatype": "u16",
+        "cal_type": "disabled",
+        "map_up_o": "",
+        "map_down_o": "",
+        "map_up_t": "",
+        "map_down_t": "",
+        "formula": "",
+        "startaddr": "6",
+        "addrtype": "03(4X)",
+        "int_bit": "",
+        "decimal_bit": ""
+      },
+      {
+        "portid": "CO",
+        "rdwr": "rw",
+        "datanum": 1,
+        "datatype": "u16",
+        "cal_type": "disabled",
+        "map_up_o": "",
+        "map_down_o": "",
+        "map_up_t": "",
+        "map_down_t": "",
+        "formula": "",
+        "startaddr": "5",
+        "addrtype": "03(4X)",
+        "int_bit": "",
+        "decimal_bit": ""
+      },
+      {
+        "portid": "NO2",
+        "rdwr": "rw",
+        "datanum": 1,
+        "datatype": "u16",
+        "cal_type": "disabled",
+        "map_up_o": "",
+        "map_down_o": "",
+        "map_up_t": "",
+        "map_down_t": "",
+        "formula": "",
+        "startaddr": "4",
+        "addrtype": "03(4X)",
+        "int_bit": "",
+        "decimal_bit": ""
+      },
+      {
+        "portid": "SO2",
+        "rdwr": "rw",
+        "datanum": 1,
+        "datatype": "u16",
+        "cal_type": "disabled",
+        "map_up_o": "",
+        "map_down_o": "",
+        "map_up_t": "",
+        "map_down_t": "",
+        "formula": "",
+        "startaddr": "3",
+        "addrtype": "03(4X)",
+        "int_bit": "",
+        "decimal_bit": ""
+      },
+      {
+        "portid": "H2s_tvoc",
+        "rdwr": "rw",
+        "datanum": 1,
+        "datatype": "u16",
+        "cal_type": "disabled",
+        "map_up_o": "",
+        "map_down_o": "",
+        "map_up_t": "",
+        "map_down_t": "",
+        "formula": "",
+        "startaddr": "2",
+        "addrtype": "03(4X)",
+        "int_bit": "",
+        "decimal_bit": ""
+      },
+      {
+        "portid": "Temperature",
+        "rdwr": "rw",
+        "datanum": 1,
+        "datatype": "u16",
+        "cal_type": "cal",
+        "map_up_o": "",
+        "map_down_o": "",
+        "map_up_t": "",
+        "map_down_t": "",
+        "formula": "${this}/100 -40",
+        "startaddr": "9",
+        "addrtype": "03(4X)",
+        "int_bit": "",
+        "decimal_bit": ""
+      }
+    ],
+    "IO": [
+      {
+        "portid": "AC-OUT3",
+        "rdwr": "rw",
+        "datanum": 64,
+        "datatype": "s",
+        "cal_type": "disabled",
+        "map_up_o": "",
+        "map_down_o": "",
+        "map_up_t": "",
+        "map_down_t": "",
+        "formula": "",
+        "startaddr": "ac_enabled3",
+        "addrtype": "nvram",
+        "int_bit": "",
+        "decimal_bit": ""
+      },
+      {
+        "portid": "AC-OUT2",
+        "rdwr": "rw",
+        "datanum": 64,
+        "datatype": "s",
+        "cal_type": "disabled",
+        "map_up_o": "",
+        "map_down_o": "",
+        "map_up_t": "",
+        "map_down_t": "",
+        "formula": "",
+        "startaddr": "ac_enabled2",
+        "addrtype": "nvram",
+        "int_bit": "",
+        "decimal_bit": ""
+      },
+      {
+        "portid": "AC-OUT1",
+        "rdwr": "rw",
+        "datanum": 64,
+        "datatype": "s",
+        "cal_type": "disabled",
+        "map_up_o": "",
+        "map_down_o": "",
+        "map_up_t": "",
+        "map_down_t": "",
+        "formula": "",
+        "startaddr": "ac_enabled1",
+        "addrtype": "nvram",
+        "int_bit": "",
+        "decimal_bit": ""
+      },
+      {
+        "portid": "ac_dc_switch",
+        "rdwr": "rw",
+        "datanum": 64,
+        "datatype": "s",
+        "cal_type": "disabled",
+        "map_up_o": "",
+        "map_down_o": "",
+        "map_up_t": "",
+        "map_down_t": "",
+        "formula": "",
+        "startaddr": "ac_dc_switch",
+        "addrtype": "nvram",
+        "int_bit": "",
+        "decimal_bit": ""
+      },
+      {
+        "portid": "smart_lightpole_en",
+        "rdwr": "rw",
+        "datanum": 64,
+        "datatype": "s",
+        "cal_type": "disabled",
+        "map_up_o": "",
+        "map_down_o": "",
+        "map_up_t": "",
+        "map_down_t": "",
+        "formula": "",
+        "startaddr": "smart_lightpole_en",
+        "addrtype": "nvram",
+        "int_bit": "",
+        "decimal_bit": ""
+      }
+    ],
+    "rgb_controller": [
+      {
+        "portid": "red_level",
+        "rdwr": "rw",
+        "datanum": 1,
+        "datatype": "u16",
+        "cal_type": "disabled",
+        "map_up_o": "",
+        "map_down_o": "",
+        "map_up_t": "",
+        "map_down_t": "",
+        "formula": "",
+        "startaddr": "0",
+        "addrtype": "03(4X)",
+        "int_bit": "",
+        "decimal_bit": ""
+      },
+      {
+        "portid": "green_level",
+        "rdwr": "rw",
+        "datanum": 1,
+        "datatype": "u16",
+        "cal_type": "disabled",
+        "map_up_o": "",
+        "map_down_o": "",
+        "map_up_t": "",
+        "map_down_t": "",
+        "formula": "",
+        "startaddr": "1",
+        "addrtype": "03(4X)",
+        "int_bit": "",
+        "decimal_bit": ""
+      },
+      {
+        "portid": "blue_level",
+        "rdwr": "rw",
+        "datanum": 1,
+        "datatype": "u16",
+        "cal_type": "disabled",
+        "map_up_o": "",
+        "map_down_o": "",
+        "map_up_t": "",
+        "map_down_t": "",
+        "formula": "",
+        "startaddr": "2",
+        "addrtype": "03(4X)",
+        "int_bit": "",
+        "decimal_bit": ""
+      },
+      {
+        "portid": "brightness",
+        "rdwr": "rw",
+        "datanum": 1,
+        "datatype": "u16",
+        "cal_type": "disabled",
+        "map_up_o": "",
+        "map_down_o": "",
+        "map_up_t": "",
+        "map_down_t": "",
+        "formula": "",
+        "startaddr": "3",
+        "addrtype": "03(4X)",
+        "int_bit": "",
+        "decimal_bit": ""
+      },
+      {
+        "portid": "light_mode",
+        "rdwr": "rw",
+        "datanum": 1,
+        "datatype": "u16",
+        "cal_type": "disabled",
+        "map_up_o": "",
+        "map_down_o": "",
+        "map_up_t": "",
+        "map_down_t": "",
+        "formula": "",
+        "startaddr": "4",
+        "addrtype": "03(4X)",
+        "int_bit": "",
+        "decimal_bit": ""
+      },
+      {
+        "portid": "power_state",
+        "rdwr": "rw",
+        "datanum": 1,
+        "datatype": "u16",
+        "cal_type": "disabled",
+        "map_up_o": "",
+        "map_down_o": "",
+        "map_up_t": "",
+        "map_down_t": "",
+        "formula": "",
+        "startaddr": "5",
+        "addrtype": "03(4X)",
+        "int_bit": "",
+        "decimal_bit": ""
+      }
+    ]
+  },
+  "uplinks": [
+    {
+      "svr_en": true,
+      "proto": "TRNS_PROTO_CUSTOM_MQTT",
+      "url": "192.168.4.124",
+      "srvport": 1883,
+      "mutchange": "single",
+      "datastore": false,
+      "store_mode": "memory",
+      "clear_data": true,
+      "periodic_time": 10,
+      "mqtt_clientid": "scmp-pole-POLE-GW-01",
+      "mqtt_psk": "",
+      "mqtt_pskid": "",
+      "mqtt_enc": false,
+      "mqtt_sslmode": "server",
+      "mqtt_psk_id": "",
+      "mqtt_username": "gw-pole-test",
+      "mqtt_pswd": "gateway_secret",
+      "mqtt_keepalive": 60,
+      "mqtt_timeout": 10,
+      "mqtt_pki": "",
+      "mqtt_ca_pki": "",
+      "ct_id": "testserver"
+    },
+    {
+      "svr_en": true,
+      "proto": "TRNS_PROTO_CUSTOM_MQTT",
+      "url": "192.168.4.109",
+      "srvport": 1883,
+      "mutchange": "disabled",
+      "datastore": false,
+      "store_mode": "memory",
+      "clear_data": true,
+      "periodic_time": 10,
+      "mqtt_clientid": "FK5250546498",
+      "mqtt_psk": "",
+      "mqtt_pskid": "",
+      "mqtt_enc": false,
+      "mqtt_sslmode": "server",
+      "mqtt_psk_id": "",
+      "mqtt_username": "gw-p001",
+      "mqtt_pswd": "mosquitto123!",
+      "mqtt_keepalive": 60,
+      "mqtt_timeout": 10,
+      "mqtt_pki": "",
+      "mqtt_ca_pki": "",
+      "ct_id": "test"
+    },
+    {
+      "svr_en": true,
+      "proto": "TRNS_PROTO_CUSTOM_MQTT",
+      "url": "192.168.4.124",
+      "srvport": 1883,
+      "mutchange": "disabled",
+      "datastore": false,
+      "store_mode": "memory",
+      "clear_data": true,
+      "periodic_time": 10,
+      "mqtt_clientid": "scmp-pole-P004",
+      "mqtt_psk": "",
+      "mqtt_pskid": "",
+      "mqtt_enc": false,
+      "mqtt_sslmode": "anon",
+      "mqtt_psk_id": "",
+      "mqtt_username": "gw-pole-test",
+      "mqtt_pswd": "gateway_secret",
+      "mqtt_keepalive": 60,
+      "mqtt_timeout": 10,
+      "mqtt_pki": "",
+      "mqtt_ca_pki": "",
+      "ct_id": "me"
+    }
+  ],
+  "serial_cfg": [
+    {
+      "com_baudrate": 9600,
+      "com_databit": 8,
+      "com_stopbit": 1,
+      "com_parity": "n",
+      "com_flowcontrol": 0,
+      "com_id": "RS485-1"
+    },
+    {
+      "com_baudrate": 9600,
+      "com_databit": 8,
+      "com_stopbit": 1,
+      "com_parity": "n",
+      "com_flowcontrol": 0,
+      "com_id": "RS485-2"
+    }
+  ],
+  "scripts": {
+    "testserver": {
+      "script_up": [
+        {
+          "script_id": "Publish",
+          "ds": "periodic_report",
+          "event": "publish",
+          "param": "0",
+          "code": "LyogRGF0YSBGb3JtYXQgRXhhbXBsZQogICAgewogICAgICAiY3RfaWQiOiJNUVRUIiwKICAgICAgImRhdGFzb3VyY2UiOiJwZXJpb2RpY19yZXBvcnQiLAogICAgICAidHlwZSI6InBhY2siLAogICAgICAic3ViZGV2Ijp7CiAgICAgICAgIk1PREJVUy1UQ1AiOnsKICAgICAgICAgICJjdGltZSI6IjIwMjMtMDEtMDkgMTY6NTg6NDYiLAogICAgICAgICAgImRhdGEiOnsKICAgICAgICAgICAgIk1EQlMtVENQMCI6MTIzLCJNREJTLVRDUDEiOjMyMSwiTURCUy1UQ1AyIjoxMDAKICAgICAgICAgIH0KICAgICAgICB9LAogICAgICAgICJJTyI6ewogICAgICAgICAgImN0aW1lIjoiMjAyMy0wMS0wOSAxNjo1ODo0NiIsCiAgICAgICAgICAiZGF0YSI6ewogICAgICAgICAgICAicmVsYXkiOjEsIkRPIjoxLCJESTEiOjEsIkRJMCI6MQogICAgICAgICAgfQogICAgICAgIH0KICAgICAgfQogICAgfQoqLwphcGlfbG9nKCdTZW5kIERhdGEgPD09XG4nKTsKYXBpX2xvZyhhcGlfZGF0YSArICdcbicpOwphcGlfb3V0KGFwaV9ldmVudCwgYXBpX2RhdGEpOw==",
+          "cycle": 5
+        },
+        {
+          "script_id": "Temperature",
+          "ds": "periodic_report",
+          "event": "scmp/v1/5efa910f-8e17-4443-af76-8b0a674d23f5/Pole-CBD-3444/env/29748b52-5203-49de-8221-7f9df657e28e/telemetry",
+          "param": "1",
+          "code": "dmFyIGRhdGEgPSBKU09OLnBhcnNlKGFwaV9kYXRhKTsKdmFyIGVudiA9IGRhdGEuc3ViZGV2ICYmIGRhdGEuc3ViZGV2LmVudmlyb21lbnRhbDsKdmFyIGdhdGV3YXkgPSBkYXRhLnNuOwoKdmFyIGN0aW1lU3RyID0gKGVudiAmJiBlbnYuY3RpbWUpID8gU3RyaW5nKGVudi5jdGltZSkudHJpbSgpIDogIiI7CnZhciBpc09mZmxpbmUgPSAhZW52IHx8IGN0aW1lU3RyID09PSAiIiB8fCBjdGltZVN0ci5pbmRleE9mKCIxOTcwLTAxLTAxIikgPT09IDA7CgppZiAoaXNPZmZsaW5lKSB7CiAgLy8gT0ZGTElORQogIGFwaV9sb2coJ2Vudmlyb21lbnRhbCBpcyBPRkZMSU5FIDw9PVxuJyk7CgogIHZhciBmYXVsdF9tc2cgPSBKU09OLnN0cmluZ2lmeSh7CiAgICBzbjogZ2F0ZXdheSwKICAgIGN0X2lkOiBkYXRhLmN0X2lkLAogICAgZGF0YXNvdXJjZTogImRldmljZV9mYXVsdCIsCiAgICBkZXZpY2U6ICJlbnZpcm9tZW50YWwiLAogICAgc3RhdHVzOiAib2ZmbGluZSIsCiAgICBtZXNzYWdlOiAiR2F0ZXdheSAiICsgZ2F0ZXdheSArICI6IHRoZSBlbnZpcm9tZW50YWwgc2Vuc29yIGlzIG9mZmxpbmUiCiAgfSk7CgogIGFwaV9sb2coJ1B1Ymxpc2hpbmc6ICcgKyBmYXVsdF9tc2cgKyAnXG4nKTsKICBhcGlfb3V0KGFwaV9ldmVudCwgZmF1bHRfbXNnKTsKCn0gZWxzZSB7CiAgLy8gT05MSU5FIOKAlCBub3JtYWwgdGVsZW1ldHJ5CiAgYXBpX2xvZygnU2VuZCBEYXRhIDw9PVxuJyk7CiAgYXBpX2xvZyhhcGlfZGF0YSk7CiAgYXBpX291dChhcGlfZXZlbnQsIGFwaV9kYXRhKTsKfQ==",
+          "cycle": 5
+        },
+        {
+          "script_id": "Noise",
+          "ds": "periodic_report",
+          "event": "aacra/smartpole/P001/env/telemetry",
+          "param": "0",
+          "code": "dmFyIGRhdGEgPSBKU09OLnBhcnNlKGFwaV9kYXRhKTsKdmFyIGVudiA9IGRhdGEuc3ViZGV2ICYmIGRhdGEuc3ViZGV2LmVudmlyb21lbnRhbDsKdmFyIGdhdGV3YXkgPSBkYXRhLnNuOwoKdmFyIGN0aW1lU3RyID0gKGVudiAmJiBlbnYuY3RpbWUpID8gU3RyaW5nKGVudi5jdGltZSkudHJpbSgpIDogIiI7CnZhciBpc09mZmxpbmUgPSAhZW52IHx8IGN0aW1lU3RyID09PSAiIiB8fCBjdGltZVN0ci5pbmRleE9mKCIxOTcwLTAxLTAxIikgPT09IDA7CgppZiAoaXNPZmZsaW5lKSB7CiAgLy8gT0ZGTElORQogIGFwaV9sb2coJ2Vudmlyb21lbnRhbCBpcyBPRkZMSU5FIDw9PVxuJyk7CgogIHZhciBmYXVsdF9tc2cgPSBKU09OLnN0cmluZ2lmeSh7CiAgICBzbjogZ2F0ZXdheSwKICAgIGN0X2lkOiBkYXRhLmN0X2lkLAogICAgZGF0YXNvdXJjZTogImRldmljZV9mYXVsdCIsCiAgICBkZXZpY2U6ICJlbnZpcm9tZW50YWwiLAogICAgc3RhdHVzOiAib2ZmbGluZSIsCiAgICBtZXNzYWdlOiAiR2F0ZXdheSAiICsgZ2F0ZXdheSArICI6IHRoZSBlbnZpcm9tZW50YWwgc2Vuc29yIGlzIG9mZmxpbmUiCiAgfSk7CgogIGFwaV9sb2coJ1B1Ymxpc2hpbmc6ICcgKyBmYXVsdF9tc2cgKyAnXG4nKTsKICBhcGlfb3V0KGFwaV9ldmVudCwgZmF1bHRfbXNnKTsKCn0gZWxzZSB7CiAgLy8gT05MSU5FIOKAlCBub3JtYWwgdGVsZW1ldHJ5CiAgYXBpX2xvZygnU2VuZCBEYXRhIDw9PVxuJyk7CiAgYXBpX2xvZyhhcGlfZGF0YSk7CiAgYXBpX291dChhcGlfZXZlbnQsIGFwaV9kYXRhKTsKfQ==",
+          "cycle": 5
+        },
+        {
+          "script_id": "S02",
+          "ds": "periodic_report",
+          "event": "aacra/smartpole/P001/env/telemetry",
+          "param": "0",
+          "code": "dmFyIGRhdGEgPSBKU09OLnBhcnNlKGFwaV9kYXRhKTsKdmFyIGVudiA9IGRhdGEuc3ViZGV2ICYmIGRhdGEuc3ViZGV2LmVudmlyb21lbnRhbDsKdmFyIGdhdGV3YXkgPSBkYXRhLnNuOwoKdmFyIGN0aW1lU3RyID0gKGVudiAmJiBlbnYuY3RpbWUpID8gU3RyaW5nKGVudi5jdGltZSkudHJpbSgpIDogIiI7CnZhciBpc09mZmxpbmUgPSAhZW52IHx8IGN0aW1lU3RyID09PSAiIiB8fCBjdGltZVN0ci5pbmRleE9mKCIxOTcwLTAxLTAxIikgPT09IDA7CgppZiAoaXNPZmZsaW5lKSB7CiAgLy8gT0ZGTElORQogIGFwaV9sb2coJ2Vudmlyb21lbnRhbCBpcyBPRkZMSU5FIDw9PVxuJyk7CgogIHZhciBmYXVsdF9tc2cgPSBKU09OLnN0cmluZ2lmeSh7CiAgICBzbjogZ2F0ZXdheSwKICAgIGN0X2lkOiBkYXRhLmN0X2lkLAogICAgZGF0YXNvdXJjZTogImRldmljZV9mYXVsdCIsCiAgICBkZXZpY2U6ICJlbnZpcm9tZW50YWwiLAogICAgc3RhdHVzOiAib2ZmbGluZSIsCiAgICBtZXNzYWdlOiAiR2F0ZXdheSAiICsgZ2F0ZXdheSArICI6IHRoZSBlbnZpcm9tZW50YWwgc2Vuc29yIGlzIG9mZmxpbmUiCiAgfSk7CgogIGFwaV9sb2coJ1B1Ymxpc2hpbmc6ICcgKyBmYXVsdF9tc2cgKyAnXG4nKTsKICBhcGlfb3V0KGFwaV9ldmVudCwgZmF1bHRfbXNnKTsKCn0gZWxzZSB7CiAgLy8gT05MSU5FIOKAlCBub3JtYWwgdGVsZW1ldHJ5CiAgYXBpX2xvZygnU2VuZCBEYXRhIDw9PVxuJyk7CiAgYXBpX2xvZyhhcGlfZGF0YSk7CiAgYXBpX291dChhcGlfZXZlbnQsIGFwaV9kYXRhKTsKfQ==",
+          "cycle": 5
+        },
+        {
+          "script_id": "NO2",
+          "ds": "periodic_report",
+          "event": "aacra/smartpole/P001/env/telemetry",
+          "param": "0",
+          "code": "dmFyIGRhdGEgPSBKU09OLnBhcnNlKGFwaV9kYXRhKTsKdmFyIGVudiA9IGRhdGEuc3ViZGV2ICYmIGRhdGEuc3ViZGV2LmVudmlyb21lbnRhbDsKdmFyIGdhdGV3YXkgPSBkYXRhLnNuOwoKdmFyIGN0aW1lU3RyID0gKGVudiAmJiBlbnYuY3RpbWUpID8gU3RyaW5nKGVudi5jdGltZSkudHJpbSgpIDogIiI7CnZhciBpc09mZmxpbmUgPSAhZW52IHx8IGN0aW1lU3RyID09PSAiIiB8fCBjdGltZVN0ci5pbmRleE9mKCIxOTcwLTAxLTAxIikgPT09IDA7CgppZiAoaXNPZmZsaW5lKSB7CiAgLy8gT0ZGTElORQogIGFwaV9sb2coJ2Vudmlyb21lbnRhbCBpcyBPRkZMSU5FIDw9PVxuJyk7CgogIHZhciBmYXVsdF9tc2cgPSBKU09OLnN0cmluZ2lmeSh7CiAgICBzbjogZ2F0ZXdheSwKICAgIGN0X2lkOiBkYXRhLmN0X2lkLAogICAgZGF0YXNvdXJjZTogImRldmljZV9mYXVsdCIsCiAgICBkZXZpY2U6ICJlbnZpcm9tZW50YWwiLAogICAgc3RhdHVzOiAib2ZmbGluZSIsCiAgICBtZXNzYWdlOiAiR2F0ZXdheSAiICsgZ2F0ZXdheSArICI6IHRoZSBlbnZpcm9tZW50YWwgc2Vuc29yIGlzIG9mZmxpbmUiCiAgfSk7CgogIGFwaV9sb2coJ1B1Ymxpc2hpbmc6ICcgKyBmYXVsdF9tc2cgKyAnXG4nKTsKICBhcGlfb3V0KGFwaV9ldmVudCwgZmF1bHRfbXNnKTsKCn0gZWxzZSB7CiAgLy8gT05MSU5FIOKAlCBub3JtYWwgdGVsZW1ldHJ5CiAgYXBpX2xvZygnU2VuZCBEYXRhIDw9PVxuJyk7CiAgYXBpX2xvZyhhcGlfZGF0YSk7CiAgYXBpX291dChhcGlfZXZlbnQsIGFwaV9kYXRhKTsKfQ==",
+          "cycle": 5
+        },
+        {
+          "script_id": "CO",
+          "ds": "periodic_report",
+          "event": "aacra/smartpole/P001/env/telemetry",
+          "param": "0",
+          "code": "dmFyIGRhdGEgPSBKU09OLnBhcnNlKGFwaV9kYXRhKTsKdmFyIGVudiA9IGRhdGEuc3ViZGV2ICYmIGRhdGEuc3ViZGV2LmVudmlyb21lbnRhbDsKdmFyIGdhdGV3YXkgPSBkYXRhLnNuOwoKdmFyIGN0aW1lU3RyID0gKGVudiAmJiBlbnYuY3RpbWUpID8gU3RyaW5nKGVudi5jdGltZSkudHJpbSgpIDogIiI7CnZhciBpc09mZmxpbmUgPSAhZW52IHx8IGN0aW1lU3RyID09PSAiIiB8fCBjdGltZVN0ci5pbmRleE9mKCIxOTcwLTAxLTAxIikgPT09IDA7CgppZiAoaXNPZmZsaW5lKSB7CiAgLy8gT0ZGTElORQogIGFwaV9sb2coJ2Vudmlyb21lbnRhbCBpcyBPRkZMSU5FIDw9PVxuJyk7CgogIHZhciBmYXVsdF9tc2cgPSBKU09OLnN0cmluZ2lmeSh7CiAgICBzbjogZ2F0ZXdheSwKICAgIGN0X2lkOiBkYXRhLmN0X2lkLAogICAgZGF0YXNvdXJjZTogImRldmljZV9mYXVsdCIsCiAgICBkZXZpY2U6ICJlbnZpcm9tZW50YWwiLAogICAgc3RhdHVzOiAib2ZmbGluZSIsCiAgICBtZXNzYWdlOiAiR2F0ZXdheSAiICsgZ2F0ZXdheSArICI6IHRoZSBlbnZpcm9tZW50YWwgc2Vuc29yIGlzIG9mZmxpbmUiCiAgfSk7CgogIGFwaV9sb2coJ1B1Ymxpc2hpbmc6ICcgKyBmYXVsdF9tc2cgKyAnXG4nKTsKICBhcGlfb3V0KGFwaV9ldmVudCwgZmF1bHRfbXNnKTsKCn0gZWxzZSB7CiAgLy8gT05MSU5FIOKAlCBub3JtYWwgdGVsZW1ldHJ5CiAgYXBpX2xvZygnU2VuZCBEYXRhIDw9PVxuJyk7CiAgYXBpX2xvZyhhcGlfZGF0YSk7CiAgYXBpX291dChhcGlfZXZlbnQsIGFwaV9kYXRhKTsKfQ==",
+          "cycle": 5
+        },
+        {
+          "script_id": "O3",
+          "ds": "periodic_report",
+          "event": "aacra/smartpole/P001/env/telemetry",
+          "param": "0",
+          "code": "dmFyIGRhdGEgPSBKU09OLnBhcnNlKGFwaV9kYXRhKTsKdmFyIGVudiA9IGRhdGEuc3ViZGV2ICYmIGRhdGEuc3ViZGV2LmVudmlyb21lbnRhbDsKdmFyIGdhdGV3YXkgPSBkYXRhLnNuOwoKdmFyIGN0aW1lU3RyID0gKGVudiAmJiBlbnYuY3RpbWUpID8gU3RyaW5nKGVudi5jdGltZSkudHJpbSgpIDogIiI7CnZhciBpc09mZmxpbmUgPSAhZW52IHx8IGN0aW1lU3RyID09PSAiIiB8fCBjdGltZVN0ci5pbmRleE9mKCIxOTcwLTAxLTAxIikgPT09IDA7CgppZiAoaXNPZmZsaW5lKSB7CiAgLy8gT0ZGTElORQogIGFwaV9sb2coJ2Vudmlyb21lbnRhbCBpcyBPRkZMSU5FIDw9PVxuJyk7CgogIHZhciBmYXVsdF9tc2cgPSBKU09OLnN0cmluZ2lmeSh7CiAgICBzbjogZ2F0ZXdheSwKICAgIGN0X2lkOiBkYXRhLmN0X2lkLAogICAgZGF0YXNvdXJjZTogImRldmljZV9mYXVsdCIsCiAgICBkZXZpY2U6ICJlbnZpcm9tZW50YWwiLAogICAgc3RhdHVzOiAib2ZmbGluZSIsCiAgICBtZXNzYWdlOiAiR2F0ZXdheSAiICsgZ2F0ZXdheSArICI6IHRoZSBlbnZpcm9tZW50YWwgc2Vuc29yIGlzIG9mZmxpbmUiCiAgfSk7CgogIGFwaV9sb2coJ1B1Ymxpc2hpbmc6ICcgKyBmYXVsdF9tc2cgKyAnXG4nKTsKICBhcGlfb3V0KGFwaV9ldmVudCwgZmF1bHRfbXNnKTsKCn0gZWxzZSB7CiAgLy8gT05MSU5FIOKAlCBub3JtYWwgdGVsZW1ldHJ5CiAgYXBpX2xvZygnU2VuZCBEYXRhIDw9PVxuJyk7CiAgYXBpX2xvZyhhcGlfZGF0YSk7CiAgYXBpX291dChhcGlfZXZlbnQsIGFwaV9kYXRhKTsKfQ==",
+          "cycle": 5
+        },
+        {
+          "script_id": "PM10",
+          "ds": "periodic_report",
+          "event": "aacra/smartpole/P001/env/telemetry",
+          "param": "0",
+          "code": "dmFyIGRhdGEgPSBKU09OLnBhcnNlKGFwaV9kYXRhKTsKdmFyIGVudiA9IGRhdGEuc3ViZGV2ICYmIGRhdGEuc3ViZGV2LmVudmlyb21lbnRhbDsKdmFyIGdhdGV3YXkgPSBkYXRhLnNuOwoKdmFyIGN0aW1lU3RyID0gKGVudiAmJiBlbnYuY3RpbWUpID8gU3RyaW5nKGVudi5jdGltZSkudHJpbSgpIDogIiI7CnZhciBpc09mZmxpbmUgPSAhZW52IHx8IGN0aW1lU3RyID09PSAiIiB8fCBjdGltZVN0ci5pbmRleE9mKCIxOTcwLTAxLTAxIikgPT09IDA7CgppZiAoaXNPZmZsaW5lKSB7CiAgLy8gT0ZGTElORQogIGFwaV9sb2coJ2Vudmlyb21lbnRhbCBpcyBPRkZMSU5FIDw9PVxuJyk7CgogIHZhciBmYXVsdF9tc2cgPSBKU09OLnN0cmluZ2lmeSh7CiAgICBzbjogZ2F0ZXdheSwKICAgIGN0X2lkOiBkYXRhLmN0X2lkLAogICAgZGF0YXNvdXJjZTogImRldmljZV9mYXVsdCIsCiAgICBkZXZpY2U6ICJlbnZpcm9tZW50YWwiLAogICAgc3RhdHVzOiAib2ZmbGluZSIsCiAgICBtZXNzYWdlOiAiR2F0ZXdheSAiICsgZ2F0ZXdheSArICI6IHRoZSBlbnZpcm9tZW50YWwgc2Vuc29yIGlzIG9mZmxpbmUiCiAgfSk7CgogIGFwaV9sb2coJ1B1Ymxpc2hpbmc6ICcgKyBmYXVsdF9tc2cgKyAnXG4nKTsKICBhcGlfb3V0KGFwaV9ldmVudCwgZmF1bHRfbXNnKTsKCn0gZWxzZSB7CiAgLy8gT05MSU5FIOKAlCBub3JtYWwgdGVsZW1ldHJ5CiAgYXBpX2xvZygnU2VuZCBEYXRhIDw9PVxuJyk7CiAgYXBpX2xvZyhhcGlfZGF0YSk7CiAgYXBpX291dChhcGlfZXZlbnQsIGFwaV9kYXRhKTsKfQ==",
+          "cycle": 5
+        },
+        {
+          "script_id": "Humidity",
+          "ds": "periodic_report",
+          "event": "aacra/smartpole/P001/env/telemetry",
+          "param": "0",
+          "code": "dmFyIGRhdGEgPSBKU09OLnBhcnNlKGFwaV9kYXRhKTsKdmFyIGVudiA9IGRhdGEuc3ViZGV2ICYmIGRhdGEuc3ViZGV2LmVudmlyb21lbnRhbDsKdmFyIGdhdGV3YXkgPSBkYXRhLnNuOwoKdmFyIGN0aW1lU3RyID0gKGVudiAmJiBlbnYuY3RpbWUpID8gU3RyaW5nKGVudi5jdGltZSkudHJpbSgpIDogIiI7CnZhciBpc09mZmxpbmUgPSAhZW52IHx8IGN0aW1lU3RyID09PSAiIiB8fCBjdGltZVN0ci5pbmRleE9mKCIxOTcwLTAxLTAxIikgPT09IDA7CgppZiAoaXNPZmZsaW5lKSB7CiAgLy8gT0ZGTElORQogIGFwaV9sb2coJ2Vudmlyb21lbnRhbCBpcyBPRkZMSU5FIDw9PVxuJyk7CgogIHZhciBmYXVsdF9tc2cgPSBKU09OLnN0cmluZ2lmeSh7CiAgICBzbjogZ2F0ZXdheSwKICAgIGN0X2lkOiBkYXRhLmN0X2lkLAogICAgZGF0YXNvdXJjZTogImRldmljZV9mYXVsdCIsCiAgICBkZXZpY2U6ICJlbnZpcm9tZW50YWwiLAogICAgc3RhdHVzOiAib2ZmbGluZSIsCiAgICBtZXNzYWdlOiAiR2F0ZXdheSAiICsgZ2F0ZXdheSArICI6IHRoZSBlbnZpcm9tZW50YWwgc2Vuc29yIGlzIG9mZmxpbmUiCiAgfSk7CgogIGFwaV9sb2coJ1B1Ymxpc2hpbmc6ICcgKyBmYXVsdF9tc2cgKyAnXG4nKTsKICBhcGlfb3V0KGFwaV9ldmVudCwgZmF1bHRfbXNnKTsKCn0gZWxzZSB7CiAgLy8gT05MSU5FIOKAlCBub3JtYWwgdGVsZW1ldHJ5CiAgYXBpX2xvZygnU2VuZCBEYXRhIDw9PVxuJyk7CiAgYXBpX2xvZyhhcGlfZGF0YSk7CiAgYXBpX291dChhcGlfZXZlbnQsIGFwaV9kYXRhKTsKfQ==",
+          "cycle": 5
+        },
+        {
+          "script_id": "Pressure",
+          "ds": "periodic_report",
+          "event": "aacra/smartpole/P001/env/telemetry",
+          "param": "0",
+          "code": "dmFyIGRhdGEgPSBKU09OLnBhcnNlKGFwaV9kYXRhKTsKdmFyIGVudiA9IGRhdGEuc3ViZGV2ICYmIGRhdGEuc3ViZGV2LmVudmlyb21lbnRhbDsKdmFyIGdhdGV3YXkgPSBkYXRhLnNuOwoKdmFyIGN0aW1lU3RyID0gKGVudiAmJiBlbnYuY3RpbWUpID8gU3RyaW5nKGVudi5jdGltZSkudHJpbSgpIDogIiI7CnZhciBpc09mZmxpbmUgPSAhZW52IHx8IGN0aW1lU3RyID09PSAiIiB8fCBjdGltZVN0ci5pbmRleE9mKCIxOTcwLTAxLTAxIikgPT09IDA7CgppZiAoaXNPZmZsaW5lKSB7CiAgLy8gT0ZGTElORQogIGFwaV9sb2coJ2Vudmlyb21lbnRhbCBpcyBPRkZMSU5FIDw9PVxuJyk7CgogIHZhciBmYXVsdF9tc2cgPSBKU09OLnN0cmluZ2lmeSh7CiAgICBzbjogZ2F0ZXdheSwKICAgIGN0X2lkOiBkYXRhLmN0X2lkLAogICAgZGF0YXNvdXJjZTogImRldmljZV9mYXVsdCIsCiAgICBkZXZpY2U6ICJlbnZpcm9tZW50YWwiLAogICAgc3RhdHVzOiAib2ZmbGluZSIsCiAgICBtZXNzYWdlOiAiR2F0ZXdheSAiICsgZ2F0ZXdheSArICI6IHRoZSBlbnZpcm9tZW50YWwgc2Vuc29yIGlzIG9mZmxpbmUiCiAgfSk7CgogIGFwaV9sb2coJ1B1Ymxpc2hpbmc6ICcgKyBmYXVsdF9tc2cgKyAnXG4nKTsKICBhcGlfb3V0KGFwaV9ldmVudCwgZmF1bHRfbXNnKTsKCn0gZWxzZSB7CiAgLy8gT05MSU5FIOKAlCBub3JtYWwgdGVsZW1ldHJ5CiAgYXBpX2xvZygnU2VuZCBEYXRhIDw9PVxuJyk7CiAgYXBpX2xvZyhhcGlfZGF0YSk7CiAgYXBpX291dChhcGlfZXZlbnQsIGFwaV9kYXRhKTsKfQ==",
+          "cycle": 5
+        },
+        {
+          "script_id": "Wind speed",
+          "ds": "periodic_report",
+          "event": "aacra/smartpole/P001/env/telemetry",
+          "param": "0",
+          "code": "dmFyIGRhdGEgPSBKU09OLnBhcnNlKGFwaV9kYXRhKTsKdmFyIGVudiA9IGRhdGEuc3ViZGV2ICYmIGRhdGEuc3ViZGV2LmVudmlyb21lbnRhbDsKdmFyIGdhdGV3YXkgPSBkYXRhLnNuOwoKdmFyIGN0aW1lU3RyID0gKGVudiAmJiBlbnYuY3RpbWUpID8gU3RyaW5nKGVudi5jdGltZSkudHJpbSgpIDogIiI7CnZhciBpc09mZmxpbmUgPSAhZW52IHx8IGN0aW1lU3RyID09PSAiIiB8fCBjdGltZVN0ci5pbmRleE9mKCIxOTcwLTAxLTAxIikgPT09IDA7CgppZiAoaXNPZmZsaW5lKSB7CiAgLy8gT0ZGTElORQogIGFwaV9sb2coJ2Vudmlyb21lbnRhbCBpcyBPRkZMSU5FIDw9PVxuJyk7CgogIHZhciBmYXVsdF9tc2cgPSBKU09OLnN0cmluZ2lmeSh7CiAgICBzbjogZ2F0ZXdheSwKICAgIGN0X2lkOiBkYXRhLmN0X2lkLAogICAgZGF0YXNvdXJjZTogImRldmljZV9mYXVsdCIsCiAgICBkZXZpY2U6ICJlbnZpcm9tZW50YWwiLAogICAgc3RhdHVzOiAib2ZmbGluZSIsCiAgICBtZXNzYWdlOiAiR2F0ZXdheSAiICsgZ2F0ZXdheSArICI6IHRoZSBlbnZpcm9tZW50YWwgc2Vuc29yIGlzIG9mZmxpbmUiCiAgfSk7CgogIGFwaV9sb2coJ1B1Ymxpc2hpbmc6ICcgKyBmYXVsdF9tc2cgKyAnXG4nKTsKICBhcGlfb3V0KGFwaV9ldmVudCwgZmF1bHRfbXNnKTsKCn0gZWxzZSB7CiAgLy8gT05MSU5FIOKAlCBub3JtYWwgdGVsZW1ldHJ5CiAgYXBpX2xvZygnU2VuZCBEYXRhIDw9PVxuJyk7CiAgYXBpX2xvZyhhcGlfZGF0YSk7CiAgYXBpX291dChhcGlfZXZlbnQsIGFwaV9kYXRhKTsKfQ==",
+          "cycle": 5
+        },
+        {
+          "script_id": "Rainfall",
+          "ds": "periodic_report",
+          "event": "aacra/smartpole/P001/env/telemetry",
+          "param": "0",
+          "code": "dmFyIGRhdGEgPSBKU09OLnBhcnNlKGFwaV9kYXRhKTsKdmFyIGVudiA9IGRhdGEuc3ViZGV2ICYmIGRhdGEuc3ViZGV2LmVudmlyb21lbnRhbDsKdmFyIGdhdGV3YXkgPSBkYXRhLnNuOwoKdmFyIGN0aW1lU3RyID0gKGVudiAmJiBlbnYuY3RpbWUpID8gU3RyaW5nKGVudi5jdGltZSkudHJpbSgpIDogIiI7CnZhciBpc09mZmxpbmUgPSAhZW52IHx8IGN0aW1lU3RyID09PSAiIiB8fCBjdGltZVN0ci5pbmRleE9mKCIxOTcwLTAxLTAxIikgPT09IDA7CgppZiAoaXNPZmZsaW5lKSB7CiAgLy8gT0ZGTElORQogIGFwaV9sb2coJ2Vudmlyb21lbnRhbCBpcyBPRkZMSU5FIDw9PVxuJyk7CgogIHZhciBmYXVsdF9tc2cgPSBKU09OLnN0cmluZ2lmeSh7CiAgICBzbjogZ2F0ZXdheSwKICAgIGN0X2lkOiBkYXRhLmN0X2lkLAogICAgZGF0YXNvdXJjZTogImRldmljZV9mYXVsdCIsCiAgICBkZXZpY2U6ICJlbnZpcm9tZW50YWwiLAogICAgc3RhdHVzOiAib2ZmbGluZSIsCiAgICBtZXNzYWdlOiAiR2F0ZXdheSAiICsgZ2F0ZXdheSArICI6IHRoZSBlbnZpcm9tZW50YWwgc2Vuc29yIGlzIG9mZmxpbmUiCiAgfSk7CgogIGFwaV9sb2coJ1B1Ymxpc2hpbmc6ICcgKyBmYXVsdF9tc2cgKyAnXG4nKTsKICBhcGlfb3V0KGFwaV9ldmVudCwgZmF1bHRfbXNnKTsKCn0gZWxzZSB7CiAgLy8gT05MSU5FIOKAlCBub3JtYWwgdGVsZW1ldHJ5CiAgYXBpX2xvZygnU2VuZCBEYXRhIDw9PVxuJyk7CiAgYXBpX2xvZyhhcGlfZGF0YSk7CiAgYXBpX291dChhcGlfZXZlbnQsIGFwaV9kYXRhKTsKfQ==",
+          "cycle": 5
+        },
+        {
+          "script_id": "Winddirection",
+          "ds": "periodic_report",
+          "event": "aacra/smartpole/P001/env/telemetry",
+          "param": "0",
+          "code": "dmFyIGRhdGEgPSBKU09OLnBhcnNlKGFwaV9kYXRhKTsKdmFyIGVudiA9IGRhdGEuc3ViZGV2ICYmIGRhdGEuc3ViZGV2LmVudmlyb21lbnRhbDsKdmFyIGdhdGV3YXkgPSBkYXRhLnNuOwoKdmFyIGN0aW1lU3RyID0gKGVudiAmJiBlbnYuY3RpbWUpID8gU3RyaW5nKGVudi5jdGltZSkudHJpbSgpIDogIiI7CnZhciBpc09mZmxpbmUgPSAhZW52IHx8IGN0aW1lU3RyID09PSAiIiB8fCBjdGltZVN0ci5pbmRleE9mKCIxOTcwLTAxLTAxIikgPT09IDA7CgppZiAoaXNPZmZsaW5lKSB7CiAgLy8gT0ZGTElORQogIGFwaV9sb2coJ2Vudmlyb21lbnRhbCBpcyBPRkZMSU5FIDw9PVxuJyk7CgogIHZhciBmYXVsdF9tc2cgPSBKU09OLnN0cmluZ2lmeSh7CiAgICBzbjogZ2F0ZXdheSwKICAgIGN0X2lkOiBkYXRhLmN0X2lkLAogICAgZGF0YXNvdXJjZTogImRldmljZV9mYXVsdCIsCiAgICBkZXZpY2U6ICJlbnZpcm9tZW50YWwiLAogICAgc3RhdHVzOiAib2ZmbGluZSIsCiAgICBtZXNzYWdlOiAiR2F0ZXdheSAiICsgZ2F0ZXdheSArICI6IHRoZSBlbnZpcm9tZW50YWwgc2Vuc29yIGlzIG9mZmxpbmUiCiAgfSk7CgogIGFwaV9sb2coJ1B1Ymxpc2hpbmc6ICcgKyBmYXVsdF9tc2cgKyAnXG4nKTsKICBhcGlfb3V0KGFwaV9ldmVudCwgZmF1bHRfbXNnKTsKCn0gZWxzZSB7CiAgLy8gT05MSU5FIOKAlCBub3JtYWwgdGVsZW1ldHJ5CiAgYXBpX2xvZygnU2VuZCBEYXRhIDw9PVxuJyk7CiAgYXBpX2xvZyhhcGlfZGF0YSk7CiAgYXBpX291dChhcGlfZXZlbnQsIGFwaV9kYXRhKTsKfQ==",
+          "cycle": 5
+        },
+        {
+          "script_id": "Rainfall",
+          "ds": "periodic_report",
+          "event": "aacra/smartpole/P001/env/telemetry",
+          "param": "0",
+          "code": "dmFyIGRhdGEgPSBKU09OLnBhcnNlKGFwaV9kYXRhKTsKdmFyIGVudiA9IGRhdGEuc3ViZGV2ICYmIGRhdGEuc3ViZGV2LmVudmlyb21lbnRhbDsKdmFyIGdhdGV3YXkgPSBkYXRhLnNuOwoKdmFyIGN0aW1lU3RyID0gKGVudiAmJiBlbnYuY3RpbWUpID8gU3RyaW5nKGVudi5jdGltZSkudHJpbSgpIDogIiI7CnZhciBpc09mZmxpbmUgPSAhZW52IHx8IGN0aW1lU3RyID09PSAiIiB8fCBjdGltZVN0ci5pbmRleE9mKCIxOTcwLTAxLTAxIikgPT09IDA7CgppZiAoaXNPZmZsaW5lKSB7CiAgLy8gT0ZGTElORQogIGFwaV9sb2coJ2Vudmlyb21lbnRhbCBpcyBPRkZMSU5FIDw9PVxuJyk7CgogIHZhciBmYXVsdF9tc2cgPSBKU09OLnN0cmluZ2lmeSh7CiAgICBzbjogZ2F0ZXdheSwKICAgIGN0X2lkOiBkYXRhLmN0X2lkLAogICAgZGF0YXNvdXJjZTogImRldmljZV9mYXVsdCIsCiAgICBkZXZpY2U6ICJlbnZpcm9tZW50YWwiLAogICAgc3RhdHVzOiAib2ZmbGluZSIsCiAgICBtZXNzYWdlOiAiR2F0ZXdheSAiICsgZ2F0ZXdheSArICI6IHRoZSBlbnZpcm9tZW50YWwgc2Vuc29yIGlzIG9mZmxpbmUiCiAgfSk7CgogIGFwaV9sb2coJ1B1Ymxpc2hpbmc6ICcgKyBmYXVsdF9tc2cgKyAnXG4nKTsKICBhcGlfb3V0KGFwaV9ldmVudCwgZmF1bHRfbXNnKTsKCn0gZWxzZSB7CiAgLy8gT05MSU5FIOKAlCBub3JtYWwgdGVsZW1ldHJ5CiAgYXBpX2xvZygnU2VuZCBEYXRhIDw9PVxuJyk7CiAgYXBpX2xvZyhhcGlfZGF0YSk7CiAgYXBpX291dChhcGlfZXZlbnQsIGFwaV9kYXRhKTsKfQ==",
+          "cycle": 5
+        },
+        {
+          "script_id": "Radiation",
+          "ds": "periodic_report",
+          "event": "aacra/smartpole/P001/env/telemetry",
+          "param": "0",
+          "code": "dmFyIGRhdGEgPSBKU09OLnBhcnNlKGFwaV9kYXRhKTsKdmFyIGVudiA9IGRhdGEuc3ViZGV2ICYmIGRhdGEuc3ViZGV2LmVudmlyb21lbnRhbDsKdmFyIGdhdGV3YXkgPSBkYXRhLnNuOwoKdmFyIGN0aW1lU3RyID0gKGVudiAmJiBlbnYuY3RpbWUpID8gU3RyaW5nKGVudi5jdGltZSkudHJpbSgpIDogIiI7CnZhciBpc09mZmxpbmUgPSAhZW52IHx8IGN0aW1lU3RyID09PSAiIiB8fCBjdGltZVN0ci5pbmRleE9mKCIxOTcwLTAxLTAxIikgPT09IDA7CgppZiAoaXNPZmZsaW5lKSB7CiAgLy8gT0ZGTElORQogIGFwaV9sb2coJ2Vudmlyb21lbnRhbCBpcyBPRkZMSU5FIDw9PVxuJyk7CgogIHZhciBmYXVsdF9tc2cgPSBKU09OLnN0cmluZ2lmeSh7CiAgICBzbjogZ2F0ZXdheSwKICAgIGN0X2lkOiBkYXRhLmN0X2lkLAogICAgZGF0YXNvdXJjZTogImRldmljZV9mYXVsdCIsCiAgICBkZXZpY2U6ICJlbnZpcm9tZW50YWwiLAogICAgc3RhdHVzOiAib2ZmbGluZSIsCiAgICBtZXNzYWdlOiAiR2F0ZXdheSAiICsgZ2F0ZXdheSArICI6IHRoZSBlbnZpcm9tZW50YWwgc2Vuc29yIGlzIG9mZmxpbmUiCiAgfSk7CgogIGFwaV9sb2coJ1B1Ymxpc2hpbmc6ICcgKyBmYXVsdF9tc2cgKyAnXG4nKTsKICBhcGlfb3V0KGFwaV9ldmVudCwgZmF1bHRfbXNnKTsKCn0gZWxzZSB7CiAgLy8gT05MSU5FIOKAlCBub3JtYWwgdGVsZW1ldHJ5CiAgYXBpX2xvZygnU2VuZCBEYXRhIDw9PVxuJyk7CiAgYXBpX2xvZyhhcGlfZGF0YSk7CiAgYXBpX291dChhcGlfZXZlbnQsIGFwaV9kYXRhKTsKfQ==",
+          "cycle": 5
+        },
+        {
+          "script_id": "Illuminance",
+          "ds": "periodic_report",
+          "event": "aacra/smartpole/P001/env/telemetry",
+          "param": "0",
+          "code": "dmFyIGRhdGEgPSBKU09OLnBhcnNlKGFwaV9kYXRhKTsKdmFyIGVudiA9IGRhdGEuc3ViZGV2ICYmIGRhdGEuc3ViZGV2LmVudmlyb21lbnRhbDsKdmFyIGdhdGV3YXkgPSBkYXRhLnNuOwoKdmFyIGN0aW1lU3RyID0gKGVudiAmJiBlbnYuY3RpbWUpID8gU3RyaW5nKGVudi5jdGltZSkudHJpbSgpIDogIiI7CnZhciBpc09mZmxpbmUgPSAhZW52IHx8IGN0aW1lU3RyID09PSAiIiB8fCBjdGltZVN0ci5pbmRleE9mKCIxOTcwLTAxLTAxIikgPT09IDA7CgppZiAoaXNPZmZsaW5lKSB7CiAgLy8gT0ZGTElORQogIGFwaV9sb2coJ2Vudmlyb21lbnRhbCBpcyBPRkZMSU5FIDw9PVxuJyk7CgogIHZhciBmYXVsdF9tc2cgPSBKU09OLnN0cmluZ2lmeSh7CiAgICBzbjogZ2F0ZXdheSwKICAgIGN0X2lkOiBkYXRhLmN0X2lkLAogICAgZGF0YXNvdXJjZTogImRldmljZV9mYXVsdCIsCiAgICBkZXZpY2U6ICJlbnZpcm9tZW50YWwiLAogICAgc3RhdHVzOiAib2ZmbGluZSIsCiAgICBtZXNzYWdlOiAiR2F0ZXdheSAiICsgZ2F0ZXdheSArICI6IHRoZSBlbnZpcm9tZW50YWwgc2Vuc29yIGlzIG9mZmxpbmUiCiAgfSk7CgogIGFwaV9sb2coJ1B1Ymxpc2hpbmc6ICcgKyBmYXVsdF9tc2cgKyAnXG4nKTsKICBhcGlfb3V0KGFwaV9ldmVudCwgZmF1bHRfbXNnKTsKCn0gZWxzZSB7CiAgLy8gT05MSU5FIOKAlCBub3JtYWwgdGVsZW1ldHJ5CiAgYXBpX2xvZygnU2VuZCBEYXRhIDw9PVxuJyk7CiAgYXBpX2xvZyhhcGlfZGF0YSk7CiAgYXBpX291dChhcGlfZXZlbnQsIGFwaV9kYXRhKTsKfQ==",
+          "cycle": 5
+        },
+        {
+          "script_id": "UV index",
+          "ds": "periodic_report",
+          "event": "aacra/smartpole/P001/env/telemetry",
+          "param": "0",
+          "code": "dmFyIGRhdGEgPSBKU09OLnBhcnNlKGFwaV9kYXRhKTsKdmFyIGVudiA9IGRhdGEuc3ViZGV2ICYmIGRhdGEuc3ViZGV2LmVudmlyb21lbnRhbDsKdmFyIGdhdGV3YXkgPSBkYXRhLnNuOwoKdmFyIGN0aW1lU3RyID0gKGVudiAmJiBlbnYuY3RpbWUpID8gU3RyaW5nKGVudi5jdGltZSkudHJpbSgpIDogIiI7CnZhciBpc09mZmxpbmUgPSAhZW52IHx8IGN0aW1lU3RyID09PSAiIiB8fCBjdGltZVN0ci5pbmRleE9mKCIxOTcwLTAxLTAxIikgPT09IDA7CgppZiAoaXNPZmZsaW5lKSB7CiAgLy8gT0ZGTElORQogIGFwaV9sb2coJ2Vudmlyb21lbnRhbCBpcyBPRkZMSU5FIDw9PVxuJyk7CgogIHZhciBmYXVsdF9tc2cgPSBKU09OLnN0cmluZ2lmeSh7CiAgICBzbjogZ2F0ZXdheSwKICAgIGN0X2lkOiBkYXRhLmN0X2lkLAogICAgZGF0YXNvdXJjZTogImRldmljZV9mYXVsdCIsCiAgICBkZXZpY2U6ICJlbnZpcm9tZW50YWwiLAogICAgc3RhdHVzOiAib2ZmbGluZSIsCiAgICBtZXNzYWdlOiAiR2F0ZXdheSAiICsgZ2F0ZXdheSArICI6IHRoZSBlbnZpcm9tZW50YWwgc2Vuc29yIGlzIG9mZmxpbmUiCiAgfSk7CgogIGFwaV9sb2coJ1B1Ymxpc2hpbmc6ICcgKyBmYXVsdF9tc2cgKyAnXG4nKTsKICBhcGlfb3V0KGFwaV9ldmVudCwgZmF1bHRfbXNnKTsKCn0gZWxzZSB7CiAgLy8gT05MSU5FIOKAlCBub3JtYWwgdGVsZW1ldHJ5CiAgYXBpX2xvZygnU2VuZCBEYXRhIDw9PVxuJyk7CiAgYXBpX2xvZyhhcGlfZGF0YSk7CiAgYXBpX291dChhcGlfZXZlbnQsIGFwaV9kYXRhKTsKfQ==",
+          "cycle": 5
+        },
+        {
+          "script_id": "CO2",
+          "ds": "periodic_report",
+          "event": "aacra/smartpole/P001/env/telemetry",
+          "param": "0",
+          "code": "dmFyIGRhdGEgPSBKU09OLnBhcnNlKGFwaV9kYXRhKTsKdmFyIGVudiA9IGRhdGEuc3ViZGV2ICYmIGRhdGEuc3ViZGV2LmVudmlyb21lbnRhbDsKdmFyIGdhdGV3YXkgPSBkYXRhLnNuOwoKdmFyIGN0aW1lU3RyID0gKGVudiAmJiBlbnYuY3RpbWUpID8gU3RyaW5nKGVudi5jdGltZSkudHJpbSgpIDogIiI7CnZhciBpc09mZmxpbmUgPSAhZW52IHx8IGN0aW1lU3RyID09PSAiIiB8fCBjdGltZVN0ci5pbmRleE9mKCIxOTcwLTAxLTAxIikgPT09IDA7CgppZiAoaXNPZmZsaW5lKSB7CiAgLy8gT0ZGTElORQogIGFwaV9sb2coJ2Vudmlyb21lbnRhbCBpcyBPRkZMSU5FIDw9PVxuJyk7CgogIHZhciBmYXVsdF9tc2cgPSBKU09OLnN0cmluZ2lmeSh7CiAgICBzbjogZ2F0ZXdheSwKICAgIGN0X2lkOiBkYXRhLmN0X2lkLAogICAgZGF0YXNvdXJjZTogImRldmljZV9mYXVsdCIsCiAgICBkZXZpY2U6ICJlbnZpcm9tZW50YWwiLAogICAgc3RhdHVzOiAib2ZmbGluZSIsCiAgICBtZXNzYWdlOiAiR2F0ZXdheSAiICsgZ2F0ZXdheSArICI6IHRoZSBlbnZpcm9tZW50YWwgc2Vuc29yIGlzIG9mZmxpbmUiCiAgfSk7CgogIGFwaV9sb2coJ1B1Ymxpc2hpbmc6ICcgKyBmYXVsdF9tc2cgKyAnXG4nKTsKICBhcGlfb3V0KGFwaV9ldmVudCwgZmF1bHRfbXNnKTsKCn0gZWxzZSB7CiAgLy8gT05MSU5FIOKAlCBub3JtYWwgdGVsZW1ldHJ5CiAgYXBpX2xvZygnU2VuZCBEYXRhIDw9PVxuJyk7CiAgYXBpX2xvZyhhcGlfZGF0YSk7CiAgYXBpX291dChhcGlfZXZlbnQsIGFwaV9kYXRhKTsKfQ==",
+          "cycle": 5
+        },
+        {
+          "script_id": "Negative O2 ions",
+          "ds": "periodic_report",
+          "event": "aacra/smartpole/P001/env/telemetry",
+          "param": "0",
+          "code": "dmFyIGRhdGEgPSBKU09OLnBhcnNlKGFwaV9kYXRhKTsKdmFyIGVudiA9IGRhdGEuc3ViZGV2ICYmIGRhdGEuc3ViZGV2LmVudmlyb21lbnRhbDsKdmFyIGdhdGV3YXkgPSBkYXRhLnNuOwoKdmFyIGN0aW1lU3RyID0gKGVudiAmJiBlbnYuY3RpbWUpID8gU3RyaW5nKGVudi5jdGltZSkudHJpbSgpIDogIiI7CnZhciBpc09mZmxpbmUgPSAhZW52IHx8IGN0aW1lU3RyID09PSAiIiB8fCBjdGltZVN0ci5pbmRleE9mKCIxOTcwLTAxLTAxIikgPT09IDA7CgppZiAoaXNPZmZsaW5lKSB7CiAgLy8gT0ZGTElORQogIGFwaV9sb2coJ2Vudmlyb21lbnRhbCBpcyBPRkZMSU5FIDw9PVxuJyk7CgogIHZhciBmYXVsdF9tc2cgPSBKU09OLnN0cmluZ2lmeSh7CiAgICBzbjogZ2F0ZXdheSwKICAgIGN0X2lkOiBkYXRhLmN0X2lkLAogICAgZGF0YXNvdXJjZTogImRldmljZV9mYXVsdCIsCiAgICBkZXZpY2U6ICJlbnZpcm9tZW50YWwiLAogICAgc3RhdHVzOiAib2ZmbGluZSIsCiAgICBtZXNzYWdlOiAiR2F0ZXdheSAiICsgZ2F0ZXdheSArICI6IHRoZSBlbnZpcm9tZW50YWwgc2Vuc29yIGlzIG9mZmxpbmUiCiAgfSk7CgogIGFwaV9sb2coJ1B1Ymxpc2hpbmc6ICcgKyBmYXVsdF9tc2cgKyAnXG4nKTsKICBhcGlfb3V0KGFwaV9ldmVudCwgZmF1bHRfbXNnKTsKCn0gZWxzZSB7CiAgLy8gT05MSU5FIOKAlCBub3JtYWwgdGVsZW1ldHJ5CiAgYXBpX2xvZygnU2VuZCBEYXRhIDw9PVxuJyk7CiAgYXBpX2xvZyhhcGlfZGF0YSk7CiAgYXBpX291dChhcGlfZXZlbnQsIGFwaV9kYXRhKTsKfQ==",
+          "cycle": 5
+        },
+        {
+          "script_id": "TSP",
+          "ds": "periodic_report",
+          "event": "aacra/smartpole/P001/env/telemetry",
+          "param": "0",
+          "code": "dmFyIGRhdGEgPSBKU09OLnBhcnNlKGFwaV9kYXRhKTsKdmFyIGVudiA9IGRhdGEuc3ViZGV2ICYmIGRhdGEuc3ViZGV2LmVudmlyb21lbnRhbDsKdmFyIGdhdGV3YXkgPSBkYXRhLnNuOwoKdmFyIGN0aW1lU3RyID0gKGVudiAmJiBlbnYuY3RpbWUpID8gU3RyaW5nKGVudi5jdGltZSkudHJpbSgpIDogIiI7CnZhciBpc09mZmxpbmUgPSAhZW52IHx8IGN0aW1lU3RyID09PSAiIiB8fCBjdGltZVN0ci5pbmRleE9mKCIxOTcwLTAxLTAxIikgPT09IDA7CgppZiAoaXNPZmZsaW5lKSB7CiAgLy8gT0ZGTElORQogIGFwaV9sb2coJ2Vudmlyb21lbnRhbCBpcyBPRkZMSU5FIDw9PVxuJyk7CgogIHZhciBmYXVsdF9tc2cgPSBKU09OLnN0cmluZ2lmeSh7CiAgICBzbjogZ2F0ZXdheSwKICAgIGN0X2lkOiBkYXRhLmN0X2lkLAogICAgZGF0YXNvdXJjZTogImRldmljZV9mYXVsdCIsCiAgICBkZXZpY2U6ICJlbnZpcm9tZW50YWwiLAogICAgc3RhdHVzOiAib2ZmbGluZSIsCiAgICBtZXNzYWdlOiAiR2F0ZXdheSAiICsgZ2F0ZXdheSArICI6IHRoZSBlbnZpcm9tZW50YWwgc2Vuc29yIGlzIG9mZmxpbmUiCiAgfSk7CgogIGFwaV9sb2coJ1B1Ymxpc2hpbmc6ICcgKyBmYXVsdF9tc2cgKyAnXG4nKTsKICBhcGlfb3V0KGFwaV9ldmVudCwgZmF1bHRfbXNnKTsKCn0gZWxzZSB7CiAgLy8gT05MSU5FIOKAlCBub3JtYWwgdGVsZW1ldHJ5CiAgYXBpX2xvZygnU2VuZCBEYXRhIDw9PVxuJyk7CiAgYXBpX2xvZyhhcGlfZGF0YSk7CiAgYXBpX291dChhcGlfZXZlbnQsIGFwaV9kYXRhKTsKfQ==",
+          "cycle": 5
+        },
+        {
+          "script_id": "PM1",
+          "ds": "periodic_report",
+          "event": "aacra/smartpole/P001/env/telemetry",
+          "param": "0",
+          "code": "dmFyIGRhdGEgPSBKU09OLnBhcnNlKGFwaV9kYXRhKTsKdmFyIGVudiA9IGRhdGEuc3ViZGV2ICYmIGRhdGEuc3ViZGV2LmVudmlyb21lbnRhbDsKdmFyIGdhdGV3YXkgPSBkYXRhLnNuOwoKdmFyIGN0aW1lU3RyID0gKGVudiAmJiBlbnYuY3RpbWUpID8gU3RyaW5nKGVudi5jdGltZSkudHJpbSgpIDogIiI7CnZhciBpc09mZmxpbmUgPSAhZW52IHx8IGN0aW1lU3RyID09PSAiIiB8fCBjdGltZVN0ci5pbmRleE9mKCIxOTcwLTAxLTAxIikgPT09IDA7CgppZiAoaXNPZmZsaW5lKSB7CiAgLy8gT0ZGTElORQogIGFwaV9sb2coJ2Vudmlyb21lbnRhbCBpcyBPRkZMSU5FIDw9PVxuJyk7CgogIHZhciBmYXVsdF9tc2cgPSBKU09OLnN0cmluZ2lmeSh7CiAgICBzbjogZ2F0ZXdheSwKICAgIGN0X2lkOiBkYXRhLmN0X2lkLAogICAgZGF0YXNvdXJjZTogImRldmljZV9mYXVsdCIsCiAgICBkZXZpY2U6ICJlbnZpcm9tZW50YWwiLAogICAgc3RhdHVzOiAib2ZmbGluZSIsCiAgICBtZXNzYWdlOiAiR2F0ZXdheSAiICsgZ2F0ZXdheSArICI6IHRoZSBlbnZpcm9tZW50YWwgc2Vuc29yIGlzIG9mZmxpbmUiCiAgfSk7CgogIGFwaV9sb2coJ1B1Ymxpc2hpbmc6ICcgKyBmYXVsdF9tc2cgKyAnXG4nKTsKICBhcGlfb3V0KGFwaV9ldmVudCwgZmF1bHRfbXNnKTsKCn0gZWxzZSB7CiAgLy8gT05MSU5FIOKAlCBub3JtYWwgdGVsZW1ldHJ5CiAgYXBpX2xvZygnU2VuZCBEYXRhIDw9PVxuJyk7CiAgYXBpX2xvZyhhcGlfZGF0YSk7CiAgYXBpX291dChhcGlfZXZlbnQsIGFwaV9kYXRhKTsKfQ==",
+          "cycle": 5
+        },
+        {
+          "script_id": "ack ",
+          "ds": "periodic_report",
+          "event": "scmp/v1/6e1a6f4e-5abc-4824-949c-8709dc4fd7ce/POLE-GW-01/lamp/25e019f5-f3b4-4ed7-a9b8-eda6d3784767/ack/control",
+          "param": "1",
+          "code": "LyogRXhhbXBsZSAKICBhcGlfZXZlbnQ6IHRvcGljKG1xdHQpIC8gdXJsKGh0dHApCiAgYXBpX2RhdGE6IG1lc3NhZ2UgdG8gc2VuZAoqLwphcGlfbG9nKCdTZW5kIERhdGEgPD09XG4nKTsKYXBpX291dChhcGlfZXZlbnQsIGFwaV9kYXRhKTs=",
+          "cycle": 5
+        },
+        {
+          "script_id": "camera_status",
+          "ds": "periodic_report",
+          "event": "aacra/smartpole/P001/camera/fault",
+          "param": "0",
+          "code": "YXBpX2xvZygnQ2hlY2tpbmcgY2FtZXJhIGNvbm5lY3Rpdml0eVxuJyk7CnRyeSB7CiAgICB2YXIgc3RhdHVzRmlsZSA9ICcvdG1wL2NhbWVyYV9zdGF0dXMudHh0JzsKICAgIHZhciBsb2NrRmlsZSA9ICcvdG1wL2NhbWVyYV9jaGVjay5sb2NrJzsKCiAgICB2YXIgbG9ja1Jlc3VsdCA9IGFwaV9zeXNfZXhlYygnbWtkaXIgJyArIGxvY2tGaWxlICsgJyAyPiYxICYmIGVjaG8gTE9DS0VEIHx8IGVjaG8gQlVTWScpOwogICAgaWYgKGxvY2tSZXN1bHQuaW5kZXhPZignQlVTWScpICE9PSAtMSkgewogICAgICAgIGFwaV9sb2coJ1ByZXZpb3VzIGNoZWNrIHN0aWxsIHJ1bm5pbmcsIHNraXBwaW5nIHRoaXMgY3ljbGVcbicpOwogICAgfSBlbHNlIHsKICAgICAgICB0cnkgewogICAgICAgICAgICB2YXIgcmVzdWx0ID0gYXBpX3N5c19leGVjKCduYyAtdyAxMCAxOTIuMTY4LjQuMTA4IDM3Nzc3IDwvZGV2L251bGwgPi9kZXYvbnVsbCAyPiYxOyBlY2hvICQ/Jyk7CiAgICAgICAgICAgIHZhciBleGl0X2NvZGUgPSByZXN1bHQucmVwbGFjZSgvW14wLTldL2csICcnKTsKICAgICAgICAgICAgdmFyIGlzX29ubGluZSA9IChleGl0X2NvZGUgPT09ICcwJyk7CiAgICAgICAgICAgIHZhciBjdXJyZW50X3N0YXR1cyA9IGlzX29ubGluZSA/ICdvbmxpbmUnIDogJ29mZmxpbmUnOwoKICAgICAgICAgICAgdmFyIHJhd19wcmV2aW91cyA9IGFwaV9zeXNfZXhlYygnY2F0ICcgKyBzdGF0dXNGaWxlICsgJyAyPi9kZXYvbnVsbCcpOwogICAgICAgICAgICB2YXIgcHJldmlvdXNfc3RhdHVzID0gcmF3X3ByZXZpb3VzID8gcmF3X3ByZXZpb3VzLnJlcGxhY2UoL1teYS16XS9nLCAnJykgOiAnJzsKCiAgICAgICAgICAgIGFwaV9sb2coJ3ByZXZpb3VzPVsnICsgcHJldmlvdXNfc3RhdHVzICsgJ10gY3VycmVudD1bJyArIGN1cnJlbnRfc3RhdHVzICsgJ11cbicpOwoKICAgICAgICAgICAgaWYgKHByZXZpb3VzX3N0YXR1cyAhPT0gY3VycmVudF9zdGF0dXMpIHsKICAgICAgICAgICAgICAgIHZhciBmYXVsdF9tc2cgPSBKU09OLnN0cmluZ2lmeSh7CiAgICAgICAgICAgICAgICAgICAgZGV2aWNlOiAiY2FtZXJhIiwKICAgICAgICAgICAgICAgICAgICBpcDogIjE5Mi4xNjguNC4xMDgiLAogICAgICAgICAgICAgICAgICAgIHN0YXR1czogY3VycmVudF9zdGF0dXMsCiAgICAgICAgICAgICAgICAgICAgbWVzc2FnZTogaXNfb25saW5lID8gIkNhbWVyYSBpcyBiYWNrIG9ubGluZSIgOiAiQ2FtZXJhIGlzIG9mZmxpbmUiCiAgICAgICAgICAgICAgICB9KTsKICAgICAgICAgICAgICAgIGFwaV9sb2coJ1N0YXRlIGNoYW5nZWQsIHB1Ymxpc2hpbmc6ICcgKyBmYXVsdF9tc2cgKyAnXG4nKTsKICAgICAgICAgICAgICAgIGFwaV9vdXQoYXBpX2V2ZW50LCBmYXVsdF9tc2cpOwogICAgICAgICAgICAgICAgYXBpX3N5c19leGVjKCdlY2hvIC1uICInICsgY3VycmVudF9zdGF0dXMgKyAnIiA+ICcgKyBzdGF0dXNGaWxlKTsKICAgICAgICAgICAgfSBlbHNlIHsKICAgICAgICAgICAgICAgIGFwaV9sb2coJ05vIGNoYW5nZSAoJyArIGN1cnJlbnRfc3RhdHVzICsgJyksIHNraXBwaW5nIHB1Ymxpc2hcbicpOwogICAgICAgICAgICB9CiAgICAgICAgfSBmaW5hbGx5IHsKICAgICAgICAgICAgYXBpX3N5c19leGVjKCdybWRpciAnICsgbG9ja0ZpbGUpOwogICAgICAgIH0KICAgIH0KfSBjYXRjaCAoZSkgewogICAgYXBpX2xvZygnRXJyb3IgY2hlY2tpbmcgY2FtZXJhOiAnICsgZS50b1N0cmluZygpICsgJ1xuJyk7Cn0=",
+          "cycle": 5
+        },
+        {
+          "script_id": "led_screen_status",
+          "ds": "periodic_report",
+          "event": "aacra/smartpole/P001/screen/fault",
+          "param": "0",
+          "code": "YXBpX2xvZygnQ2hlY2tpbmcgTEVEIHNjcmVlbiBjb25uZWN0aXZpdHlcbicpOwp0cnkgewogICAgdmFyIHN0YXR1c0ZpbGUgPSAnL3RtcC9zY3JlZW5fc3RhdHVzLnR4dCc7CiAgICB2YXIgbG9ja0ZpbGUgPSAnL3RtcC9zY3JlZW5fY2hlY2subG9jayc7CgogICAgdmFyIGxvY2tSZXN1bHQgPSBhcGlfc3lzX2V4ZWMoJ21rZGlyICcgKyBsb2NrRmlsZSArICcgMj4mMSAmJiBlY2hvIExPQ0tFRCB8fCBlY2hvIEJVU1knKTsKICAgIGlmIChsb2NrUmVzdWx0LmluZGV4T2YoJ0JVU1knKSAhPT0gLTEpIHsKICAgICAgICBhcGlfbG9nKCdQcmV2aW91cyBjaGVjayBzdGlsbCBydW5uaW5nLCBza2lwcGluZyB0aGlzIGN5Y2xlXG4nKTsKICAgIH0gZWxzZSB7CiAgICAgICAgdHJ5IHsKICAgICAgICAgICAgdmFyIHJlc3VsdCA9IGFwaV9zeXNfZXhlYygnbmMgLXcgMTAgMTkyLjE2OC40LjEyNSAxNjY3NCA8L2Rldi9udWxsID4vZGV2L251bGwgMj4mMTsgZWNobyAkPycpOwogICAgICAgICAgICB2YXIgZXhpdF9jb2RlID0gcmVzdWx0LnJlcGxhY2UoL1teMC05XS9nLCAnJyk7CiAgICAgICAgICAgIHZhciBpc19vbmxpbmUgPSAoZXhpdF9jb2RlID09PSAnMCcpOwogICAgICAgICAgICB2YXIgY3VycmVudF9zdGF0dXMgPSBpc19vbmxpbmUgPyAnb25saW5lJyA6ICdvZmZsaW5lJzsKCiAgICAgICAgICAgIHZhciByYXdfcHJldmlvdXMgPSBhcGlfc3lzX2V4ZWMoJ2NhdCAnICsgc3RhdHVzRmlsZSArICcgMj4vZGV2L251bGwnKTsKICAgICAgICAgICAgdmFyIHByZXZpb3VzX3N0YXR1cyA9IHJhd19wcmV2aW91cyA/IHJhd19wcmV2aW91cy5yZXBsYWNlKC9bXmEtel0vZywgJycpIDogJyc7CgogICAgICAgICAgICBhcGlfbG9nKCdwcmV2aW91cz1bJyArIHByZXZpb3VzX3N0YXR1cyArICddIGN1cnJlbnQ9WycgKyBjdXJyZW50X3N0YXR1cyArICddXG4nKTsKCiAgICAgICAgICAgIGlmIChwcmV2aW91c19zdGF0dXMgIT09IGN1cnJlbnRfc3RhdHVzKSB7CiAgICAgICAgICAgICAgICB2YXIgZmF1bHRfbXNnID0gSlNPTi5zdHJpbmdpZnkoewogICAgICAgICAgICAgICAgICAgIGRldmljZTogInNjcmVlbiIsCiAgICAgICAgICAgICAgICAgICAgaXA6ICIxOTIuMTY4LjQuMTI1IiwKICAgICAgICAgICAgICAgICAgICBzdGF0dXM6IGN1cnJlbnRfc3RhdHVzLAogICAgICAgICAgICAgICAgICAgIG1lc3NhZ2U6IGlzX29ubGluZSA/ICJMRUQgc2NyZWVuIGlzIGJhY2sgb25saW5lIiA6ICJMRUQgc2NyZWVuIGlzIG9mZmxpbmUiCiAgICAgICAgICAgICAgICB9KTsKICAgICAgICAgICAgICAgIGFwaV9sb2coJ1N0YXRlIGNoYW5nZWQsIHB1Ymxpc2hpbmc6ICcgKyBmYXVsdF9tc2cgKyAnXG4nKTsKICAgICAgICAgICAgICAgIGFwaV9vdXQoYXBpX2V2ZW50LCBmYXVsdF9tc2cpOwogICAgICAgICAgICAgICAgYXBpX3N5c19leGVjKCdlY2hvIC1uICInICsgY3VycmVudF9zdGF0dXMgKyAnIiA+ICcgKyBzdGF0dXNGaWxlKTsKICAgICAgICAgICAgfSBlbHNlIHsKICAgICAgICAgICAgICAgIGFwaV9sb2coJ05vIGNoYW5nZSAoJyArIGN1cnJlbnRfc3RhdHVzICsgJyksIHNraXBwaW5nIHB1Ymxpc2hcbicpOwogICAgICAgICAgICB9CiAgICAgICAgfSBmaW5hbGx5IHsKICAgICAgICAgICAgYXBpX3N5c19leGVjKCdybWRpciAnICsgbG9ja0ZpbGUpOwogICAgICAgIH0KICAgIH0KfSBjYXRjaCAoZSkgewogICAgYXBpX2xvZygnRXJyb3IgY2hlY2tpbmcgc2NyZWVuOiAnICsgZS50b1N0cmluZygpICsgJ1xuJyk7Cn0=",
+          "cycle": 5
+        }
+      ],
+      "script_down": [
+        {
+          "script_id": "Subscribe",
+          "ds": "form_server",
+          "event": "subscribe",
+          "param": "0",
+          "code": "LyogU2VydmVyIERhdGEgRXhhbXBsZSAKICAgIHsKICAgICAgIk1PREJVUy1UQ1AiOnsKICAgICAgICAiZGF0YSI6ewogICAgICAgICAgIk1EQlMtVENQMCI6MzIxLCJNREJTLVRDUDEiOjEyMwogICAgICAgICB9CiAgICAgICB9LAogICAgICAgIklPIjp7CiAgICAgICAgICJkYXRhIjp7CiAgICAgICAgICAgInJlbGF5IjowCiAgICAgICAgIH0KICAgICAgIH0KICAgIH0KKi8KYXBpX2xvZygnTmV3IE1lc3NhZ2UgPT0+XG4nKTsKYXBpX2xvZyhhcGlfZGF0YSk7CgovKiBwYXJzZSBhcyBvYmplY3QgKi8KdmFyIGluX2pzb24gPSBKU09OLnBhcnNlKGFwaV9kYXRhKTsKCmZvcih2YXIgcGxjX2lkIGluIGluX2pzb24pIHsKICB2YXIgZGF0YSA9IGluX2pzb25bcGxjX2lkXS5kYXRhOwogIGZvcih2YXIgdmlkIGluIGRhdGEpIHsKICAgIHZhciB2YWx1ZSA9IGRhdGFbdmlkXS50b1N0cmluZygpOwogICAgYXBpX2xvZygnV3JpdGUgbm9kZSAnKTsKICAgIGFwaV9sb2codmlkICsgJyA9ICcgKyB2YWx1ZSArICdcbicpOwogICAgYXBpX3dyaXRlX25vZGUocGxjX2lkLCB2aWQsIHZhbHVlKTsKICB9Cn0K",
+          "cycle": 0
+        },
+        {
+          "script_id": "LampControlTopic",
+          "ds": "form_server",
+          "event": "scmp/v1/36e3d400-e836-4452-9f66-44edec11bd7c/Pole-CBD-3483/lamp/2c82a9b9-2e3f-43ed-925c-df79783b6dc1/cmd/control",
+          "param": "0",
+          "code": "YXBpX2xvZygnPT09IFNDTVAgQ29tbWFuZCBSZWNlaXZlZCA9PT1cbicpOwphcGlfbG9nKGFwaV9kYXRhICsgJ1xuJyk7Cgp0cnkgewogICAgLy8gU2FuaXRpemUgcGF5bG9hZAogICAgdmFyIHBheWxvYWQgPSBhcGlfZGF0YS5yZXBsYWNlKC8nL2csICciJyk7CiAgICBwYXlsb2FkID0gcGF5bG9hZC5yZXBsYWNlKAogICAgICAgIC8oW3ssXVxzKikoW2EtekEtWjAtOV9cLV0rKVxzKjovZywKICAgICAgICAnJDEiJDIiOicKICAgICk7CgogICAgdmFyIGVudmVsb3BlID0gSlNPTi5wYXJzZShwYXlsb2FkKTsKCiAgICBhcGlfbG9nKCdQYXJzZWQgSlNPTiBzdWNjZXNzZnVsbHlcbicpOwoKICAgIC8vIEdldCBTQ01QIHBhcmFtcwogICAgdmFyIHBhcmFtcyA9IHt9OwoKICAgIGlmIChlbnZlbG9wZS5kYXRhICYmIGVudmVsb3BlLmRhdGEucGFyYW1zKSB7CiAgICAgICAgcGFyYW1zID0gZW52ZWxvcGUuZGF0YS5wYXJhbXM7CiAgICAgICAgYXBpX2xvZygnVXNpbmcgZW52ZWxvcGUuZGF0YS5wYXJhbXNcbicpOwogICAgfSBlbHNlIGlmIChlbnZlbG9wZS5jb250ZW50KSB7CiAgICAgICAgcGFyYW1zID0gZW52ZWxvcGUuY29udGVudDsKICAgICAgICBhcGlfbG9nKCdVc2luZyBlbnZlbG9wZS5jb250ZW50XG4nKTsKICAgIH0gZWxzZSB7CiAgICAgICAgcGFyYW1zID0gZW52ZWxvcGU7CiAgICAgICAgYXBpX2xvZygnVXNpbmcgcm9vdCBlbnZlbG9wZVxuJyk7CiAgICB9CgogICAgLy8gLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0KICAgIC8vIFJlYWQgc3dpdGNoIHN0YXR1cyBzYWZlbHkKICAgIC8vIC0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tCgogICAgdmFyIHN3aXRjaFN0YXR1czsKCiAgICBpZiAocGFyYW1zLnN3aXRjaFN0YXR1cyAhPT0gdW5kZWZpbmVkKSB7CiAgICAgICAgc3dpdGNoU3RhdHVzID0gcGFyYW1zLnN3aXRjaFN0YXR1czsKICAgIH0gZWxzZSBpZiAocGFyYW1zLnN3aXRjaF9zdGF0dXMgIT09IHVuZGVmaW5lZCkgewogICAgICAgIHN3aXRjaFN0YXR1cyA9IHBhcmFtcy5zd2l0Y2hfc3RhdHVzOwogICAgfSBlbHNlIGlmIChwYXJhbXMuc3dpdGNoICE9PSB1bmRlZmluZWQpIHsKICAgICAgICBzd2l0Y2hTdGF0dXMgPSBwYXJhbXMuc3dpdGNoOwogICAgfQoKICAgIGFwaV9sb2coCiAgICAgICAgJ3N3aXRjaFN0YXR1cyA9ICcgKwogICAgICAgIHN3aXRjaFN0YXR1cyArCiAgICAgICAgJyAodHlwZT0nICsKICAgICAgICB0eXBlb2Ygc3dpdGNoU3RhdHVzICsKICAgICAgICAnKVxuJwogICAgKTsKCiAgICAvLyAtLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLQogICAgLy8gQ29udmVydCBzd2l0Y2ggc3RhdHVzIHRvIGdhdGV3YXkgSU8gdmFsdWUKICAgIC8vIC0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tCgogICAgdmFyIHZhbCA9ICcwJzsKCiAgICBpZiAoCiAgICAgICAgc3dpdGNoU3RhdHVzID09PSAnb24nIHx8CiAgICAgICAgc3dpdGNoU3RhdHVzID09PSAnT04nIHx8CiAgICAgICAgc3dpdGNoU3RhdHVzID09PSAxIHx8CiAgICAgICAgc3dpdGNoU3RhdHVzID09PSAnMScgfHwKICAgICAgICBzd2l0Y2hTdGF0dXMgPT09IHRydWUKICAgICkgewogICAgICAgIHZhbCA9ICcxJzsKICAgIH0KCiAgICBhcGlfbG9nKAogICAgICAgICdMYW1wIGNvbW1hbmQgcmVzb2x2ZWQgdG86ICcgKwogICAgICAgICh2YWwgPT09ICcxJyA/ICdPTicgOiAnT0ZGJykgKwogICAgICAgICcgKCcgKyB2YWwgKyAnKVxuJwogICAgKTsKCiAgICAvLyAtLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLQogICAgLy8gSU1QT1JUQU5UOgogICAgLy8gVXNlIHRoZSBSRUFMIGdhdGV3YXkgSU8gY2hhbm5lbAogICAgLy8gLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0KCiAgICBhcGlfbG9nKAogICAgICAgICdXcml0aW5nIEFDLU9VVDEgPSAnICsKICAgICAgICB2YWwgKwogICAgICAgICdcbicKICAgICk7CgogICAgYXBpX3dyaXRlX25vZGUoJ0lPJywgJ0FDLU9VVDEnLCB2YWwpOwoKICAgIC8vIEtlZXAgdGhlIHN1YnN5c3RlbSBlbmFibGVkCiAgICBhcGlfd3JpdGVfbm9kZSgnSU8nLCAnc21hcnRfbGlnaHRwb2xlX2VuJywgJzEnKTsKCiAgICAvLyBLZWVwIEFDL0RDIHBvd2VyIGJ1cyBlbmFibGVkCiAgICBhcGlfd3JpdGVfbm9kZSgnSU8nLCAnYWNfZGNfc3dpdGNoJywgJzEnKTsKCiAgICAvLyAtLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLQogICAgLy8gT3B0aW9uYWwgZGltbWluZwogICAgLy8gLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0KCiAgICB2YXIgZGltTGV2ZWw7CgogICAgaWYgKHBhcmFtcy5kaW1MZXZlbCAhPT0gdW5kZWZpbmVkKSB7CiAgICAgICAgZGltTGV2ZWwgPSBwYXJhbXMuZGltTGV2ZWw7CiAgICB9IGVsc2UgaWYgKHBhcmFtcy5kaW1fbGV2ZWwgIT09IHVuZGVmaW5lZCkgewogICAgICAgIGRpbUxldmVsID0gcGFyYW1zLmRpbV9sZXZlbDsKICAgIH0KCiAgICBpZiAoZGltTGV2ZWwgIT09IHVuZGVmaW5lZCAmJiBkaW1MZXZlbCAhPT0gbnVsbCkgewogICAgICAgIGFwaV9sb2coCiAgICAgICAgICAgICdEaW0gbGV2ZWwgcmVjZWl2ZWQ6ICcgKwogICAgICAgICAgICBkaW1MZXZlbCArCiAgICAgICAgICAgICdcbicKICAgICAgICApOwoKICAgICAgICAvLyBFbmFibGUgbGF0ZXIgd2hlbiBhY3R1YWwgZGltbWVyIG5vZGUgaXMgY29uZmlybWVkCiAgICAgICAgLy8gYXBpX3dyaXRlX25vZGUoJ0lPJywgJ2RpbV9sZXZlbCcsIGRpbUxldmVsLnRvU3RyaW5nKCkpOwogICAgfQoKICAgIGFwaV9sb2coJz09PSBTQ01QIENvbW1hbmQgQ29tcGxldGVkID09PVxuJyk7Cgp9IGNhdGNoIChlKSB7CiAgICBhcGlfbG9nKAogICAgICAgICdFcnJvciBwcm9jZXNzaW5nIFNDTVAgY29tbWFuZDogJyArCiAgICAgICAgZS50b1N0cmluZygpICsKICAgICAgICAnXG4nCiAgICApOwp9",
+          "cycle": 0
+        },
+        {
+          "script_id": "new",
+          "ds": "form_server",
+          "event": "new",
+          "param": "1",
+          "code": "LyoKICogcHJvYmVfY29ubmVjdGl2aXR5LmpzCiAqIFdlIGtub3cgYXBpX3N5c19leGVjIHJldHVybnMgc3Rkb3V0IGRpcmVjdGx5LiBUaGUgbG9naW4gY3VybCBjYWxsCiAqIHByb2R1Y2VkIG5vIG91dHB1dCBhdCBhbGwgKG5vdCBldmVuIGFuIGVycm9yKSwgd2hpY2ggbWVhbnMgY3VybCBpcwogKiBmYWlsaW5nIHNpbGVudGx5IHVuZGVyIC1zLiBUaGlzIHByb2JlIHJlbW92ZXMgLXMgLyAtbyBzbyB3ZSBjYW4gc2VlCiAqIGN1cmwncyBhY3R1YWwgZXJyb3IsIGFuZCBzZXBhcmF0ZWx5IGNoZWNrcyBiYXNpYyByZWFjaGFiaWxpdHkuCiAqLwoKYXBpX2xvZygnTmV3IE1lc3NhZ2UgPT0+XG4nKTsKYXBpX2xvZygnUHJvYmluZyBjb25uZWN0aXZpdHkgdG8gVENDMTYwLi4uXG4nKTsKCmZ1bmN0aW9uIHRyeUV4ZWMobGFiZWwsIGNtZCkgewogICAgYXBpX2xvZygnLS0tICcgKyBsYWJlbCArICcgLS0tXG4nKTsKICAgIGFwaV9sb2coJ2NtZDogJyArIGNtZCArICdcbicpOwogICAgdHJ5IHsKICAgICAgICB2YXIgcmVzdWx0ID0gYXBpX3N5c19leGVjKGNtZCk7CiAgICAgICAgYXBpX2xvZygncmVzdWx0OiAnICsgSlNPTi5zdHJpbmdpZnkocmVzdWx0KSArICdcbicpOwogICAgfSBjYXRjaCAoZSkgewogICAgICAgIGFwaV9sb2coJ3RocmV3OiAnICsgZS5tZXNzYWdlICsgJ1xuJyk7CiAgICB9Cn0KCi8vIDEuIFNhbWUgbG9naW4gY2FsbCwgYnV0IFdJVEhPVVQgLXMgKHNvIGVycm9ycyBwcmludCkgYW5kIFdJVEhPVVQgLW8KLy8gICAgKHNvIGJvZHkvZXJyb3JzIGJvdGggY29tZSBiYWNrIHRocm91Z2ggc3Rkb3V0KSwgd2l0aCBhIHNob3J0Ci8vICAgIHRpbWVvdXQgYW5kIHZlcmJvc2UtaXNoIGVycm9yIHJlcG9ydGluZy4KdHJ5RXhlYygKICAgICdjdXJsIGxvZ2luLCB2ZXJib3NlIGVycm9ycywgZGlyZWN0IHN0ZG91dCcsCiAgICAnY3VybCAtayAtUyAtbSA4IC1YIFBPU1QgaHR0cHM6Ly8xOTIuMTY4LjQuMjU6MTY2NzQvdGVybWluYWwvY29yZS92MS91c2VyL2xvZ2luICcgKwogICAgJy1IICJDb250ZW50LVR5cGU6IGFwcGxpY2F0aW9uL2pzb24iICcgKwogICAgJy1kIFwneyJzbiI6IjI0QzIwQTAwMDAwNTI4NCIsInVzZXJuYW1lIjoiYWRtaW4iLCJwYXNzd29yZCI6IlNOMjAwOEArIiwnICsKICAgICcibG9naW5UeXBlIjoyLCJjbGllbnRJZCI6MSwiY2xpZW50TmFtZSI6IlRDQzE2MCJ9XCcgMj4mMScKKTsKCi8vIDQuIEhUVFAgc3RhdHVzL2Vycm9yIGNvZGUgYnJlYWtkb3duLCBpbiBjYXNlIHRoZSBib2R5IGlzIGVtcHR5IGJ1dCB0aGUKLy8gICAgY29ubmVjdGlvbiBpdHNlbGYgc3VjY2VlZHMuCnRyeUV4ZWMoCiAgICAnY3VybCBsb2dpbiB3aXRoIHN0YXR1cyBjb2RlJywKICAgICdjdXJsIC1rIC1tIDggLXMgLW8gL3RtcC9sb2dpbl90ZXN0Mi5qc29uIC13ICJIVFRQX1NUQVRVUzole2h0dHBfY29kZX0gRVJSOiV7ZXJyb3Jtc2d9XFxuIiAnICsKICAgICctWCBQT1NUIGh0dHBzOi8vMTkyLjE2OC40LjI1OjE2Njc0L3Rlcm1pbmFsL2NvcmUvdjEvdXNlci9sb2dpbiAnICsKICAgICctSCAiQ29udGVudC1UeXBlOiBhcHBsaWNhdGlvbi9qc29uIiAnICsKICAgICctZCBcJ3sic24iOiIyNEMyMEEwMDAwMDUyODQiLCJ1c2VybmFtZSI6ImFkbWluIiwicGFzc3dvcmQiOiJTTjIwMDhAKyIsJyArCiAgICAnImxvZ2luVHlwZSI6MiwiY2xpZW50SWQiOjEsImNsaWVudE5hbWUiOiJUQ0MxNjAifVwnJwopOwp0cnlFeGVjKCdyZWFkIGxvZ2luIHJlc3BvbnNlIGZpbGUgMicsICdjYXQgL3RtcC9sb2dpbl90ZXN0Mi5qc29uJyk7",
+          "cycle": 0
+        },
+        {
+          "script_id": "testsub",
+          "ds": "form_server",
+          "event": "aacra/smartpole/P001/lamp/telemetry",
+          "param": "0",
+          "code": "LyogRXhhbXBsZSAKICBhcGlfZGF0YTogbWVzc2FnZSBmcm9tIHNlcnZlcgoqLwphcGlfbG9nKCdOZXcgTWVzc2FnZSA9PT5cbicpOwphcGlfbG9nKGFwaV9kYXRhKTs=",
+          "cycle": 0
+        },
+        {
+          "script_id": "LedScreenControl",
+          "ds": "form_server",
+          "event": "aacra/smartpole/P001/led/command",
+          "param": "0",
+          "code": "YXBpX2xvZygnPT09IENvbW1hbmQgUmVjZWl2ZWQgZm9yIEFDLU9VVDMgKExFRCkgPT09XG4nKTsKYXBpX2xvZyhhcGlfZGF0YSArICdcbicpOwoKdHJ5IHsKICAgIHZhciBwYXlsb2FkID0gYXBpX2RhdGEucmVwbGFjZSgvJy9nLCAnIicpOwogICAgcGF5bG9hZCA9IHBheWxvYWQucmVwbGFjZSgvKFt7LF1ccyopKFthLXpBLVowLTlfXC1dKylccyo6L2csICckMSIkMiI6Jyk7CgogICAgdmFyIGluX2pzb24gPSBKU09OLnBhcnNlKHBheWxvYWQpOwogICAgdmFyIHJvb3QgPSBpbl9qc29uLmNvbnRlbnQgfHwgKGluX2pzb24uSU8gPyBpbl9qc29uLklPLmRhdGEgOiBpbl9qc29uKTsKCiAgICBmb3IgKHZhciB2aWQgaW4gcm9vdCkgewogICAgICAgIHZhciByYXdfdmFsID0gcm9vdFt2aWRdOwogICAgICAgIHZhciB2YWxfc3RyID0gKHR5cGVvZiByYXdfdmFsID09PSAnb2JqZWN0JyAmJiByYXdfdmFsLnZhbCAhPT0gdW5kZWZpbmVkKSAKICAgICAgICAgICAgICAgICAgICAgID8gcmF3X3ZhbC52YWwudG9TdHJpbmcoKSAKICAgICAgICAgICAgICAgICAgICAgIDogcmF3X3ZhbC50b1N0cmluZygpOwoKICAgICAgICBhcGlfbG9nKCdTZXR0aW5nIEFDLU9VVDMgPSAnICsgdmFsX3N0ciArICdcbicpOwoKICAgICAgICAvLyBUYXJnZXQgQUMtT1VUMyBOVlJBTSByZWdpc3RlcgogICAgICAgIGFwaV93cml0ZV9ub2RlKCdJTycsICdBQy1PVVQzJywgdmFsX3N0cik7CiAgICAgICAgYXBpX3dyaXRlX25vZGUoJ0lPJywgJ2FjX2VuYWJsZWQzJywgdmFsX3N0cik7CgogICAgICAgIC8vIEtlZXAgYnVzIHBvd2VyZWQKICAgICAgICBhcGlfd3JpdGVfbm9kZSgnSU8nLCAnc21hcnRfbGlnaHRwb2xlX2VuJywgJzEnKTsKICAgICAgICBhcGlfd3JpdGVfbm9kZSgnSU8nLCAnYWNfZGNfc3dpdGNoJywgJzEnKTsKICAgIH0KfSBjYXRjaCAoZSkgewogICAgYXBpX2xvZygnRXJyb3IgZXhlY3V0aW5nIEFDLU9VVDMgY29tbWFuZDogJyArIGUudG9TdHJpbmcoKSArICdcbicpOwp9",
+          "cycle": 0
+        }
+      ]
+    },
+    "test": {
+      "script_up": [
+        {
+          "script_id": "Publish",
+          "ds": "periodic_report",
+          "event": "aacra/smartpole/P001/env/telemetry",
+          "param": "0",
+          "code": "LyogRGF0YSBGb3JtYXQgRXhhbXBsZQogICAgewogICAgICAiY3RfaWQiOiJNUVRUIiwKICAgICAgImRhdGFzb3VyY2UiOiJwZXJpb2RpY19yZXBvcnQiLAogICAgICAidHlwZSI6InBhY2siLAogICAgICAic3ViZGV2Ijp7CiAgICAgICAgIk1PREJVUy1UQ1AiOnsKICAgICAgICAgICJjdGltZSI6IjIwMjMtMDEtMDkgMTY6NTg6NDYiLAogICAgICAgICAgImRhdGEiOnsKICAgICAgICAgICAgIk1EQlMtVENQMCI6MTIzLCJNREJTLVRDUDEiOjMyMSwiTURCUy1UQ1AyIjoxMDAKICAgICAgICAgIH0KICAgICAgICB9LAogICAgICAgICJJTyI6ewogICAgICAgICAgImN0aW1lIjoiMjAyMy0wMS0wOSAxNjo1ODo0NiIsCiAgICAgICAgICAiZGF0YSI6ewogICAgICAgICAgICAicmVsYXkiOjEsIkRPIjoxLCJESTEiOjEsIkRJMCI6MQogICAgICAgICAgfQogICAgICAgIH0KICAgICAgfQogICAgfQoqLwphcGlfbG9nKCdTZW5kIERhdGEgPD09XG4nKTsKYXBpX2xvZyhhcGlfZGF0YSArICdcbicpOwphcGlfb3V0KGFwaV9ldmVudCwgYXBpX2RhdGEpOw==",
+          "cycle": 5
+        },
+        {
+          "script_id": "Temperature",
+          "ds": "periodic_report",
+          "event": "aacra/smartpole/P003/env/telemetry",
+          "param": "0",
+          "code": "dmFyIGRhdGEgPSBKU09OLnBhcnNlKGFwaV9kYXRhKTsKdmFyIGVudiA9IGRhdGEuc3ViZGV2ICYmIGRhdGEuc3ViZGV2LmVudmlyb21lbnRhbDsKdmFyIGdhdGV3YXkgPSBkYXRhLnNuOwoKdmFyIGN0aW1lU3RyID0gKGVudiAmJiBlbnYuY3RpbWUpID8gU3RyaW5nKGVudi5jdGltZSkudHJpbSgpIDogIiI7CnZhciBpc09mZmxpbmUgPSAhZW52IHx8IGN0aW1lU3RyID09PSAiIiB8fCBjdGltZVN0ci5pbmRleE9mKCIxOTcwLTAxLTAxIikgPT09IDA7CgppZiAoaXNPZmZsaW5lKSB7CiAgLy8gT0ZGTElORQogIGFwaV9sb2coJ2Vudmlyb21lbnRhbCBpcyBPRkZMSU5FIDw9PVxuJyk7CgogIHZhciBmYXVsdF9tc2cgPSBKU09OLnN0cmluZ2lmeSh7CiAgICBzbjogZ2F0ZXdheSwKICAgIGN0X2lkOiBkYXRhLmN0X2lkLAogICAgZGF0YXNvdXJjZTogImRldmljZV9mYXVsdCIsCiAgICBkZXZpY2U6ICJlbnZpcm9tZW50YWwiLAogICAgc3RhdHVzOiAib2ZmbGluZSIsCiAgICBtZXNzYWdlOiAiR2F0ZXdheSAiICsgZ2F0ZXdheSArICI6IHRoZSBlbnZpcm9tZW50YWwgc2Vuc29yIGlzIG9mZmxpbmUiCiAgfSk7CgogIGFwaV9sb2coJ1B1Ymxpc2hpbmc6ICcgKyBmYXVsdF9tc2cgKyAnXG4nKTsKICBhcGlfb3V0KGFwaV9ldmVudCwgZmF1bHRfbXNnKTsKCn0gZWxzZSB7CiAgLy8gT05MSU5FIOKAlCBub3JtYWwgdGVsZW1ldHJ5CiAgYXBpX2xvZygnU2VuZCBEYXRhIDw9PVxuJyk7CiAgYXBpX2xvZyhhcGlfZGF0YSk7CiAgYXBpX291dChhcGlfZXZlbnQsIGFwaV9kYXRhKTsKfQ==",
+          "cycle": 5
+        },
+        {
+          "script_id": "CO2",
+          "ds": "periodic_report",
+          "event": "aacra/smartpole/P003/env/telemetry",
+          "param": "1",
+          "code": "dmFyIGRhdGEgPSBKU09OLnBhcnNlKGFwaV9kYXRhKTsKdmFyIGVudiA9IGRhdGEuc3ViZGV2ICYmIGRhdGEuc3ViZGV2LmVudmlyb21lbnRhbDsKdmFyIGdhdGV3YXkgPSBkYXRhLnNuOwoKdmFyIGN0aW1lU3RyID0gKGVudiAmJiBlbnYuY3RpbWUpID8gU3RyaW5nKGVudi5jdGltZSkudHJpbSgpIDogIiI7CnZhciBpc09mZmxpbmUgPSAhZW52IHx8IGN0aW1lU3RyID09PSAiIiB8fCBjdGltZVN0ci5pbmRleE9mKCIxOTcwLTAxLTAxIikgPT09IDA7CgppZiAoaXNPZmZsaW5lKSB7CiAgLy8gT0ZGTElORQogIGFwaV9sb2coJ2Vudmlyb21lbnRhbCBpcyBPRkZMSU5FIDw9PVxuJyk7CgogIHZhciBmYXVsdF9tc2cgPSBKU09OLnN0cmluZ2lmeSh7CiAgICBzbjogZ2F0ZXdheSwKICAgIGN0X2lkOiBkYXRhLmN0X2lkLAogICAgZGF0YXNvdXJjZTogImRldmljZV9mYXVsdCIsCiAgICBkZXZpY2U6ICJlbnZpcm9tZW50YWwiLAogICAgc3RhdHVzOiAib2ZmbGluZSIsCiAgICBtZXNzYWdlOiAiR2F0ZXdheSAiICsgZ2F0ZXdheSArICI6IHRoZSBlbnZpcm9tZW50YWwgc2Vuc29yIGlzIG9mZmxpbmUiCiAgfSk7CgogIGFwaV9sb2coJ1B1Ymxpc2hpbmc6ICcgKyBmYXVsdF9tc2cgKyAnXG4nKTsKICBhcGlfb3V0KGFwaV9ldmVudCwgZmF1bHRfbXNnKTsKCn0gZWxzZSB7CiAgLy8gT05MSU5FIOKAlCBub3JtYWwgdGVsZW1ldHJ5CiAgYXBpX2xvZygnU2VuZCBEYXRhIDw9PVxuJyk7CiAgYXBpX2xvZyhhcGlfZGF0YSk7CiAgYXBpX291dChhcGlfZXZlbnQsIGFwaV9kYXRhKTsKfQ==",
+          "cycle": 5
+        },
+        {
+          "script_id": "Noise",
+          "ds": "periodic_report",
+          "event": "aacra/smartpole/P003/env/telemetry",
+          "param": "1",
+          "code": "dmFyIGRhdGEgPSBKU09OLnBhcnNlKGFwaV9kYXRhKTsKdmFyIGVudiA9IGRhdGEuc3ViZGV2ICYmIGRhdGEuc3ViZGV2LmVudmlyb21lbnRhbDsKdmFyIGdhdGV3YXkgPSBkYXRhLnNuOwoKdmFyIGN0aW1lU3RyID0gKGVudiAmJiBlbnYuY3RpbWUpID8gU3RyaW5nKGVudi5jdGltZSkudHJpbSgpIDogIiI7CnZhciBpc09mZmxpbmUgPSAhZW52IHx8IGN0aW1lU3RyID09PSAiIiB8fCBjdGltZVN0ci5pbmRleE9mKCIxOTcwLTAxLTAxIikgPT09IDA7CgppZiAoaXNPZmZsaW5lKSB7CiAgLy8gT0ZGTElORQogIGFwaV9sb2coJ2Vudmlyb21lbnRhbCBpcyBPRkZMSU5FIDw9PVxuJyk7CgogIHZhciBmYXVsdF9tc2cgPSBKU09OLnN0cmluZ2lmeSh7CiAgICBzbjogZ2F0ZXdheSwKICAgIGN0X2lkOiBkYXRhLmN0X2lkLAogICAgZGF0YXNvdXJjZTogImRldmljZV9mYXVsdCIsCiAgICBkZXZpY2U6ICJlbnZpcm9tZW50YWwiLAogICAgc3RhdHVzOiAib2ZmbGluZSIsCiAgICBtZXNzYWdlOiAiR2F0ZXdheSAiICsgZ2F0ZXdheSArICI6IHRoZSBlbnZpcm9tZW50YWwgc2Vuc29yIGlzIG9mZmxpbmUiCiAgfSk7CgogIGFwaV9sb2coJ1B1Ymxpc2hpbmc6ICcgKyBmYXVsdF9tc2cgKyAnXG4nKTsKICBhcGlfb3V0KGFwaV9ldmVudCwgZmF1bHRfbXNnKTsKCn0gZWxzZSB7CiAgLy8gT05MSU5FIOKAlCBub3JtYWwgdGVsZW1ldHJ5CiAgYXBpX2xvZygnU2VuZCBEYXRhIDw9PVxuJyk7CiAgYXBpX2xvZyhhcGlfZGF0YSk7CiAgYXBpX291dChhcGlfZXZlbnQsIGFwaV9kYXRhKTsKfQ==",
+          "cycle": 5
+        },
+        {
+          "script_id": "S02",
+          "ds": "periodic_report",
+          "event": "aacra/smartpole/P001/env/telemetry",
+          "param": "1",
+          "code": "dmFyIGRhdGEgPSBKU09OLnBhcnNlKGFwaV9kYXRhKTsKdmFyIGVudiA9IGRhdGEuc3ViZGV2ICYmIGRhdGEuc3ViZGV2LmVudmlyb21lbnRhbDsKdmFyIGdhdGV3YXkgPSBkYXRhLnNuOwoKdmFyIGN0aW1lU3RyID0gKGVudiAmJiBlbnYuY3RpbWUpID8gU3RyaW5nKGVudi5jdGltZSkudHJpbSgpIDogIiI7CnZhciBpc09mZmxpbmUgPSAhZW52IHx8IGN0aW1lU3RyID09PSAiIiB8fCBjdGltZVN0ci5pbmRleE9mKCIxOTcwLTAxLTAxIikgPT09IDA7CgppZiAoaXNPZmZsaW5lKSB7CiAgLy8gT0ZGTElORQogIGFwaV9sb2coJ2Vudmlyb21lbnRhbCBpcyBPRkZMSU5FIDw9PVxuJyk7CgogIHZhciBmYXVsdF9tc2cgPSBKU09OLnN0cmluZ2lmeSh7CiAgICBzbjogZ2F0ZXdheSwKICAgIGN0X2lkOiBkYXRhLmN0X2lkLAogICAgZGF0YXNvdXJjZTogImRldmljZV9mYXVsdCIsCiAgICBkZXZpY2U6ICJlbnZpcm9tZW50YWwiLAogICAgc3RhdHVzOiAib2ZmbGluZSIsCiAgICBtZXNzYWdlOiAiR2F0ZXdheSAiICsgZ2F0ZXdheSArICI6IHRoZSBlbnZpcm9tZW50YWwgc2Vuc29yIGlzIG9mZmxpbmUiCiAgfSk7CgogIGFwaV9sb2coJ1B1Ymxpc2hpbmc6ICcgKyBmYXVsdF9tc2cgKyAnXG4nKTsKICBhcGlfb3V0KGFwaV9ldmVudCwgZmF1bHRfbXNnKTsKCn0gZWxzZSB7CiAgLy8gT05MSU5FIOKAlCBub3JtYWwgdGVsZW1ldHJ5CiAgYXBpX2xvZygnU2VuZCBEYXRhIDw9PVxuJyk7CiAgYXBpX2xvZyhhcGlfZGF0YSk7CiAgYXBpX291dChhcGlfZXZlbnQsIGFwaV9kYXRhKTsKfQ==",
+          "cycle": 5
+        },
+        {
+          "script_id": "NO2",
+          "ds": "periodic_report",
+          "event": "aacra/smartpole/P001/env/telemetry",
+          "param": "1",
+          "code": "dmFyIGRhdGEgPSBKU09OLnBhcnNlKGFwaV9kYXRhKTsKdmFyIGVudiA9IGRhdGEuc3ViZGV2ICYmIGRhdGEuc3ViZGV2LmVudmlyb21lbnRhbDsKdmFyIGdhdGV3YXkgPSBkYXRhLnNuOwoKdmFyIGN0aW1lU3RyID0gKGVudiAmJiBlbnYuY3RpbWUpID8gU3RyaW5nKGVudi5jdGltZSkudHJpbSgpIDogIiI7CnZhciBpc09mZmxpbmUgPSAhZW52IHx8IGN0aW1lU3RyID09PSAiIiB8fCBjdGltZVN0ci5pbmRleE9mKCIxOTcwLTAxLTAxIikgPT09IDA7CgppZiAoaXNPZmZsaW5lKSB7CiAgLy8gT0ZGTElORQogIGFwaV9sb2coJ2Vudmlyb21lbnRhbCBpcyBPRkZMSU5FIDw9PVxuJyk7CgogIHZhciBmYXVsdF9tc2cgPSBKU09OLnN0cmluZ2lmeSh7CiAgICBzbjogZ2F0ZXdheSwKICAgIGN0X2lkOiBkYXRhLmN0X2lkLAogICAgZGF0YXNvdXJjZTogImRldmljZV9mYXVsdCIsCiAgICBkZXZpY2U6ICJlbnZpcm9tZW50YWwiLAogICAgc3RhdHVzOiAib2ZmbGluZSIsCiAgICBtZXNzYWdlOiAiR2F0ZXdheSAiICsgZ2F0ZXdheSArICI6IHRoZSBlbnZpcm9tZW50YWwgc2Vuc29yIGlzIG9mZmxpbmUiCiAgfSk7CgogIGFwaV9sb2coJ1B1Ymxpc2hpbmc6ICcgKyBmYXVsdF9tc2cgKyAnXG4nKTsKICBhcGlfb3V0KGFwaV9ldmVudCwgZmF1bHRfbXNnKTsKCn0gZWxzZSB7CiAgLy8gT05MSU5FIOKAlCBub3JtYWwgdGVsZW1ldHJ5CiAgYXBpX2xvZygnU2VuZCBEYXRhIDw9PVxuJyk7CiAgYXBpX2xvZyhhcGlfZGF0YSk7CiAgYXBpX291dChhcGlfZXZlbnQsIGFwaV9kYXRhKTsKfQ==",
+          "cycle": 5
+        },
+        {
+          "script_id": "CO",
+          "ds": "periodic_report",
+          "event": "aacra/smartpole/P001/env/telemetry",
+          "param": "1",
+          "code": "dmFyIGRhdGEgPSBKU09OLnBhcnNlKGFwaV9kYXRhKTsKdmFyIGVudiA9IGRhdGEuc3ViZGV2ICYmIGRhdGEuc3ViZGV2LmVudmlyb21lbnRhbDsKdmFyIGdhdGV3YXkgPSBkYXRhLnNuOwoKdmFyIGN0aW1lU3RyID0gKGVudiAmJiBlbnYuY3RpbWUpID8gU3RyaW5nKGVudi5jdGltZSkudHJpbSgpIDogIiI7CnZhciBpc09mZmxpbmUgPSAhZW52IHx8IGN0aW1lU3RyID09PSAiIiB8fCBjdGltZVN0ci5pbmRleE9mKCIxOTcwLTAxLTAxIikgPT09IDA7CgppZiAoaXNPZmZsaW5lKSB7CiAgLy8gT0ZGTElORQogIGFwaV9sb2coJ2Vudmlyb21lbnRhbCBpcyBPRkZMSU5FIDw9PVxuJyk7CgogIHZhciBmYXVsdF9tc2cgPSBKU09OLnN0cmluZ2lmeSh7CiAgICBzbjogZ2F0ZXdheSwKICAgIGN0X2lkOiBkYXRhLmN0X2lkLAogICAgZGF0YXNvdXJjZTogImRldmljZV9mYXVsdCIsCiAgICBkZXZpY2U6ICJlbnZpcm9tZW50YWwiLAogICAgc3RhdHVzOiAib2ZmbGluZSIsCiAgICBtZXNzYWdlOiAiR2F0ZXdheSAiICsgZ2F0ZXdheSArICI6IHRoZSBlbnZpcm9tZW50YWwgc2Vuc29yIGlzIG9mZmxpbmUiCiAgfSk7CgogIGFwaV9sb2coJ1B1Ymxpc2hpbmc6ICcgKyBmYXVsdF9tc2cgKyAnXG4nKTsKICBhcGlfb3V0KGFwaV9ldmVudCwgZmF1bHRfbXNnKTsKCn0gZWxzZSB7CiAgLy8gT05MSU5FIOKAlCBub3JtYWwgdGVsZW1ldHJ5CiAgYXBpX2xvZygnU2VuZCBEYXRhIDw9PVxuJyk7CiAgYXBpX2xvZyhhcGlfZGF0YSk7CiAgYXBpX291dChhcGlfZXZlbnQsIGFwaV9kYXRhKTsKfQ==",
+          "cycle": 5
+        },
+        {
+          "script_id": "O3",
+          "ds": "periodic_report",
+          "event": "aacra/smartpole/P001/env/telemetry",
+          "param": "1",
+          "code": "dmFyIGRhdGEgPSBKU09OLnBhcnNlKGFwaV9kYXRhKTsKdmFyIGVudiA9IGRhdGEuc3ViZGV2ICYmIGRhdGEuc3ViZGV2LmVudmlyb21lbnRhbDsKdmFyIGdhdGV3YXkgPSBkYXRhLnNuOwoKdmFyIGN0aW1lU3RyID0gKGVudiAmJiBlbnYuY3RpbWUpID8gU3RyaW5nKGVudi5jdGltZSkudHJpbSgpIDogIiI7CnZhciBpc09mZmxpbmUgPSAhZW52IHx8IGN0aW1lU3RyID09PSAiIiB8fCBjdGltZVN0ci5pbmRleE9mKCIxOTcwLTAxLTAxIikgPT09IDA7CgppZiAoaXNPZmZsaW5lKSB7CiAgLy8gT0ZGTElORQogIGFwaV9sb2coJ2Vudmlyb21lbnRhbCBpcyBPRkZMSU5FIDw9PVxuJyk7CgogIHZhciBmYXVsdF9tc2cgPSBKU09OLnN0cmluZ2lmeSh7CiAgICBzbjogZ2F0ZXdheSwKICAgIGN0X2lkOiBkYXRhLmN0X2lkLAogICAgZGF0YXNvdXJjZTogImRldmljZV9mYXVsdCIsCiAgICBkZXZpY2U6ICJlbnZpcm9tZW50YWwiLAogICAgc3RhdHVzOiAib2ZmbGluZSIsCiAgICBtZXNzYWdlOiAiR2F0ZXdheSAiICsgZ2F0ZXdheSArICI6IHRoZSBlbnZpcm9tZW50YWwgc2Vuc29yIGlzIG9mZmxpbmUiCiAgfSk7CgogIGFwaV9sb2coJ1B1Ymxpc2hpbmc6ICcgKyBmYXVsdF9tc2cgKyAnXG4nKTsKICBhcGlfb3V0KGFwaV9ldmVudCwgZmF1bHRfbXNnKTsKCn0gZWxzZSB7CiAgLy8gT05MSU5FIOKAlCBub3JtYWwgdGVsZW1ldHJ5CiAgYXBpX2xvZygnU2VuZCBEYXRhIDw9PVxuJyk7CiAgYXBpX2xvZyhhcGlfZGF0YSk7CiAgYXBpX291dChhcGlfZXZlbnQsIGFwaV9kYXRhKTsKfQ==",
+          "cycle": 5
+        },
+        {
+          "script_id": "PM10",
+          "ds": "periodic_report",
+          "event": "aacra/smartpole/P001/env/telemetry",
+          "param": "1",
+          "code": "dmFyIGRhdGEgPSBKU09OLnBhcnNlKGFwaV9kYXRhKTsKdmFyIGVudiA9IGRhdGEuc3ViZGV2ICYmIGRhdGEuc3ViZGV2LmVudmlyb21lbnRhbDsKdmFyIGdhdGV3YXkgPSBkYXRhLnNuOwoKdmFyIGN0aW1lU3RyID0gKGVudiAmJiBlbnYuY3RpbWUpID8gU3RyaW5nKGVudi5jdGltZSkudHJpbSgpIDogIiI7CnZhciBpc09mZmxpbmUgPSAhZW52IHx8IGN0aW1lU3RyID09PSAiIiB8fCBjdGltZVN0ci5pbmRleE9mKCIxOTcwLTAxLTAxIikgPT09IDA7CgppZiAoaXNPZmZsaW5lKSB7CiAgLy8gT0ZGTElORQogIGFwaV9sb2coJ2Vudmlyb21lbnRhbCBpcyBPRkZMSU5FIDw9PVxuJyk7CgogIHZhciBmYXVsdF9tc2cgPSBKU09OLnN0cmluZ2lmeSh7CiAgICBzbjogZ2F0ZXdheSwKICAgIGN0X2lkOiBkYXRhLmN0X2lkLAogICAgZGF0YXNvdXJjZTogImRldmljZV9mYXVsdCIsCiAgICBkZXZpY2U6ICJlbnZpcm9tZW50YWwiLAogICAgc3RhdHVzOiAib2ZmbGluZSIsCiAgICBtZXNzYWdlOiAiR2F0ZXdheSAiICsgZ2F0ZXdheSArICI6IHRoZSBlbnZpcm9tZW50YWwgc2Vuc29yIGlzIG9mZmxpbmUiCiAgfSk7CgogIGFwaV9sb2coJ1B1Ymxpc2hpbmc6ICcgKyBmYXVsdF9tc2cgKyAnXG4nKTsKICBhcGlfb3V0KGFwaV9ldmVudCwgZmF1bHRfbXNnKTsKCn0gZWxzZSB7CiAgLy8gT05MSU5FIOKAlCBub3JtYWwgdGVsZW1ldHJ5CiAgYXBpX2xvZygnU2VuZCBEYXRhIDw9PVxuJyk7CiAgYXBpX2xvZyhhcGlfZGF0YSk7CiAgYXBpX291dChhcGlfZXZlbnQsIGFwaV9kYXRhKTsKfQ==",
+          "cycle": 5
+        },
+        {
+          "script_id": "Humidity",
+          "ds": "periodic_report",
+          "event": "aacra/smartpole/P001/env/telemetry",
+          "param": "1",
+          "code": "dmFyIGRhdGEgPSBKU09OLnBhcnNlKGFwaV9kYXRhKTsKdmFyIGVudiA9IGRhdGEuc3ViZGV2ICYmIGRhdGEuc3ViZGV2LmVudmlyb21lbnRhbDsKdmFyIGdhdGV3YXkgPSBkYXRhLnNuOwoKdmFyIGN0aW1lU3RyID0gKGVudiAmJiBlbnYuY3RpbWUpID8gU3RyaW5nKGVudi5jdGltZSkudHJpbSgpIDogIiI7CnZhciBpc09mZmxpbmUgPSAhZW52IHx8IGN0aW1lU3RyID09PSAiIiB8fCBjdGltZVN0ci5pbmRleE9mKCIxOTcwLTAxLTAxIikgPT09IDA7CgppZiAoaXNPZmZsaW5lKSB7CiAgLy8gT0ZGTElORQogIGFwaV9sb2coJ2Vudmlyb21lbnRhbCBpcyBPRkZMSU5FIDw9PVxuJyk7CgogIHZhciBmYXVsdF9tc2cgPSBKU09OLnN0cmluZ2lmeSh7CiAgICBzbjogZ2F0ZXdheSwKICAgIGN0X2lkOiBkYXRhLmN0X2lkLAogICAgZGF0YXNvdXJjZTogImRldmljZV9mYXVsdCIsCiAgICBkZXZpY2U6ICJlbnZpcm9tZW50YWwiLAogICAgc3RhdHVzOiAib2ZmbGluZSIsCiAgICBtZXNzYWdlOiAiR2F0ZXdheSAiICsgZ2F0ZXdheSArICI6IHRoZSBlbnZpcm9tZW50YWwgc2Vuc29yIGlzIG9mZmxpbmUiCiAgfSk7CgogIGFwaV9sb2coJ1B1Ymxpc2hpbmc6ICcgKyBmYXVsdF9tc2cgKyAnXG4nKTsKICBhcGlfb3V0KGFwaV9ldmVudCwgZmF1bHRfbXNnKTsKCn0gZWxzZSB7CiAgLy8gT05MSU5FIOKAlCBub3JtYWwgdGVsZW1ldHJ5CiAgYXBpX2xvZygnU2VuZCBEYXRhIDw9PVxuJyk7CiAgYXBpX2xvZyhhcGlfZGF0YSk7CiAgYXBpX291dChhcGlfZXZlbnQsIGFwaV9kYXRhKTsKfQ==",
+          "cycle": 5
+        },
+        {
+          "script_id": "Pressure",
+          "ds": "periodic_report",
+          "event": "aacra/smartpole/P001/env/telemetry",
+          "param": "1",
+          "code": "dmFyIGRhdGEgPSBKU09OLnBhcnNlKGFwaV9kYXRhKTsKdmFyIGVudiA9IGRhdGEuc3ViZGV2ICYmIGRhdGEuc3ViZGV2LmVudmlyb21lbnRhbDsKdmFyIGdhdGV3YXkgPSBkYXRhLnNuOwoKdmFyIGN0aW1lU3RyID0gKGVudiAmJiBlbnYuY3RpbWUpID8gU3RyaW5nKGVudi5jdGltZSkudHJpbSgpIDogIiI7CnZhciBpc09mZmxpbmUgPSAhZW52IHx8IGN0aW1lU3RyID09PSAiIiB8fCBjdGltZVN0ci5pbmRleE9mKCIxOTcwLTAxLTAxIikgPT09IDA7CgppZiAoaXNPZmZsaW5lKSB7CiAgLy8gT0ZGTElORQogIGFwaV9sb2coJ2Vudmlyb21lbnRhbCBpcyBPRkZMSU5FIDw9PVxuJyk7CgogIHZhciBmYXVsdF9tc2cgPSBKU09OLnN0cmluZ2lmeSh7CiAgICBzbjogZ2F0ZXdheSwKICAgIGN0X2lkOiBkYXRhLmN0X2lkLAogICAgZGF0YXNvdXJjZTogImRldmljZV9mYXVsdCIsCiAgICBkZXZpY2U6ICJlbnZpcm9tZW50YWwiLAogICAgc3RhdHVzOiAib2ZmbGluZSIsCiAgICBtZXNzYWdlOiAiR2F0ZXdheSAiICsgZ2F0ZXdheSArICI6IHRoZSBlbnZpcm9tZW50YWwgc2Vuc29yIGlzIG9mZmxpbmUiCiAgfSk7CgogIGFwaV9sb2coJ1B1Ymxpc2hpbmc6ICcgKyBmYXVsdF9tc2cgKyAnXG4nKTsKICBhcGlfb3V0KGFwaV9ldmVudCwgZmF1bHRfbXNnKTsKCn0gZWxzZSB7CiAgLy8gT05MSU5FIOKAlCBub3JtYWwgdGVsZW1ldHJ5CiAgYXBpX2xvZygnU2VuZCBEYXRhIDw9PVxuJyk7CiAgYXBpX2xvZyhhcGlfZGF0YSk7CiAgYXBpX291dChhcGlfZXZlbnQsIGFwaV9kYXRhKTsKfQ==",
+          "cycle": 5
+        },
+        {
+          "script_id": "Wind speed",
+          "ds": "periodic_report",
+          "event": "aacra/smartpole/P001/env/telemetry",
+          "param": "1",
+          "code": "dmFyIGRhdGEgPSBKU09OLnBhcnNlKGFwaV9kYXRhKTsKdmFyIGVudiA9IGRhdGEuc3ViZGV2ICYmIGRhdGEuc3ViZGV2LmVudmlyb21lbnRhbDsKdmFyIGdhdGV3YXkgPSBkYXRhLnNuOwoKdmFyIGN0aW1lU3RyID0gKGVudiAmJiBlbnYuY3RpbWUpID8gU3RyaW5nKGVudi5jdGltZSkudHJpbSgpIDogIiI7CnZhciBpc09mZmxpbmUgPSAhZW52IHx8IGN0aW1lU3RyID09PSAiIiB8fCBjdGltZVN0ci5pbmRleE9mKCIxOTcwLTAxLTAxIikgPT09IDA7CgppZiAoaXNPZmZsaW5lKSB7CiAgLy8gT0ZGTElORQogIGFwaV9sb2coJ2Vudmlyb21lbnRhbCBpcyBPRkZMSU5FIDw9PVxuJyk7CgogIHZhciBmYXVsdF9tc2cgPSBKU09OLnN0cmluZ2lmeSh7CiAgICBzbjogZ2F0ZXdheSwKICAgIGN0X2lkOiBkYXRhLmN0X2lkLAogICAgZGF0YXNvdXJjZTogImRldmljZV9mYXVsdCIsCiAgICBkZXZpY2U6ICJlbnZpcm9tZW50YWwiLAogICAgc3RhdHVzOiAib2ZmbGluZSIsCiAgICBtZXNzYWdlOiAiR2F0ZXdheSAiICsgZ2F0ZXdheSArICI6IHRoZSBlbnZpcm9tZW50YWwgc2Vuc29yIGlzIG9mZmxpbmUiCiAgfSk7CgogIGFwaV9sb2coJ1B1Ymxpc2hpbmc6ICcgKyBmYXVsdF9tc2cgKyAnXG4nKTsKICBhcGlfb3V0KGFwaV9ldmVudCwgZmF1bHRfbXNnKTsKCn0gZWxzZSB7CiAgLy8gT05MSU5FIOKAlCBub3JtYWwgdGVsZW1ldHJ5CiAgYXBpX2xvZygnU2VuZCBEYXRhIDw9PVxuJyk7CiAgYXBpX2xvZyhhcGlfZGF0YSk7CiAgYXBpX291dChhcGlfZXZlbnQsIGFwaV9kYXRhKTsKfQ==",
+          "cycle": 5
+        },
+        {
+          "script_id": "Rainfall",
+          "ds": "periodic_report",
+          "event": "aacra/smartpole/P001/env/telemetry",
+          "param": "1",
+          "code": "dmFyIGRhdGEgPSBKU09OLnBhcnNlKGFwaV9kYXRhKTsKdmFyIGVudiA9IGRhdGEuc3ViZGV2ICYmIGRhdGEuc3ViZGV2LmVudmlyb21lbnRhbDsKdmFyIGdhdGV3YXkgPSBkYXRhLnNuOwoKdmFyIGN0aW1lU3RyID0gKGVudiAmJiBlbnYuY3RpbWUpID8gU3RyaW5nKGVudi5jdGltZSkudHJpbSgpIDogIiI7CnZhciBpc09mZmxpbmUgPSAhZW52IHx8IGN0aW1lU3RyID09PSAiIiB8fCBjdGltZVN0ci5pbmRleE9mKCIxOTcwLTAxLTAxIikgPT09IDA7CgppZiAoaXNPZmZsaW5lKSB7CiAgLy8gT0ZGTElORQogIGFwaV9sb2coJ2Vudmlyb21lbnRhbCBpcyBPRkZMSU5FIDw9PVxuJyk7CgogIHZhciBmYXVsdF9tc2cgPSBKU09OLnN0cmluZ2lmeSh7CiAgICBzbjogZ2F0ZXdheSwKICAgIGN0X2lkOiBkYXRhLmN0X2lkLAogICAgZGF0YXNvdXJjZTogImRldmljZV9mYXVsdCIsCiAgICBkZXZpY2U6ICJlbnZpcm9tZW50YWwiLAogICAgc3RhdHVzOiAib2ZmbGluZSIsCiAgICBtZXNzYWdlOiAiR2F0ZXdheSAiICsgZ2F0ZXdheSArICI6IHRoZSBlbnZpcm9tZW50YWwgc2Vuc29yIGlzIG9mZmxpbmUiCiAgfSk7CgogIGFwaV9sb2coJ1B1Ymxpc2hpbmc6ICcgKyBmYXVsdF9tc2cgKyAnXG4nKTsKICBhcGlfb3V0KGFwaV9ldmVudCwgZmF1bHRfbXNnKTsKCn0gZWxzZSB7CiAgLy8gT05MSU5FIOKAlCBub3JtYWwgdGVsZW1ldHJ5CiAgYXBpX2xvZygnU2VuZCBEYXRhIDw9PVxuJyk7CiAgYXBpX2xvZyhhcGlfZGF0YSk7CiAgYXBpX291dChhcGlfZXZlbnQsIGFwaV9kYXRhKTsKfQ==",
+          "cycle": 5
+        },
+        {
+          "script_id": "Winddirection",
+          "ds": "periodic_report",
+          "event": "aacra/smartpole/P001/env/telemetry",
+          "param": "1",
+          "code": "dmFyIGRhdGEgPSBKU09OLnBhcnNlKGFwaV9kYXRhKTsKdmFyIGVudiA9IGRhdGEuc3ViZGV2ICYmIGRhdGEuc3ViZGV2LmVudmlyb21lbnRhbDsKdmFyIGdhdGV3YXkgPSBkYXRhLnNuOwoKdmFyIGN0aW1lU3RyID0gKGVudiAmJiBlbnYuY3RpbWUpID8gU3RyaW5nKGVudi5jdGltZSkudHJpbSgpIDogIiI7CnZhciBpc09mZmxpbmUgPSAhZW52IHx8IGN0aW1lU3RyID09PSAiIiB8fCBjdGltZVN0ci5pbmRleE9mKCIxOTcwLTAxLTAxIikgPT09IDA7CgppZiAoaXNPZmZsaW5lKSB7CiAgLy8gT0ZGTElORQogIGFwaV9sb2coJ2Vudmlyb21lbnRhbCBpcyBPRkZMSU5FIDw9PVxuJyk7CgogIHZhciBmYXVsdF9tc2cgPSBKU09OLnN0cmluZ2lmeSh7CiAgICBzbjogZ2F0ZXdheSwKICAgIGN0X2lkOiBkYXRhLmN0X2lkLAogICAgZGF0YXNvdXJjZTogImRldmljZV9mYXVsdCIsCiAgICBkZXZpY2U6ICJlbnZpcm9tZW50YWwiLAogICAgc3RhdHVzOiAib2ZmbGluZSIsCiAgICBtZXNzYWdlOiAiR2F0ZXdheSAiICsgZ2F0ZXdheSArICI6IHRoZSBlbnZpcm9tZW50YWwgc2Vuc29yIGlzIG9mZmxpbmUiCiAgfSk7CgogIGFwaV9sb2coJ1B1Ymxpc2hpbmc6ICcgKyBmYXVsdF9tc2cgKyAnXG4nKTsKICBhcGlfb3V0KGFwaV9ldmVudCwgZmF1bHRfbXNnKTsKCn0gZWxzZSB7CiAgLy8gT05MSU5FIOKAlCBub3JtYWwgdGVsZW1ldHJ5CiAgYXBpX2xvZygnU2VuZCBEYXRhIDw9PVxuJyk7CiAgYXBpX2xvZyhhcGlfZGF0YSk7CiAgYXBpX291dChhcGlfZXZlbnQsIGFwaV9kYXRhKTsKfQ==",
+          "cycle": 5
+        },
+        {
+          "script_id": "UV index",
+          "ds": "periodic_report",
+          "event": "aacra/smartpole/P001/env/telemetry",
+          "param": "1",
+          "code": "dmFyIGRhdGEgPSBKU09OLnBhcnNlKGFwaV9kYXRhKTsKdmFyIGVudiA9IGRhdGEuc3ViZGV2ICYmIGRhdGEuc3ViZGV2LmVudmlyb21lbnRhbDsKdmFyIGdhdGV3YXkgPSBkYXRhLnNuOwoKdmFyIGN0aW1lU3RyID0gKGVudiAmJiBlbnYuY3RpbWUpID8gU3RyaW5nKGVudi5jdGltZSkudHJpbSgpIDogIiI7CnZhciBpc09mZmxpbmUgPSAhZW52IHx8IGN0aW1lU3RyID09PSAiIiB8fCBjdGltZVN0ci5pbmRleE9mKCIxOTcwLTAxLTAxIikgPT09IDA7CgppZiAoaXNPZmZsaW5lKSB7CiAgLy8gT0ZGTElORQogIGFwaV9sb2coJ2Vudmlyb21lbnRhbCBpcyBPRkZMSU5FIDw9PVxuJyk7CgogIHZhciBmYXVsdF9tc2cgPSBKU09OLnN0cmluZ2lmeSh7CiAgICBzbjogZ2F0ZXdheSwKICAgIGN0X2lkOiBkYXRhLmN0X2lkLAogICAgZGF0YXNvdXJjZTogImRldmljZV9mYXVsdCIsCiAgICBkZXZpY2U6ICJlbnZpcm9tZW50YWwiLAogICAgc3RhdHVzOiAib2ZmbGluZSIsCiAgICBtZXNzYWdlOiAiR2F0ZXdheSAiICsgZ2F0ZXdheSArICI6IHRoZSBlbnZpcm9tZW50YWwgc2Vuc29yIGlzIG9mZmxpbmUiCiAgfSk7CgogIGFwaV9sb2coJ1B1Ymxpc2hpbmc6ICcgKyBmYXVsdF9tc2cgKyAnXG4nKTsKICBhcGlfb3V0KGFwaV9ldmVudCwgZmF1bHRfbXNnKTsKCn0gZWxzZSB7CiAgLy8gT05MSU5FIOKAlCBub3JtYWwgdGVsZW1ldHJ5CiAgYXBpX2xvZygnU2VuZCBEYXRhIDw9PVxuJyk7CiAgYXBpX2xvZyhhcGlfZGF0YSk7CiAgYXBpX291dChhcGlfZXZlbnQsIGFwaV9kYXRhKTsKfQ==",
+          "cycle": 5
+        },
+        {
+          "script_id": "Negative O2 ions",
+          "ds": "periodic_report",
+          "event": "aacra/smartpole/P001/env/telemetry",
+          "param": "1",
+          "code": "dmFyIGRhdGEgPSBKU09OLnBhcnNlKGFwaV9kYXRhKTsKdmFyIGVudiA9IGRhdGEuc3ViZGV2ICYmIGRhdGEuc3ViZGV2LmVudmlyb21lbnRhbDsKdmFyIGdhdGV3YXkgPSBkYXRhLnNuOwoKdmFyIGN0aW1lU3RyID0gKGVudiAmJiBlbnYuY3RpbWUpID8gU3RyaW5nKGVudi5jdGltZSkudHJpbSgpIDogIiI7CnZhciBpc09mZmxpbmUgPSAhZW52IHx8IGN0aW1lU3RyID09PSAiIiB8fCBjdGltZVN0ci5pbmRleE9mKCIxOTcwLTAxLTAxIikgPT09IDA7CgppZiAoaXNPZmZsaW5lKSB7CiAgLy8gT0ZGTElORQogIGFwaV9sb2coJ2Vudmlyb21lbnRhbCBpcyBPRkZMSU5FIDw9PVxuJyk7CgogIHZhciBmYXVsdF9tc2cgPSBKU09OLnN0cmluZ2lmeSh7CiAgICBzbjogZ2F0ZXdheSwKICAgIGN0X2lkOiBkYXRhLmN0X2lkLAogICAgZGF0YXNvdXJjZTogImRldmljZV9mYXVsdCIsCiAgICBkZXZpY2U6ICJlbnZpcm9tZW50YWwiLAogICAgc3RhdHVzOiAib2ZmbGluZSIsCiAgICBtZXNzYWdlOiAiR2F0ZXdheSAiICsgZ2F0ZXdheSArICI6IHRoZSBlbnZpcm9tZW50YWwgc2Vuc29yIGlzIG9mZmxpbmUiCiAgfSk7CgogIGFwaV9sb2coJ1B1Ymxpc2hpbmc6ICcgKyBmYXVsdF9tc2cgKyAnXG4nKTsKICBhcGlfb3V0KGFwaV9ldmVudCwgZmF1bHRfbXNnKTsKCn0gZWxzZSB7CiAgLy8gT05MSU5FIOKAlCBub3JtYWwgdGVsZW1ldHJ5CiAgYXBpX2xvZygnU2VuZCBEYXRhIDw9PVxuJyk7CiAgYXBpX2xvZyhhcGlfZGF0YSk7CiAgYXBpX291dChhcGlfZXZlbnQsIGFwaV9kYXRhKTsKfQ==",
+          "cycle": 5
+        },
+        {
+          "script_id": "TSP",
+          "ds": "periodic_report",
+          "event": "aacra/smartpole/P001/env/telemetry",
+          "param": "1",
+          "code": "dmFyIGRhdGEgPSBKU09OLnBhcnNlKGFwaV9kYXRhKTsKdmFyIGVudiA9IGRhdGEuc3ViZGV2ICYmIGRhdGEuc3ViZGV2LmVudmlyb21lbnRhbDsKdmFyIGdhdGV3YXkgPSBkYXRhLnNuOwoKdmFyIGN0aW1lU3RyID0gKGVudiAmJiBlbnYuY3RpbWUpID8gU3RyaW5nKGVudi5jdGltZSkudHJpbSgpIDogIiI7CnZhciBpc09mZmxpbmUgPSAhZW52IHx8IGN0aW1lU3RyID09PSAiIiB8fCBjdGltZVN0ci5pbmRleE9mKCIxOTcwLTAxLTAxIikgPT09IDA7CgppZiAoaXNPZmZsaW5lKSB7CiAgLy8gT0ZGTElORQogIGFwaV9sb2coJ2Vudmlyb21lbnRhbCBpcyBPRkZMSU5FIDw9PVxuJyk7CgogIHZhciBmYXVsdF9tc2cgPSBKU09OLnN0cmluZ2lmeSh7CiAgICBzbjogZ2F0ZXdheSwKICAgIGN0X2lkOiBkYXRhLmN0X2lkLAogICAgZGF0YXNvdXJjZTogImRldmljZV9mYXVsdCIsCiAgICBkZXZpY2U6ICJlbnZpcm9tZW50YWwiLAogICAgc3RhdHVzOiAib2ZmbGluZSIsCiAgICBtZXNzYWdlOiAiR2F0ZXdheSAiICsgZ2F0ZXdheSArICI6IHRoZSBlbnZpcm9tZW50YWwgc2Vuc29yIGlzIG9mZmxpbmUiCiAgfSk7CgogIGFwaV9sb2coJ1B1Ymxpc2hpbmc6ICcgKyBmYXVsdF9tc2cgKyAnXG4nKTsKICBhcGlfb3V0KGFwaV9ldmVudCwgZmF1bHRfbXNnKTsKCn0gZWxzZSB7CiAgLy8gT05MSU5FIOKAlCBub3JtYWwgdGVsZW1ldHJ5CiAgYXBpX2xvZygnU2VuZCBEYXRhIDw9PVxuJyk7CiAgYXBpX2xvZyhhcGlfZGF0YSk7CiAgYXBpX291dChhcGlfZXZlbnQsIGFwaV9kYXRhKTsKfQ==",
+          "cycle": 5
+        },
+        {
+          "script_id": "PM1",
+          "ds": "periodic_report",
+          "event": "aacra/smartpole/P001/env/telemetry",
+          "param": "1",
+          "code": "dmFyIGRhdGEgPSBKU09OLnBhcnNlKGFwaV9kYXRhKTsKdmFyIGVudiA9IGRhdGEuc3ViZGV2ICYmIGRhdGEuc3ViZGV2LmVudmlyb21lbnRhbDsKdmFyIGdhdGV3YXkgPSBkYXRhLnNuOwoKdmFyIGN0aW1lU3RyID0gKGVudiAmJiBlbnYuY3RpbWUpID8gU3RyaW5nKGVudi5jdGltZSkudHJpbSgpIDogIiI7CnZhciBpc09mZmxpbmUgPSAhZW52IHx8IGN0aW1lU3RyID09PSAiIiB8fCBjdGltZVN0ci5pbmRleE9mKCIxOTcwLTAxLTAxIikgPT09IDA7CgppZiAoaXNPZmZsaW5lKSB7CiAgLy8gT0ZGTElORQogIGFwaV9sb2coJ2Vudmlyb21lbnRhbCBpcyBPRkZMSU5FIDw9PVxuJyk7CgogIHZhciBmYXVsdF9tc2cgPSBKU09OLnN0cmluZ2lmeSh7CiAgICBzbjogZ2F0ZXdheSwKICAgIGN0X2lkOiBkYXRhLmN0X2lkLAogICAgZGF0YXNvdXJjZTogImRldmljZV9mYXVsdCIsCiAgICBkZXZpY2U6ICJlbnZpcm9tZW50YWwiLAogICAgc3RhdHVzOiAib2ZmbGluZSIsCiAgICBtZXNzYWdlOiAiR2F0ZXdheSAiICsgZ2F0ZXdheSArICI6IHRoZSBlbnZpcm9tZW50YWwgc2Vuc29yIGlzIG9mZmxpbmUiCiAgfSk7CgogIGFwaV9sb2coJ1B1Ymxpc2hpbmc6ICcgKyBmYXVsdF9tc2cgKyAnXG4nKTsKICBhcGlfb3V0KGFwaV9ldmVudCwgZmF1bHRfbXNnKTsKCn0gZWxzZSB7CiAgLy8gT05MSU5FIOKAlCBub3JtYWwgdGVsZW1ldHJ5CiAgYXBpX2xvZygnU2VuZCBEYXRhIDw9PVxuJyk7CiAgYXBpX2xvZyhhcGlfZGF0YSk7CiAgYXBpX291dChhcGlfZXZlbnQsIGFwaV9kYXRhKTsKfQ==",
+          "cycle": 5
+        },
+        {
+          "script_id": "Fault",
+          "ds": "periodic_report",
+          "event": "aacra/smartpole/P001/camera/fault",
+          "param": "0",
+          "code": "YXBpX2xvZygnQ2hlY2tpbmcgY2FtZXJhIGNvbm5lY3Rpdml0eVxuJyk7CnRyeSB7CiAgICB2YXIgc3RhdHVzRmlsZSA9ICcvdG1wL2NhbWVyYV9zdGF0dXMudHh0JzsKICAgIHZhciBsb2NrRmlsZSA9ICcvdG1wL2NhbWVyYV9jaGVjay5sb2NrJzsKCiAgICB2YXIgbG9ja1Jlc3VsdCA9IGFwaV9zeXNfZXhlYygnbWtkaXIgJyArIGxvY2tGaWxlICsgJyAyPiYxICYmIGVjaG8gTE9DS0VEIHx8IGVjaG8gQlVTWScpOwogICAgaWYgKGxvY2tSZXN1bHQuaW5kZXhPZignQlVTWScpICE9PSAtMSkgewogICAgICAgIGFwaV9sb2coJ1ByZXZpb3VzIGNoZWNrIHN0aWxsIHJ1bm5pbmcsIHNraXBwaW5nIHRoaXMgY3ljbGVcbicpOwogICAgfSBlbHNlIHsKICAgICAgICB0cnkgewogICAgICAgICAgICB2YXIgcmVzdWx0ID0gYXBpX3N5c19leGVjKCduYyAtdyAxMCAxOTIuMTY4LjQuMTA4IDM3Nzc3IDwvZGV2L251bGwgPi9kZXYvbnVsbCAyPiYxOyBlY2hvICQ/Jyk7CiAgICAgICAgICAgIHZhciBleGl0X2NvZGUgPSByZXN1bHQucmVwbGFjZSgvW14wLTldL2csICcnKTsKICAgICAgICAgICAgdmFyIGlzX29ubGluZSA9IChleGl0X2NvZGUgPT09ICcwJyk7CiAgICAgICAgICAgIHZhciBjdXJyZW50X3N0YXR1cyA9IGlzX29ubGluZSA/ICdvbmxpbmUnIDogJ29mZmxpbmUnOwoKICAgICAgICAgICAgdmFyIHJhd19wcmV2aW91cyA9IGFwaV9zeXNfZXhlYygnY2F0ICcgKyBzdGF0dXNGaWxlICsgJyAyPi9kZXYvbnVsbCcpOwogICAgICAgICAgICB2YXIgcHJldmlvdXNfc3RhdHVzID0gcmF3X3ByZXZpb3VzID8gcmF3X3ByZXZpb3VzLnJlcGxhY2UoL1teYS16XS9nLCAnJykgOiAnJzsKCiAgICAgICAgICAgIGFwaV9sb2coJ3ByZXZpb3VzPVsnICsgcHJldmlvdXNfc3RhdHVzICsgJ10gY3VycmVudD1bJyArIGN1cnJlbnRfc3RhdHVzICsgJ11cbicpOwoKICAgICAgICAgICAgaWYgKHByZXZpb3VzX3N0YXR1cyAhPT0gY3VycmVudF9zdGF0dXMpIHsKICAgICAgICAgICAgICAgIHZhciBmYXVsdF9tc2cgPSBKU09OLnN0cmluZ2lmeSh7CiAgICAgICAgICAgICAgICAgICAgZGV2aWNlOiAiY2FtZXJhIiwKICAgICAgICAgICAgICAgICAgICBpcDogIjE5Mi4xNjguNC4xMDgiLAogICAgICAgICAgICAgICAgICAgIHN0YXR1czogY3VycmVudF9zdGF0dXMsCiAgICAgICAgICAgICAgICAgICAgbWVzc2FnZTogaXNfb25saW5lID8gIkNhbWVyYSBpcyBiYWNrIG9ubGluZSIgOiAiQ2FtZXJhIGlzIG9mZmxpbmUiCiAgICAgICAgICAgICAgICB9KTsKICAgICAgICAgICAgICAgIGFwaV9sb2coJ1N0YXRlIGNoYW5nZWQsIHB1Ymxpc2hpbmc6ICcgKyBmYXVsdF9tc2cgKyAnXG4nKTsKICAgICAgICAgICAgICAgIGFwaV9vdXQoYXBpX2V2ZW50LCBmYXVsdF9tc2cpOwogICAgICAgICAgICAgICAgYXBpX3N5c19leGVjKCdlY2hvIC1uICInICsgY3VycmVudF9zdGF0dXMgKyAnIiA+ICcgKyBzdGF0dXNGaWxlKTsKICAgICAgICAgICAgfSBlbHNlIHsKICAgICAgICAgICAgICAgIGFwaV9sb2coJ05vIGNoYW5nZSAoJyArIGN1cnJlbnRfc3RhdHVzICsgJyksIHNraXBwaW5nIHB1Ymxpc2hcbicpOwogICAgICAgICAgICB9CiAgICAgICAgfSBmaW5hbGx5IHsKICAgICAgICAgICAgYXBpX3N5c19leGVjKCdybWRpciAnICsgbG9ja0ZpbGUpOwogICAgICAgIH0KICAgIH0KfSBjYXRjaCAoZSkgewogICAgYXBpX2xvZygnRXJyb3IgY2hlY2tpbmcgY2FtZXJhOiAnICsgZS50b1N0cmluZygpICsgJ1xuJyk7Cn0=",
+          "cycle": 5
+        },
+        {
+          "script_id": "ScreenFault",
+          "ds": "periodic_report",
+          "event": "aacra/smartpole/P001/screen/fault",
+          "param": "0",
+          "code": "YXBpX2xvZygnQ2hlY2tpbmcgTEVEIHNjcmVlbiBjb25uZWN0aXZpdHlcbicpOwp0cnkgewogICAgdmFyIHN0YXR1c0ZpbGUgPSAnL3RtcC9zY3JlZW5fc3RhdHVzLnR4dCc7CiAgICB2YXIgbG9ja0ZpbGUgPSAnL3RtcC9zY3JlZW5fY2hlY2subG9jayc7CgogICAgdmFyIGxvY2tSZXN1bHQgPSBhcGlfc3lzX2V4ZWMoJ21rZGlyICcgKyBsb2NrRmlsZSArICcgMj4mMSAmJiBlY2hvIExPQ0tFRCB8fCBlY2hvIEJVU1knKTsKICAgIGlmIChsb2NrUmVzdWx0LmluZGV4T2YoJ0JVU1knKSAhPT0gLTEpIHsKICAgICAgICBhcGlfbG9nKCdQcmV2aW91cyBjaGVjayBzdGlsbCBydW5uaW5nLCBza2lwcGluZyB0aGlzIGN5Y2xlXG4nKTsKICAgIH0gZWxzZSB7CiAgICAgICAgdHJ5IHsKICAgICAgICAgICAgdmFyIHJlc3VsdCA9IGFwaV9zeXNfZXhlYygnbmMgLXcgMTAgMTkyLjE2OC40LjEyNSAxNjY3NCA8L2Rldi9udWxsID4vZGV2L251bGwgMj4mMTsgZWNobyAkPycpOwogICAgICAgICAgICB2YXIgZXhpdF9jb2RlID0gcmVzdWx0LnJlcGxhY2UoL1teMC05XS9nLCAnJyk7CiAgICAgICAgICAgIHZhciBpc19vbmxpbmUgPSAoZXhpdF9jb2RlID09PSAnMCcpOwogICAgICAgICAgICB2YXIgY3VycmVudF9zdGF0dXMgPSBpc19vbmxpbmUgPyAnb25saW5lJyA6ICdvZmZsaW5lJzsKCiAgICAgICAgICAgIHZhciByYXdfcHJldmlvdXMgPSBhcGlfc3lzX2V4ZWMoJ2NhdCAnICsgc3RhdHVzRmlsZSArICcgMj4vZGV2L251bGwnKTsKICAgICAgICAgICAgdmFyIHByZXZpb3VzX3N0YXR1cyA9IHJhd19wcmV2aW91cyA/IHJhd19wcmV2aW91cy5yZXBsYWNlKC9bXmEtel0vZywgJycpIDogJyc7CgogICAgICAgICAgICBhcGlfbG9nKCdwcmV2aW91cz1bJyArIHByZXZpb3VzX3N0YXR1cyArICddIGN1cnJlbnQ9WycgKyBjdXJyZW50X3N0YXR1cyArICddXG4nKTsKCiAgICAgICAgICAgIGlmIChwcmV2aW91c19zdGF0dXMgIT09IGN1cnJlbnRfc3RhdHVzKSB7CiAgICAgICAgICAgICAgICB2YXIgZmF1bHRfbXNnID0gSlNPTi5zdHJpbmdpZnkoewogICAgICAgICAgICAgICAgICAgIGRldmljZTogInNjcmVlbiIsCiAgICAgICAgICAgICAgICAgICAgaXA6ICIxOTIuMTY4LjQuMTI1IiwKICAgICAgICAgICAgICAgICAgICBzdGF0dXM6IGN1cnJlbnRfc3RhdHVzLAogICAgICAgICAgICAgICAgICAgIG1lc3NhZ2U6IGlzX29ubGluZSA/ICJMRUQgc2NyZWVuIGlzIGJhY2sgb25saW5lIiA6ICJMRUQgc2NyZWVuIGlzIG9mZmxpbmUiCiAgICAgICAgICAgICAgICB9KTsKICAgICAgICAgICAgICAgIGFwaV9sb2coJ1N0YXRlIGNoYW5nZWQsIHB1Ymxpc2hpbmc6ICcgKyBmYXVsdF9tc2cgKyAnXG4nKTsKICAgICAgICAgICAgICAgIGFwaV9vdXQoYXBpX2V2ZW50LCBmYXVsdF9tc2cpOwogICAgICAgICAgICAgICAgYXBpX3N5c19leGVjKCdlY2hvIC1uICInICsgY3VycmVudF9zdGF0dXMgKyAnIiA+ICcgKyBzdGF0dXNGaWxlKTsKICAgICAgICAgICAgfSBlbHNlIHsKICAgICAgICAgICAgICAgIGFwaV9sb2coJ05vIGNoYW5nZSAoJyArIGN1cnJlbnRfc3RhdHVzICsgJyksIHNraXBwaW5nIHB1Ymxpc2hcbicpOwogICAgICAgICAgICB9CiAgICAgICAgfSBmaW5hbGx5IHsKICAgICAgICAgICAgYXBpX3N5c19leGVjKCdybWRpciAnICsgbG9ja0ZpbGUpOwogICAgICAgIH0KICAgIH0KfSBjYXRjaCAoZSkgewogICAgYXBpX2xvZygnRXJyb3IgY2hlY2tpbmcgc2NyZWVuOiAnICsgZS50b1N0cmluZygpICsgJ1xuJyk7Cn0=",
+          "cycle": 5
+        }
+      ],
+      "script_down": [
+        {
+          "script_id": "Subscribe",
+          "ds": "form_server",
+          "event": "subscribe",
+          "param": "0",
+          "code": "Ly8gU1VCU0NSSUJFIFNDUklQVDogVXBkYXRlcyB0aGUgImxhc3Qgc2VlbiIgdGltZXN0YW1wIGZvciBkZXZpY2VzCmFwaV9sb2coJz09PSBJbmNvbWluZyBEYXRhIFJlY2VpdmVkID09PVxuJyk7CmFwaV9sb2coYXBpX2RhdGEgKyAnXG4nKTsKCnRyeSB7CiAgICAvLyBTYXZlIHRoZSBjdXJyZW50IHRpbWVzdGFtcCB0byBhIGdsb2JhbCB2YXJpYWJsZSBmb3IgdGhpcyBkZXZpY2UuCiAgICAvLyBXZSB1c2UgdGhlIGRldmljZSBuYW1lIChvciB0b3BpYykgYXMgdGhlIGtleS4KICAgIC8vIE5vdGU6IEluIEYtRzMxMCwgeW91IHVzZSAnZ2xvYmFsLnNldCcgYW5kICdnbG9iYWwuZ2V0JyB0byBzdG9yZSBkYXRhIGJldHdlZW4gc2NyaXB0IHJ1bnMuCiAgICAKICAgIC8vIFdlIGFzc3VtZSBhcGlfZGF0YSBjb250YWlucyB0aGUgZGV2aWNlIG5hbWUgb3Igd2UgZXh0cmFjdCBpdCBmcm9tIHRoZSB0b3BpYy4KICAgIC8vIEZvciBzaW1wbGljaXR5LCB3ZSB3aWxsIGp1c3QgdXBkYXRlIGEgZ2VuZXJpYyB0aW1lc3RhbXAgZm9yIG5vdy4KICAgIC8vIEluIGEgcmVhbCBzZXR1cCwgeW91IHdvdWxkIHBhcnNlIHRoZSBKU09OIHRvIGdldCB0aGUgZGV2aWNlIElELgogICAgCiAgICBnbG9iYWwuc2V0KCdsYXN0X3NlZW5fZW52aXJvbm1lbnRhbCcsIERhdGUubm93KCkpOwogICAgZ2xvYmFsLnNldCgnbGFzdF9zZWVuX0lPJywgRGF0ZS5ub3coKSk7CiAgICBnbG9iYWwuc2V0KCdsYXN0X3NlZW5fUkdCX2NvbnRyb2xsZXInLCBEYXRlLm5vdygpKTsKICAgIGdsb2JhbC5zZXQoJ2xhc3Rfc2Vlbl9TY3JlZW4nLCBEYXRlLm5vdygpKTsKICAgIAogICAgYXBpX2xvZygnVGltZXN0YW1wcyB1cGRhdGVkLlxuJyk7CiAgICAKfSBjYXRjaCAoZSkgewogICAgYXBpX2xvZygnRXJyb3IgdXBkYXRpbmcgdGltZXN0YW1wOiAnICsgZS50b1N0cmluZygpICsgJ1xuJyk7Cn0=",
+          "cycle": 0
+        },
+        {
+          "script_id": "Led",
+          "ds": "form_server",
+          "event": "aacra/smartpole/P001/led/command",
+          "param": "0",
+          "code": "YXBpX2xvZygnPT09IENvbW1hbmQgUmVjZWl2ZWQgZm9yIEFDLU9VVDMgKExFRCkgPT09XG4nKTsKYXBpX2xvZyhhcGlfZGF0YSArICdcbicpOwoKdHJ5IHsKICAgIHZhciBwYXlsb2FkID0gYXBpX2RhdGEucmVwbGFjZSgvJy9nLCAnIicpOwogICAgcGF5bG9hZCA9IHBheWxvYWQucmVwbGFjZSgvKFt7LF1ccyopKFthLXpBLVowLTlfXC1dKylccyo6L2csICckMSIkMiI6Jyk7CgogICAgdmFyIGluX2pzb24gPSBKU09OLnBhcnNlKHBheWxvYWQpOwogICAgdmFyIHJvb3QgPSBpbl9qc29uLmNvbnRlbnQgfHwgKGluX2pzb24uSU8gPyBpbl9qc29uLklPLmRhdGEgOiBpbl9qc29uKTsKCiAgICBmb3IgKHZhciB2aWQgaW4gcm9vdCkgewogICAgICAgIHZhciByYXdfdmFsID0gcm9vdFt2aWRdOwogICAgICAgIHZhciB2YWxfc3RyID0gKHR5cGVvZiByYXdfdmFsID09PSAnb2JqZWN0JyAmJiByYXdfdmFsLnZhbCAhPT0gdW5kZWZpbmVkKSAKICAgICAgICAgICAgICAgICAgICAgID8gcmF3X3ZhbC52YWwudG9TdHJpbmcoKSAKICAgICAgICAgICAgICAgICAgICAgIDogcmF3X3ZhbC50b1N0cmluZygpOwoKICAgICAgICBhcGlfbG9nKCdTZXR0aW5nIEFDLU9VVDMgPSAnICsgdmFsX3N0ciArICdcbicpOwoKICAgICAgICAvLyBUYXJnZXQgQUMtT1VUMyBOVlJBTSByZWdpc3RlcgogICAgICAgIGFwaV93cml0ZV9ub2RlKCdJTycsICdBQy1PVVQzJywgdmFsX3N0cik7CiAgICAgICAgYXBpX3dyaXRlX25vZGUoJ0lPJywgJ2FjX2VuYWJsZWQzJywgdmFsX3N0cik7CgogICAgICAgIC8vIEtlZXAgYnVzIHBvd2VyZWQKICAgICAgICBhcGlfd3JpdGVfbm9kZSgnSU8nLCAnc21hcnRfbGlnaHRwb2xlX2VuJywgJzEnKTsKICAgICAgICBhcGlfd3JpdGVfbm9kZSgnSU8nLCAnYWNfZGNfc3dpdGNoJywgJzEnKTsKICAgIH0KfSBjYXRjaCAoZSkgewogICAgYXBpX2xvZygnRXJyb3IgZXhlY3V0aW5nIEFDLU9VVDMgY29tbWFuZDogJyArIGUudG9TdHJpbmcoKSArICdcbicpOwp9",
+          "cycle": 0
+        },
+        {
+          "script_id": "Strip",
+          "ds": "form_server",
+          "event": "aacra/smartpole/P001/strip/command",
+          "param": "0",
+          "code": "YXBpX2xvZygnPT09IENvbW1hbmQgUmVjZWl2ZWQgZm9yIEFDLU9VVDIgPT09XG4nKTsKYXBpX2xvZyhhcGlfZGF0YSArICdcbicpOwoKdHJ5IHsKICAgIHZhciBwYXlsb2FkID0gYXBpX2RhdGEucmVwbGFjZSgvJy9nLCAnIicpOwogICAgcGF5bG9hZCA9IHBheWxvYWQucmVwbGFjZSgvKFt7LF1ccyopKFthLXpBLVowLTlfXC1dKylccyo6L2csICckMSIkMiI6Jyk7CgogICAgdmFyIGluX2pzb24gPSBKU09OLnBhcnNlKHBheWxvYWQpOwogICAgdmFyIHJvb3QgPSBpbl9qc29uLmNvbnRlbnQgfHwgKGluX2pzb24uSU8gPyBpbl9qc29uLklPLmRhdGEgOiBpbl9qc29uKTsKCiAgICBmb3IgKHZhciB2aWQgaW4gcm9vdCkgewogICAgICAgIHZhciByYXdfdmFsID0gcm9vdFt2aWRdOwogICAgICAgIHZhciB2YWxfc3RyID0gKHR5cGVvZiByYXdfdmFsID09PSAnb2JqZWN0JyAmJiByYXdfdmFsLnZhbCAhPT0gdW5kZWZpbmVkKSAKICAgICAgICAgICAgICAgICAgICA/IHJhd192YWwudmFsLnRvU3RyaW5nKCkgCiAgICAgICAgICAgICAgICAgICAgOiByYXdfdmFsLnRvU3RyaW5nKCk7CgogICAgICAgIGFwaV9sb2coJ1NldHRpbmcgQUMtT1VUMiA9ICcgKyB2YWxfc3RyICsgJ1xuJyk7CgogICAgICAgIC8vIFRhcmdldCBBQy1PVVQyIG5vZGVzCiAgICAgICAgYXBpX3dyaXRlX25vZGUoJ0lPJywgJ0FDLU9VVDInLCB2YWxfc3RyKTsKICAgICAgICBhcGlfd3JpdGVfbm9kZSgnSU8nLCAnYWNfZW5hYmxlZDInLCB2YWxfc3RyKTsKCiAgICAgICAgLy8gS2VlcCBidXMgcG93ZXJlZAogICAgICAgIGFwaV93cml0ZV9ub2RlKCdJTycsICdzbWFydF9saWdodHBvbGVfZW4nLCAnMScpOwogICAgICAgIGFwaV93cml0ZV9ub2RlKCdJTycsICdhY19kY19zd2l0Y2gnLCAnMScpOwogICAgfQp9IGNhdGNoIChlKSB7CiAgICBhcGlfbG9nKCdFcnJvciBleGVjdXRpbmcgQUMtT1VUMiBjb21tYW5kOiAnICsgZS50b1N0cmluZygpICsgJ1xuJyk7Cn0=",
+          "cycle": 0
+        },
+        {
+          "script_id": "LampControl",
+          "ds": "form_server",
+          "event": "aacra/smartpole/P001/lamp/command",
+          "param": "0",
+          "code": "YXBpX2xvZygnPT09IE5ldyBNUVRUIENvbW1hbmQgUmVjZWl2ZWQgPT09XG4nKTsKYXBpX2xvZyhhcGlfZGF0YSArICdcbicpOwoKdHJ5IHsKICAgIC8vIDEuIFNhbml0aXplIHBheWxvYWQgcXVvdGVzCiAgICB2YXIgcGF5bG9hZCA9IGFwaV9kYXRhLnJlcGxhY2UoLycvZywgJyInKTsKICAgIHBheWxvYWQgPSBwYXlsb2FkLnJlcGxhY2UoLyhbeyxdXHMqKShbYS16QS1aMC05X1wtXSspXHMqOi9nLCAnJDEiJDIiOicpOwoKICAgIHZhciBpbl9qc29uID0gSlNPTi5wYXJzZShwYXlsb2FkKTsKICAgIHZhciByb290ID0gaW5fanNvbi5jb250ZW50IHx8IChpbl9qc29uLklPID8gaW5fanNvbi5JTy5kYXRhIDogaW5fanNvbik7CgogICAgZm9yICh2YXIgdmlkIGluIHJvb3QpIHsKICAgICAgICB2YXIgcmF3X3ZhbCA9IHJvb3RbdmlkXTsKICAgICAgICB2YXIgdmFsX3N0ciA9ICh0eXBlb2YgcmF3X3ZhbCA9PT0gJ29iamVjdCcgJiYgcmF3X3ZhbC52YWwgIT09IHVuZGVmaW5lZCkgCiAgICAgICAgICAgICAgICAgICAgPyByYXdfdmFsLnZhbC50b1N0cmluZygpIAogICAgICAgICAgICAgICAgICAgIDogcmF3X3ZhbC50b1N0cmluZygpOyAvLyAiMSIgb3IgIjAiCgogICAgICAgIGFwaV9sb2coJ1NldHRpbmcgQ2hhbm5lbCAnICsgdmlkICsgJyA9ICcgKyB2YWxfc3RyICsgJ1xuJyk7CgogICAgICAgIC8vIDEuIER5bmFtaWNhbGx5IHRvZ2dsZSB0aGUgc3BlY2lmaWMgY2hhbm5lbCBvdXRwdXQgc3RhdGUgcmVjZWl2ZWQgaW4gdGhlIHBheWxvYWQgCiAgICAgICAgLy8gKFN1cHBvcnRzIGFjX2VuYWJsZWQxLCBhY19lbmFibGVkMiwgYWNfZW5hYmxlZDMsIGV0Yy4pCiAgICAgICAgYXBpX3dyaXRlX25vZGUoJ0lPJywgdmlkLCB2YWxfc3RyKTsKCiAgICAgICAgLy8gMi4gS2VlcCBnbG9iYWwgc3lzdGVtIHN1YnN5c3RlbSBhbmQgcG93ZXIgYnVzIGFjdGl2ZSAoIjEiKQogICAgICAgIGFwaV93cml0ZV9ub2RlKCdJTycsICdzbWFydF9saWdodHBvbGVfZW4nLCAnMScpOwogICAgICAgIGFwaV93cml0ZV9ub2RlKCdJTycsICdhY19kY19zd2l0Y2gnLCAnMScpOwogICAgfQp9IGNhdGNoIChlKSB7CiAgICBhcGlfbG9nKCdFcnJvciBleGVjdXRpbmcgTVFUVCBjb21tYW5kOiAnICsgZS50b1N0cmluZygpICsgJ1xuJyk7Cn0=",
+          "cycle": 0
+        },
+        {
+          "script_id": "screen ",
+          "ds": "form_server",
+          "event": "screen/telemetry",
+          "param": "0",
+          "code": "dmFyIGRhdGEgPSBKU09OLnBhcnNlKGFwaV9kYXRhKTsKdmFyIHNjciA9IGRhdGEuc3ViZGV2ICYmIGRhdGEuc3ViZGV2LlNjcmVlbjsKYXBpX2xvZyhKU09OLnN0cmluZ2lmeShzY3IpKTs=",
+          "cycle": 0
+        }
+      ]
+    },
+    "me": {
+      "script_up": [
+        {
+          "script_id": "EnvTelemetry",
+          "ds": "periodic_report",
+          "event": "scmp/v1/default-site/P004/env/env-01/telemetry",
+          "param": "1",
+          "code": "Ly8gQ29uc29saWRhdGVkIEVudmlyb25tZW50YWwgVGVsZW1ldHJ5IEZvcm1hdHRlciAoU0NNUCBTdGFuZGFyZCkKdHJ5IHsKICAgIHZhciByYXcgPSBKU09OLnBhcnNlKGFwaV9kYXRhKTsKICAgIHZhciBlbnYgPSByYXcuc3ViZGV2ICYmIChyYXcuc3ViZGV2LmVudmlyb21lbnRhbCB8fCByYXcuc3ViZGV2LmVudmlyb25tZW50YWwpOwogICAgdmFyIGdhdGV3YXlfc24gPSByYXcuc24gfHwgIkdXLVNJTkdMRSI7CiAgICB2YXIgY3RpbWVTdHIgPSAoZW52ICYmIGVudi5jdGltZSkgPyBTdHJpbmcoZW52LmN0aW1lKS50cmltKCkgOiAiIjsKCiAgICB2YXIgaXNPZmZsaW5lID0gIWVudiB8fCBjdGltZVN0ciA9PT0gIiIgfHwgY3RpbWVTdHIuaW5kZXhPZigiMTk3MC0wMS0wMSIpID09PSAwOwoKICAgIGlmIChpc09mZmxpbmUpIHsKICAgICAgICB2YXIgZmF1bHRQYXlsb2FkID0gSlNPTi5zdHJpbmdpZnkoewogICAgICAgICAgICBkZXZpY2VUeXBlOiAiZW52IiwKICAgICAgICAgICAgZGV2aWNlSWQ6ICJlbnYtMDEiLAogICAgICAgICAgICBnYXRld2F5X3NuOiBnYXRld2F5X3NuLAogICAgICAgICAgICBzdGF0dXM6ICJvZmZsaW5lIiwKICAgICAgICAgICAgZmF1bHRDb2RlOiAiRVJSX0VOVl9PRkZMSU5FIiwKICAgICAgICAgICAgZmF1bHREZXNjcmlwdGlvbjogIlNlbnNvciBhY3F1aXNpdGlvbiB0aW1lb3V0IG9yIGRpc2Nvbm5lY3RlZCIsCiAgICAgICAgICAgIHRpbWVzdGFtcDogbmV3IERhdGUoKS50b0lTT1N0cmluZygpCiAgICAgICAgfSk7CiAgICAgICAgYXBpX2xvZygiW0VOVl0gU2Vuc29yIE9GRkxJTkUuIFB1Ymxpc2hpbmcgYWxlcnQuXG4iKTsKICAgICAgICBhcGlfb3V0KGFwaV9ldmVudCwgZmF1bHRQYXlsb2FkKTsKICAgIH0gZWxzZSB7CiAgICAgICAgdmFyIHRlbGVtZXRyeSA9IHsKICAgICAgICAgICAgZGV2aWNlVHlwZTogImVudiIsCiAgICAgICAgICAgIGRldmljZUlkOiAiZW52LTAxIiwKICAgICAgICAgICAgZ2F0ZXdheV9zbjogZ2F0ZXdheV9zbiwKICAgICAgICAgICAgc3RhdHVzOiAib25saW5lIiwKICAgICAgICAgICAgdGltZXN0YW1wOiBlbnYuY3RpbWUgfHwgbmV3IERhdGUoKS50b0lTT1N0cmluZygpLAogICAgICAgICAgICB0ZW1wZXJhdHVyZTogTnVtYmVyKGVudi5UZW1wZXJhdHVyZSB8fCBlbnYudGVtcCB8fCAwKSwKICAgICAgICAgICAgaHVtaWRpdHk6IE51bWJlcihlbnYuSHVtaWRpdHkgfHwgZW52Lmh1bSB8fCAwKSwKICAgICAgICAgICAgcHJlc3N1cmU6IE51bWJlcihlbnYucHJlc3N1cmUgfHwgZW52LlByZXNzdXJlIHx8IDApLAogICAgICAgICAgICBwbTE6IE51bWJlcihlbnYuUE0xIHx8IGVudi5wbTEgfHwgMCksCiAgICAgICAgICAgIHBtMjU6IE51bWJlcihlbnZbIlBNMi41Il0gfHwgZW52LnBtMjUgfHwgZW52LnBtMl81IHx8IDApLAogICAgICAgICAgICBwbTEwOiBOdW1iZXIoZW52LlBNMTAgfHwgZW52LnBtMTAgfHwgMCksCiAgICAgICAgICAgIHRzcDogTnVtYmVyKGVudi5Uc3AgfHwgZW52LnRzcCB8fCAwKSwKICAgICAgICAgICAgY28yOiBOdW1iZXIoZW52LkNPMiB8fCBlbnYuY28yIHx8IDApLAogICAgICAgICAgICBjbzogTnVtYmVyKGVudi5DTyB8fCBlbnYuY28gfHwgMCksCiAgICAgICAgICAgIHNvMjogTnVtYmVyKGVudi5TTzIgfHwgZW52LnNvMiB8fCAwKSwKICAgICAgICAgICAgbm8yOiBOdW1iZXIoZW52Lk5PMiB8fCBlbnYubm8yIHx8IDApLAogICAgICAgICAgICBvMzogTnVtYmVyKGVudi5PMyB8fCBlbnYubzMgfHwgMCksCiAgICAgICAgICAgIGgyc190dm9jOiBOdW1iZXIoZW52Lkgyc190dm9jIHx8IGVudi5oMnNfdHZvYyB8fCAwKSwKICAgICAgICAgICAgbm9pc2U6IE51bWJlcihlbnYuTm9pc2UgfHwgZW52Lm5vaXNlIHx8IDApLAogICAgICAgICAgICB3aW5kU3BlZWQ6IE51bWJlcihlbnYuV2luZF9zcGVlZCB8fCBlbnYud2luZFNwZWVkIHx8IDApLAogICAgICAgICAgICB3aW5kX2RpcmVjdGlvbjogTnVtYmVyKGVudi5XaW5kX2RpcmVjdGlvbiB8fCAwKSwKICAgICAgICAgICAgcmFpbmZhbGw6IE51bWJlcihlbnYuUmFpbmZhbGwgfHwgZW52LnJhaW5mYWxsIHx8IDApLAogICAgICAgICAgICBpbGx1bWluYW5jZTogTnVtYmVyKGVudi5JbGx1bWluYW5jZSB8fCAwKSwKICAgICAgICAgICAgcmFkaWF0aW9uOiBOdW1iZXIoZW52LlJhZGlhdGlvbiB8fCAwKSwKICAgICAgICAgICAgdXZfaW5kZXg6IE51bWJlcihlbnYuVXZfaW5kZXggfHwgMCksCiAgICAgICAgICAgIG5lZ2F0aXZlX28yX2lvbnM6IE51bWJlcihlbnYubmVnX294eWdlbl9pb25zIHx8IDApCiAgICAgICAgfTsKICAgICAgICBhcGlfbG9nKCJbRU5WXSBDbGVhbiB0ZWxlbWV0cnkgcHVibGlzaGVkLlxuIik7CiAgICAgICAgYXBpX291dChhcGlfZXZlbnQsIEpTT04uc3RyaW5naWZ5KHRlbGVtZXRyeSkpOwogICAgfQp9IGNhdGNoIChlKSB7CiAgICBhcGlfbG9nKCJbRU5WIEVSUk9SXSAiICsgZS50b1N0cmluZygpICsgIlxuIik7Cn0K",
+          "cycle": 10
+        },
+        {
+          "script_id": "PoleIoTelemetry",
+          "ds": "periodic_report",
+          "event": "scmp/v1/default-site/P004/gateway/gw-01/status",
+          "param": "1",
+          "code": "Ly8gU21hcnQgUG9sZSBHYXRld2F5ICYgSU8gUG93ZXIgU3RhdHVzIFRlbGVtZXRyeSAoU0NNUCBTdGFuZGFyZCkKdHJ5IHsKICAgIHZhciByYXcgPSBKU09OLnBhcnNlKGFwaV9kYXRhKTsKICAgIHZhciBpbyA9IHJhdy5zdWJkZXYgJiYgcmF3LnN1YmRldi5JTzsKICAgIHZhciBnYXRld2F5X3NuID0gcmF3LnNuIHx8ICJHVy1TSU5HTEUiOwoKICAgIGlmIChpbykgewogICAgICAgIHZhciBpb1BheWxvYWQgPSB7CiAgICAgICAgICAgIGRldmljZVR5cGU6ICJnYXRld2F5IiwKICAgICAgICAgICAgZGV2aWNlSWQ6ICJndy0wMSIsCiAgICAgICAgICAgIGdhdGV3YXlfc246IGdhdGV3YXlfc24sCiAgICAgICAgICAgIHN0YXR1czogIm9ubGluZSIsCiAgICAgICAgICAgIHRpbWVzdGFtcDogaW8uY3RpbWUgfHwgbmV3IERhdGUoKS50b0lTT1N0cmluZygpLAogICAgICAgICAgICBtZXRyaWNzOiB7CiAgICAgICAgICAgICAgICBhY19vdXQxX2xhbXA6IE51bWJlcihpb1siQUMtT1VUMSJdIHx8IDApLAogICAgICAgICAgICAgICAgYWNfb3V0Ml9zdHJpcDogTnVtYmVyKGlvWyJBQy1PVVQyIl0gfHwgMCksCiAgICAgICAgICAgICAgICBhY19vdXQzX2xlZDogTnVtYmVyKGlvWyJBQy1PVVQzIl0gfHwgMCksCiAgICAgICAgICAgICAgICBzeXN0ZW1fcG93ZXJfZW46IE51bWJlcihpby5zbWFydF9saWdodHBvbGVfZW4gfHwgMCksCiAgICAgICAgICAgICAgICBhY19kY19zd2l0Y2g6IE51bWJlcihpby5hY19kY19zd2l0Y2ggfHwgMCkKICAgICAgICAgICAgfQogICAgICAgIH07CiAgICAgICAgYXBpX291dChhcGlfZXZlbnQsIEpTT04uc3RyaW5naWZ5KGlvUGF5bG9hZCkpOwogICAgfQp9IGNhdGNoIChlKSB7CiAgICBhcGlfbG9nKCJbSU8gRVJST1JdICIgKyBlLnRvU3RyaW5nKCkgKyAiXG4iKTsKfQo=",
+          "cycle": 15
+        },
+        {
+          "script_id": "RgbTelemetry",
+          "ds": "periodic_report",
+          "event": "scmp/v1/default-site/P004/rgb/rgb-01/telemetry",
+          "param": "1",
+          "code": "Ly8gTW9kYnVzIFJUVSBSR0IgQ29udHJvbGxlciBUZWxlbWV0cnkgKFNDTVAgU3RhbmRhcmQpCnRyeSB7CiAgICB2YXIgcmF3ID0gSlNPTi5wYXJzZShhcGlfZGF0YSk7CiAgICB2YXIgcmdiID0gcmF3LnN1YmRldiAmJiByYXcuc3ViZGV2LnJnYl9jb250cm9sbGVyOwogICAgdmFyIGdhdGV3YXlfc24gPSByYXcuc24gfHwgIkdXLVNJTkdMRSI7CgogICAgaWYgKHJnYiAmJiByZ2IucG93ZXJfc3RhdGUgIT09IHVuZGVmaW5lZCAmJiByZ2IucG93ZXJfc3RhdGUgIT09ICJudWxsIikgewogICAgICAgIHZhciByZ2JQYXlsb2FkID0gewogICAgICAgICAgICBkZXZpY2VUeXBlOiAicmdiIiwKICAgICAgICAgICAgZGV2aWNlSWQ6ICJyZ2ItMDEiLAogICAgICAgICAgICBnYXRld2F5X3NuOiBnYXRld2F5X3NuLAogICAgICAgICAgICBzdGF0dXM6ICJvbmxpbmUiLAogICAgICAgICAgICB0aW1lc3RhbXA6IHJnYi5jdGltZSB8fCBuZXcgRGF0ZSgpLnRvSVNPU3RyaW5nKCksCiAgICAgICAgICAgIG1ldHJpY3M6IHsKICAgICAgICAgICAgICAgIHBvd2VyOiBOdW1iZXIocmdiLnBvd2VyX3N0YXRlIHx8IDApLAogICAgICAgICAgICAgICAgYnJpZ2h0bmVzczogTnVtYmVyKHJnYi5icmlnaHRuZXNzIHx8IDApLAogICAgICAgICAgICAgICAgbW9kZTogTnVtYmVyKHJnYi5saWdodF9tb2RlIHx8IDApLAogICAgICAgICAgICAgICAgcmVkOiBOdW1iZXIocmdiLnJlZF9sZXZlbCB8fCAwKSwKICAgICAgICAgICAgICAgIGdyZWVuOiBOdW1iZXIocmdiLmdyZWVuX2xldmVsIHx8IDApLAogICAgICAgICAgICAgICAgYmx1ZTogTnVtYmVyKHJnYi5ibHVlX2xldmVsIHx8IDApCiAgICAgICAgICAgIH0KICAgICAgICB9OwogICAgICAgIGFwaV9vdXQoYXBpX2V2ZW50LCBKU09OLnN0cmluZ2lmeShyZ2JQYXlsb2FkKSk7CiAgICB9Cn0gY2F0Y2ggKGUpIHsKICAgIGFwaV9sb2coIltSR0IgRVJST1JdICIgKyBlLnRvU3RyaW5nKCkgKyAiXG4iKTsKfQo=",
+          "cycle": 10
+        },
+        {
+          "script_id": "CameraFault",
+          "ds": "periodic_report",
+          "event": "scmp/v1/default-site/P004/camera/camera-01/status",
+          "param": "0",
+          "code": "Ly8gQ2FtZXJhIENvbm5lY3Rpdml0eSBGYXVsdCBEaWFnbm9zdGljIENoZWNrIChTQ01QIFN0YW5kYXJkKQp0cnkgewogICAgdmFyIHBpbmdSZXMgPSBhcGlfc3lzX2V4ZWMoInBpbmcgLWMgMiAtVyAyIDE5Mi4xNjguNC4xMjAgPi9kZXYvbnVsbCAyPiYxICYmIGVjaG8gT0sgfHwgZWNobyBGQUlMIik7CiAgICBpZiAocGluZ1JlcyAmJiBwaW5nUmVzLmluZGV4T2YoIkZBSUwiKSAhPT0gLTEpIHsKICAgICAgICB2YXIgYWxlcnQgPSB7CiAgICAgICAgICAgIGRldmljZVR5cGU6ICJjYW1lcmEiLAogICAgICAgICAgICBkZXZpY2VJZDogImNhbWVyYS0wMSIsCiAgICAgICAgICAgIHN0YXR1czogIm9mZmxpbmUiLAogICAgICAgICAgICB0YXJnZXRfaXA6ICIxOTIuMTY4LjQuMTIwIiwKICAgICAgICAgICAgZmF1bHRDb2RlOiAiRVJSX0NBTV9USU1FT1VUIiwKICAgICAgICAgICAgZmF1bHREZXNjcmlwdGlvbjogIkNhbWVyYSBJQ01QIHBpbmcgY2hlY2sgdGltZW91dCIsCiAgICAgICAgICAgIHRpbWVzdGFtcDogbmV3IERhdGUoKS50b0lTT1N0cmluZygpCiAgICAgICAgfTsKICAgICAgICBhcGlfb3V0KGFwaV9ldmVudCwgSlNPTi5zdHJpbmdpZnkoYWxlcnQpKTsKICAgIH0KfSBjYXRjaCAoZSkgewogICAgYXBpX2xvZygiW0NBTSBDSEVDSyBFUlJPUl0gIiArIGUudG9TdHJpbmcoKSArICJcbiIpOwp9Cg==",
+          "cycle": 30
+        },
+        {
+          "script_id": "ScreenFault",
+          "ds": "periodic_report",
+          "event": "scmp/v1/default-site/P004/screen/screen-01/status",
+          "param": "0",
+          "code": "Ly8gTEVEIFNjcmVlbiBDb25uZWN0aXZpdHkgRmF1bHQgRGlhZ25vc3RpYyBDaGVjayAoU0NNUCBTdGFuZGFyZCkKdHJ5IHsKICAgIHZhciBwaW5nUmVzID0gYXBpX3N5c19leGVjKCJwaW5nIC1jIDIgLVcgMiAxOTIuMTY4LjQuMTI1ID4vZGV2L251bGwgMj4mMSAmJiBlY2hvIE9LIHx8IGVjaG8gRkFJTCIpOwogICAgaWYgKHBpbmdSZXMgJiYgcGluZ1Jlcy5pbmRleE9mKCJGQUlMIikgIT09IC0xKSB7CiAgICAgICAgdmFyIGFsZXJ0ID0gewogICAgICAgICAgICBkZXZpY2VUeXBlOiAic2NyZWVuIiwKICAgICAgICAgICAgZGV2aWNlSWQ6ICJzY3JlZW4tMDEiLAogICAgICAgICAgICBzdGF0dXM6ICJvZmZsaW5lIiwKICAgICAgICAgICAgdGFyZ2V0X2lwOiAiMTkyLjE2OC40LjEyNSIsCiAgICAgICAgICAgIGZhdWx0Q29kZTogIkVSUl9TQ1JFRU5fVElNRU9VVCIsCiAgICAgICAgICAgIGZhdWx0RGVzY3JpcHRpb246ICJMRUQgU2NyZWVuIElDTVAgcGluZyBjaGVjayB0aW1lb3V0IiwKICAgICAgICAgICAgdGltZXN0YW1wOiBuZXcgRGF0ZSgpLnRvSVNPU3RyaW5nKCkKICAgICAgICB9OwogICAgICAgIGFwaV9vdXQoYXBpX2V2ZW50LCBKU09OLnN0cmluZ2lmeShhbGVydCkpOwogICAgfQp9IGNhdGNoIChlKSB7CiAgICBhcGlfbG9nKCJbU0NSRUVOIENIRUNLIEVSUk9SXSAiICsgZS50b1N0cmluZygpICsgIlxuIik7Cn0K",
+          "cycle": 30
+        }
+      ],
+      "script_down": [
+        {
+          "script_id": "LampControl",
+          "ds": "form_server",
+          "event": "scmp/v1/default-site/P004/lamp/lamp-01/cmd/control",
+          "param": "0",
+          "code": "Ly8gRG93bmxpbmsgU3RyZWV0bGlnaHQgLyBMYW1wIENvbnRyb2wgSGFuZGxlciAoU0NNUCBFbnZlbG9wZSAmIERpcmVjdCBDb21wYXRpYmxlKQphcGlfbG9nKCI9PT0gU0NNUCBMYW1wIENvbW1hbmQgUmVjZWl2ZWQgPT09XG4iICsgYXBpX2RhdGEgKyAiXG4iKTsKdHJ5IHsKICAgIHZhciBwYXlsb2FkID0gYXBpX2RhdGEucmVwbGFjZSgvJy9nLCAnIicpOwogICAgcGF5bG9hZCA9IHBheWxvYWQucmVwbGFjZSgvKFt7LF1ccyopKFthLXpBLVowLTlfXC1dKylccyo6L2csICckMSIkMiI6Jyk7CiAgICB2YXIgZW52ZWxvcGUgPSBKU09OLnBhcnNlKHBheWxvYWQpOwoKICAgIHZhciBwYXJhbXMgPSB7fTsKICAgIGlmIChlbnZlbG9wZS5kYXRhICYmIGVudmVsb3BlLmRhdGEucGFyYW1zKSB7CiAgICAgICAgcGFyYW1zID0gZW52ZWxvcGUuZGF0YS5wYXJhbXM7CiAgICB9IGVsc2UgaWYgKGVudmVsb3BlLmNvbnRlbnQpIHsKICAgICAgICBwYXJhbXMgPSBlbnZlbG9wZS5jb250ZW50OwogICAgfSBlbHNlIHsKICAgICAgICBwYXJhbXMgPSBlbnZlbG9wZTsKICAgIH0KCiAgICB2YXIgc3dpdGNoU3RhdHVzID0gcGFyYW1zLnN3aXRjaFN0YXR1cyAhPT0gdW5kZWZpbmVkID8gcGFyYW1zLnN3aXRjaFN0YXR1cyA6ICgKICAgICAgICBwYXJhbXMuc3dpdGNoX3N0YXR1cyAhPT0gdW5kZWZpbmVkID8gcGFyYW1zLnN3aXRjaF9zdGF0dXMgOiAoCiAgICAgICAgICAgIHBhcmFtcy5zdGF0ZSAhPT0gdW5kZWZpbmVkID8gcGFyYW1zLnN0YXRlIDogcGFyYW1zWyJBQy1PVVQxIl0KICAgICAgICApCiAgICApOwoKICAgIHZhciB2YWwgPSAiMCI7CiAgICBpZiAoc3dpdGNoU3RhdHVzID09PSAib24iIHx8IHN3aXRjaFN0YXR1cyA9PT0gIk9OIiB8fCBzd2l0Y2hTdGF0dXMgPT09IDEgfHwgc3dpdGNoU3RhdHVzID09PSAiMSIgfHwgc3dpdGNoU3RhdHVzID09PSB0cnVlKSB7CiAgICAgICAgdmFsID0gIjEiOwogICAgfQoKICAgIGFwaV9sb2coIkxhbXAgY29tbWFuZCByZXNvbHZlZDogIiArICh2YWwgPT09ICIxIiA/ICJPTiIgOiAiT0ZGIikgKyAiICgiICsgdmFsICsgIilcbiIpOwogICAgYXBpX3dyaXRlX25vZGUoIklPIiwgIkFDLU9VVDEiLCB2YWwpOwogICAgYXBpX3dyaXRlX25vZGUoIklPIiwgInNtYXJ0X2xpZ2h0cG9sZV9lbiIsICIxIik7CiAgICBhcGlfd3JpdGVfbm9kZSgiSU8iLCAiYWNfZGNfc3dpdGNoIiwgIjEiKTsKCiAgICBpZiAocGFyYW1zLmRpbUxldmVsICE9PSB1bmRlZmluZWQgJiYgcGFyYW1zLmRpbUxldmVsICE9PSBudWxsKSB7CiAgICAgICAgYXBpX2xvZygiRGltIGxldmVsOiAiICsgcGFyYW1zLmRpbUxldmVsICsgIlxuIik7CiAgICB9Cn0gY2F0Y2ggKGUpIHsKICAgIGFwaV9sb2coIltDTUQgRVJST1JdICIgKyBlLnRvU3RyaW5nKCkgKyAiXG4iKTsKfQo=",
+          "cycle": 0
+        },
+        {
+          "script_id": "RgbControl",
+          "ds": "form_server",
+          "event": "scmp/v1/default-site/P004/rgb/rgb-01/cmd/control",
+          "param": "0",
+          "code": "Ly8gRG93bmxpbmsgTW9kYnVzIFJHQiBDb250cm9sbGVyIEhhbmRsZXIgKFNDTVAgRW52ZWxvcGUgJiBEaXJlY3QgQ29tcGF0aWJsZSkKYXBpX2xvZygiPT09IFNDTVAgUkdCIENvbW1hbmQgUmVjZWl2ZWQgPT09XG4iICsgYXBpX2RhdGEgKyAiXG4iKTsKdHJ5IHsKICAgIHZhciBwYXlsb2FkID0gYXBpX2RhdGEucmVwbGFjZSgvJy9nLCAnIicpOwogICAgcGF5bG9hZCA9IHBheWxvYWQucmVwbGFjZSgvKFt7LF1ccyopKFthLXpBLVowLTlfXC1dKylccyo6L2csICckMSIkMiI6Jyk7CiAgICB2YXIgZW52ZWxvcGUgPSBKU09OLnBhcnNlKHBheWxvYWQpOwoKICAgIHZhciBwYXJhbXMgPSAoZW52ZWxvcGUuZGF0YSAmJiBlbnZlbG9wZS5kYXRhLnBhcmFtcykgPyBlbnZlbG9wZS5kYXRhLnBhcmFtcyA6IGVudmVsb3BlOwoKICAgIHZhciBwb3dlciA9IHBhcmFtcy5wb3dlciAhPT0gdW5kZWZpbmVkID8gcGFyYW1zLnBvd2VyIDogcGFyYW1zLnN3aXRjaFN0YXR1czsKICAgIGlmIChwb3dlciAhPT0gdW5kZWZpbmVkKSB7CiAgICAgICAgdmFyIHBvd2VyVmFsID0gKHBvd2VyID09PSAib24iIHx8IHBvd2VyID09PSAiT04iIHx8IHBvd2VyID09PSAxIHx8IHBvd2VyID09PSAiMSIgfHwgcG93ZXIgPT09IHRydWUpID8gIjEiIDogIjAiOwogICAgICAgIGFwaV93cml0ZV9ub2RlKCJyZ2JfY29udHJvbGxlciIsICJwb3dlcl9zdGF0ZSIsIHBvd2VyVmFsKTsKICAgIH0KICAgIGlmIChwYXJhbXMuYnJpZ2h0bmVzcyAhPT0gdW5kZWZpbmVkKSBhcGlfd3JpdGVfbm9kZSgicmdiX2NvbnRyb2xsZXIiLCAiYnJpZ2h0bmVzcyIsIFN0cmluZyhwYXJhbXMuYnJpZ2h0bmVzcykpOwogICAgaWYgKHBhcmFtcy5tb2RlICE9PSB1bmRlZmluZWQpIHsKICAgICAgICB2YXIgbW9kZVZhbCA9IHBhcmFtcy5tb2RlID09PSAic3RhdGljIiA/ICIxIiA6IChwYXJhbXMubW9kZSA9PT0gImJyZWF0aGUiID8gIjIiIDogU3RyaW5nKHBhcmFtcy5tb2RlKSk7CiAgICAgICAgYXBpX3dyaXRlX25vZGUoInJnYl9jb250cm9sbGVyIiwgImxpZ2h0X21vZGUiLCBtb2RlVmFsKTsKICAgIH0KICAgIGlmIChwYXJhbXMuY29sb3IgJiYgdHlwZW9mIHBhcmFtcy5jb2xvciA9PT0gInN0cmluZyIgJiYgcGFyYW1zLmNvbG9yLmluZGV4T2YoIiMiKSA9PT0gMCkgewogICAgICAgIHZhciBoZXggPSBwYXJhbXMuY29sb3IucmVwbGFjZSgiIyIsICIiKTsKICAgICAgICBpZiAoaGV4Lmxlbmd0aCA9PT0gNikgewogICAgICAgICAgICB2YXIgciA9IHBhcnNlSW50KGhleC5zdWJzdHJpbmcoMCwgMiksIDE2KTsKICAgICAgICAgICAgdmFyIGcgPSBwYXJzZUludChoZXguc3Vic3RyaW5nKDIsIDQpLCAxNik7CiAgICAgICAgICAgIHZhciBiID0gcGFyc2VJbnQoaGV4LnN1YnN0cmluZyg0LCA2KSwgMTYpOwogICAgICAgICAgICBhcGlfd3JpdGVfbm9kZSgicmdiX2NvbnRyb2xsZXIiLCAicmVkX2xldmVsIiwgU3RyaW5nKHIpKTsKICAgICAgICAgICAgYXBpX3dyaXRlX25vZGUoInJnYl9jb250cm9sbGVyIiwgImdyZWVuX2xldmVsIiwgU3RyaW5nKGcpKTsKICAgICAgICAgICAgYXBpX3dyaXRlX25vZGUoInJnYl9jb250cm9sbGVyIiwgImJsdWVfbGV2ZWwiLCBTdHJpbmcoYikpOwogICAgICAgIH0KICAgIH0gZWxzZSB7CiAgICAgICAgaWYgKHBhcmFtcy5yICE9PSB1bmRlZmluZWQpIGFwaV93cml0ZV9ub2RlKCJyZ2JfY29udHJvbGxlciIsICJyZWRfbGV2ZWwiLCBTdHJpbmcocGFyYW1zLnIpKTsKICAgICAgICBpZiAocGFyYW1zLmcgIT09IHVuZGVmaW5lZCkgYXBpX3dyaXRlX25vZGUoInJnYl9jb250cm9sbGVyIiwgImdyZWVuX2xldmVsIiwgU3RyaW5nKHBhcmFtcy5nKSk7CiAgICAgICAgaWYgKHBhcmFtcy5iICE9PSB1bmRlZmluZWQpIGFwaV93cml0ZV9ub2RlKCJyZ2JfY29udHJvbGxlciIsICJibHVlX2xldmVsIiwgU3RyaW5nKHBhcmFtcy5iKSk7CiAgICB9Cn0gY2F0Y2ggKGUpIHsKICAgIGFwaV9sb2coIltSR0IgQ01EIEVSUk9SXSAiICsgZS50b1N0cmluZygpICsgIlxuIik7Cn0K",
+          "cycle": 0
+        }
+      ]
+    }
+  },
+  "ct_datanodes": {
+    "testserver": [
+      {
+        "plc_id": "enviromental",
+        "portid": "Noise",
+        "change_report": false
+      },
+      {
+        "plc_id": "enviromental",
+        "portid": "PM1",
+        "change_report": false
+      },
+      {
+        "plc_id": "enviromental",
+        "portid": "PM10",
+        "change_report": false
+      },
+      {
+        "plc_id": "enviromental",
+        "portid": "Tsp",
+        "change_report": false
+      },
+      {
+        "plc_id": "enviromental",
+        "portid": "neg_oxygen_ions",
+        "change_report": false
+      },
+      {
+        "plc_id": "enviromental",
+        "portid": "CO2",
+        "change_report": false
+      },
+      {
+        "plc_id": "enviromental",
+        "portid": "Uv_index",
+        "change_report": false
+      },
+      {
+        "plc_id": "enviromental",
+        "portid": "Illuminance",
+        "change_report": false
+      },
+      {
+        "plc_id": "enviromental",
+        "portid": "Radiation",
+        "change_report": false
+      },
+      {
+        "plc_id": "enviromental",
+        "portid": "Rainfall",
+        "change_report": false
+      },
+      {
+        "plc_id": "enviromental",
+        "portid": "Wind_direction",
+        "change_report": false
+      },
+      {
+        "plc_id": "enviromental",
+        "portid": "Wind_speed",
+        "change_report": false
+      },
+      {
+        "plc_id": "enviromental",
+        "portid": "pressure",
+        "change_report": false
+      },
+      {
+        "plc_id": "enviromental",
+        "portid": "Humidity",
+        "change_report": false
+      },
+      {
+        "plc_id": "enviromental",
+        "portid": "PM2.5",
+        "change_report": false
+      },
+      {
+        "plc_id": "enviromental",
+        "portid": "O3",
+        "change_report": false
+      },
+      {
+        "plc_id": "enviromental",
+        "portid": "CO",
+        "change_report": false
+      },
+      {
+        "plc_id": "enviromental",
+        "portid": "NO2",
+        "change_report": false
+      },
+      {
+        "plc_id": "enviromental",
+        "portid": "SO2",
+        "change_report": false
+      },
+      {
+        "plc_id": "enviromental",
+        "portid": "H2s_tvoc",
+        "change_report": false
+      },
+      {
+        "plc_id": "enviromental",
+        "portid": "Temperature",
+        "change_report": false
+      },
+      {
+        "plc_id": "IO",
+        "portid": "AC-OUT3",
+        "change_report": false
+      },
+      {
+        "plc_id": "IO",
+        "portid": "AC-OUT2",
+        "change_report": false
+      },
+      {
+        "plc_id": "IO",
+        "portid": "AC-OUT1",
+        "change_report": false
+      },
+      {
+        "plc_id": "IO",
+        "portid": "ac_dc_switch",
+        "change_report": false
+      },
+      {
+        "plc_id": "IO",
+        "portid": "smart_lightpole_en",
+        "change_report": false
+      }
+    ],
+    "test": [
+      {
+        "plc_id": "enviromental",
+        "portid": "Noise",
+        "change_report": false
+      },
+      {
+        "plc_id": "enviromental",
+        "portid": "PM1",
+        "change_report": false
+      },
+      {
+        "plc_id": "enviromental",
+        "portid": "PM10",
+        "change_report": false
+      },
+      {
+        "plc_id": "enviromental",
+        "portid": "Tsp",
+        "change_report": false
+      },
+      {
+        "plc_id": "enviromental",
+        "portid": "neg_oxygen_ions",
+        "change_report": false
+      },
+      {
+        "plc_id": "enviromental",
+        "portid": "CO2",
+        "change_report": false
+      },
+      {
+        "plc_id": "enviromental",
+        "portid": "Uv_index",
+        "change_report": false
+      },
+      {
+        "plc_id": "enviromental",
+        "portid": "Illuminance",
+        "change_report": false
+      },
+      {
+        "plc_id": "enviromental",
+        "portid": "Radiation",
+        "change_report": false
+      },
+      {
+        "plc_id": "enviromental",
+        "portid": "Rainfall",
+        "change_report": false
+      },
+      {
+        "plc_id": "enviromental",
+        "portid": "Wind_direction",
+        "change_report": false
+      },
+      {
+        "plc_id": "enviromental",
+        "portid": "Wind_speed",
+        "change_report": false
+      },
+      {
+        "plc_id": "enviromental",
+        "portid": "pressure",
+        "change_report": false
+      },
+      {
+        "plc_id": "enviromental",
+        "portid": "Humidity",
+        "change_report": false
+      },
+      {
+        "plc_id": "enviromental",
+        "portid": "PM2.5",
+        "change_report": false
+      },
+      {
+        "plc_id": "enviromental",
+        "portid": "O3",
+        "change_report": false
+      },
+      {
+        "plc_id": "enviromental",
+        "portid": "CO",
+        "change_report": false
+      },
+      {
+        "plc_id": "enviromental",
+        "portid": "NO2",
+        "change_report": false
+      },
+      {
+        "plc_id": "enviromental",
+        "portid": "SO2",
+        "change_report": false
+      },
+      {
+        "plc_id": "enviromental",
+        "portid": "H2s_tvoc",
+        "change_report": false
+      },
+      {
+        "plc_id": "enviromental",
+        "portid": "Temperature",
+        "change_report": false
+      },
+      {
+        "plc_id": "IO",
+        "portid": "AC-OUT3",
+        "change_report": false
+      },
+      {
+        "plc_id": "IO",
+        "portid": "AC-OUT2",
+        "change_report": false
+      },
+      {
+        "plc_id": "IO",
+        "portid": "AC-OUT1",
+        "change_report": false
+      },
+      {
+        "plc_id": "IO",
+        "portid": "ac_dc_switch",
+        "change_report": false
+      },
+      {
+        "plc_id": "IO",
+        "portid": "smart_lightpole_en",
+        "change_report": false
+      }
+    ],
+    "me": [
+      {
+        "plc_id": "enviromental",
+        "portid": "Noise",
+        "change_report": false
+      },
+      {
+        "plc_id": "enviromental",
+        "portid": "PM1",
+        "change_report": false
+      },
+      {
+        "plc_id": "enviromental",
+        "portid": "PM10",
+        "change_report": false
+      },
+      {
+        "plc_id": "enviromental",
+        "portid": "Tsp",
+        "change_report": false
+      },
+      {
+        "plc_id": "enviromental",
+        "portid": "neg_oxygen_ions",
+        "change_report": false
+      },
+      {
+        "plc_id": "enviromental",
+        "portid": "CO2",
+        "change_report": false
+      },
+      {
+        "plc_id": "enviromental",
+        "portid": "Uv_index",
+        "change_report": false
+      },
+      {
+        "plc_id": "enviromental",
+        "portid": "Illuminance",
+        "change_report": false
+      },
+      {
+        "plc_id": "enviromental",
+        "portid": "Radiation",
+        "change_report": false
+      },
+      {
+        "plc_id": "enviromental",
+        "portid": "Rainfall",
+        "change_report": false
+      },
+      {
+        "plc_id": "enviromental",
+        "portid": "Wind_direction",
+        "change_report": false
+      },
+      {
+        "plc_id": "enviromental",
+        "portid": "Wind_speed",
+        "change_report": false
+      },
+      {
+        "plc_id": "enviromental",
+        "portid": "pressure",
+        "change_report": false
+      },
+      {
+        "plc_id": "enviromental",
+        "portid": "Humidity",
+        "change_report": false
+      },
+      {
+        "plc_id": "enviromental",
+        "portid": "PM2.5",
+        "change_report": false
+      },
+      {
+        "plc_id": "enviromental",
+        "portid": "O3",
+        "change_report": false
+      },
+      {
+        "plc_id": "enviromental",
+        "portid": "CO",
+        "change_report": false
+      },
+      {
+        "plc_id": "enviromental",
+        "portid": "NO2",
+        "change_report": false
+      },
+      {
+        "plc_id": "enviromental",
+        "portid": "SO2",
+        "change_report": false
+      },
+      {
+        "plc_id": "enviromental",
+        "portid": "H2s_tvoc",
+        "change_report": false
+      },
+      {
+        "plc_id": "enviromental",
+        "portid": "Temperature",
+        "change_report": false
+      },
+      {
+        "plc_id": "IO",
+        "portid": "AC-OUT3",
+        "change_report": false
+      },
+      {
+        "plc_id": "IO",
+        "portid": "AC-OUT2",
+        "change_report": false
+      },
+      {
+        "plc_id": "IO",
+        "portid": "AC-OUT1",
+        "change_report": false
+      },
+      {
+        "plc_id": "IO",
+        "portid": "ac_dc_switch",
+        "change_report": false
+      },
+      {
+        "plc_id": "IO",
+        "portid": "smart_lightpole_en",
+        "change_report": false
+      },
+      {
+        "plc_id": "rgb_controller",
+        "portid": "red_level",
+        "change_report": false
+      },
+      {
+        "plc_id": "rgb_controller",
+        "portid": "green_level",
+        "change_report": false
+      },
+      {
+        "plc_id": "rgb_controller",
+        "portid": "blue_level",
+        "change_report": false
+      },
+      {
+        "plc_id": "rgb_controller",
+        "portid": "brightness",
+        "change_report": false
+      },
+      {
+        "plc_id": "rgb_controller",
+        "portid": "light_mode",
+        "change_report": false
+      },
+      {
+        "plc_id": "rgb_controller",
+        "portid": "power_state",
+        "change_report": false
+      }
+    ]
+  },
+  "backup_metadata": {
+    "gateway_id": "GW_P001",
+    "gateway_ip": "192.168.4.1",
+    "timestamp": "20261012_232049",
+    "tag": "PRE_PROVISION",
+    "filename": "GW_P001_192.168.4.1_20261012_232049_PRE_PROVISION.json"
+  }
+}
